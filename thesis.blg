@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: thesis.aux
+The style file: alpha.bst
+Database file #1: thesis-bibliography.bib
+Warning--empty journal in datasetCIFAR10
+Warning--empty year in datasetCIFAR10
+Warning--empty journal in datasetMNIST
+Warning--there's a number but no volume in datasetGTSRD
+You've used 14 entries,
+            2543 wiz_defined-function locations,
+            628 strings with 6915 characters,
+and the built_in function-call counts, 6002 in all, are:
+= -- 560
+> -- 421
+< -- 1
++ -- 157
+- -- 155
+* -- 455
+:= -- 1065
+add.period$ -- 41
+call.type$ -- 14
+change.case$ -- 112
+chr.to.int$ -- 13
+cite$ -- 18
+duplicate$ -- 211
+empty$ -- 354
+format.name$ -- 165
+if$ -- 1164
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 14
+newline$ -- 73
+num.names$ -- 42
+pop$ -- 108
+preamble$ -- 1
+purify$ -- 126
+quote$ -- 0
+skip$ -- 178
+stack$ -- 0
+substring$ -- 167
+swap$ -- 27
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 112
+warning$ -- 4
+while$ -- 48
+width$ -- 18
+write$ -- 175
+(There were 4 warnings)

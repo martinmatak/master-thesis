@@ -1,0 +1,81 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{PMG{\etalchar{+}}16}
+
+\bibitem[B18]{brendel2018decisionbased}
+Wieland~Brendel *, Jonas~Rauber *, and Matthias Bethge.
+\newblock Decision-based adversarial attacks: Reliable attacks against
+  black-box machine learning models.
+\newblock In {\em International Conference on Learning Representations}, 2018.
+
+\bibitem[CW16]{DBLP:journals/corr/CarliniW16a}
+Nicholas Carlini and David~A. Wagner.
+\newblock Towards evaluating the robustness of neural networks.
+\newblock {\em CoRR}, abs/1608.04644, 2016.
+
+\bibitem[DDS{\etalchar{+}}09]{datasetImageNet}
+J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, and L.~Fei-Fei.
+\newblock {ImageNet: A Large-Scale Hierarchical Image Database}.
+\newblock In {\em CVPR09}, 2009.
+
+\bibitem[GSS15]{fgsm-original}
+Ian Goodfellow, Jonathon Shlens, and Christian Szegedy.
+\newblock Explaining and harnessing adversarial examples.
+\newblock In {\em International Conference on Learning Representations}, 2015.
+
+\bibitem[KGB16]{fgsm-targeted}
+Alexey Kurakin, Ian~J. Goodfellow, and Samy Bengio.
+\newblock Adversarial examples in the physical world.
+\newblock {\em CoRR}, abs/1607.02533, 2016.
+
+\bibitem[KNH]{datasetCIFAR10}
+Alex Krizhevsky, Vinod Nair, and Geoffrey Hinton.
+\newblock Cifar-10 (canadian institute for advanced research).
+
+\bibitem[KSH12]{krizhevsky2012imagenet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In {\em Advances in neural information processing systems}, pages
+  1097--1105, 2012.
+
+\bibitem[LC10]{datasetMNIST}
+Yann LeCun and Corinna Cortes.
+\newblock {MNIST} handwritten digit database.
+\newblock 2010.
+
+\bibitem[LCLS16]{ensemble-attack}
+Yanpei Liu, Xinyun Chen, Chang Liu, and Dawn Song.
+\newblock Delving into transferable adversarial examples and black-box attacks.
+\newblock {\em CoRR}, abs/1611.02770, 2016.
+
+\bibitem[PMG{\etalchar{+}}16]{DBLP:journals/corr/PapernotMGJCS16}
+Nicolas Papernot, Patrick~D. McDaniel, Ian~J. Goodfellow, Somesh Jha, Z.~Berkay
+  Celik, and Ananthram Swami.
+\newblock Practical black-box attacks against deep learning systems using
+  adversarial examples.
+\newblock {\em CoRR}, abs/1602.02697, 2016.
+
+\bibitem[PMJ{\etalchar{+}}15]{DBLP:journals/corr/PapernotMJFCS15}
+Nicolas Papernot, Patrick~D. McDaniel, Somesh Jha, Matt Fredrikson, Z.~Berkay
+  Celik, and Ananthram Swami.
+\newblock The limitations of deep learning in adversarial settings.
+\newblock {\em CoRR}, abs/1511.07528, 2015.
+
+\bibitem[SSSI12a]{datasetGTSRD}
+J.~Stallkamp, M.~Schlipsing, J.~Salmen, and C.~Igel.
+\newblock Man vs. computer: Benchmarking machine learning algorithms for
+  traffic sign recognition.
+\newblock {\em Neural Networks}, (0):--, 2012.
+
+\bibitem[SSSI12b]{outperformhumans}
+Johannes Stallkamp, Marc Schlipsing, Jan Salmen, and Christian Igel.
+\newblock Man vs. computer: Benchmarking machine learning algorithms for
+  traffic sign recognition.
+\newblock {\em Neural Networks}, 32:323--332, 2012.
+
+\bibitem[SZS{\etalchar{+}}13]{szegedy2013intriguing}
+Christian Szegedy, Wojciech Zaremba, Ilya Sutskever, Joan Bruna, Dumitru Erhan,
+  Ian Goodfellow, and Rob Fergus.
+\newblock Intriguing properties of neural networks.
+\newblock {\em arXiv preprint arXiv:1312.6199}, 2013.
+
+\end{thebibliography}
