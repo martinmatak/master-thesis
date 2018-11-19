@@ -23,6 +23,11 @@ J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, and L.~Fei-Fei.
 \newblock {ImageNet: A Large-Scale Hierarchical Image Database}.
 \newblock In {\em CVPR09}, 2009.
 
+\bibitem[FIS]{iris-dataset}
+R.~A. FISHER.
+\newblock The use of multiple measurements in taxonomic problems.
+\newblock {\em Annals of Eugenics}, 7(2):179--188.
+
 \bibitem[GSS15]{fgsm-original}
 Ian Goodfellow, Jonathon Shlens, and Christian Szegedy.
 \newblock Explaining and harnessing adversarial examples.
@@ -52,6 +57,11 @@ Yann LeCun and Corinna Cortes.
 Yanpei Liu, Xinyun Chen, Chang Liu, and Dawn Song.
 \newblock Delving into transferable adversarial examples and black-box attacks.
 \newblock {\em CoRR}, abs/1611.02770, 2016.
+
+\bibitem[Mit97]{Mitchell:1997:ML:541177}
+Thomas~M. Mitchell.
+\newblock {\em Machine Learning}.
+\newblock McGraw-Hill, Inc., New York, NY, USA, 1 edition, 1997.
 
 \bibitem[PMG{\etalchar{+}}16]{DBLP:journals/corr/PapernotMGJCS16}
 Nicolas Papernot, Patrick~D. McDaniel, Ian~J. Goodfellow, Somesh Jha, Z.~Berkay

@@ -3,49 +3,50 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: thesis.aux
 The style file: alpha.bst
 Database file #1: thesis-bibliography.bib
+Warning--empty year in iris-dataset
 Warning--empty journal in datasetCIFAR10
 Warning--empty year in datasetCIFAR10
 Warning--empty journal in datasetMNIST
 Warning--there's a number but no volume in datasetGTSRD
-You've used 15 entries,
+You've used 17 entries,
             2543 wiz_defined-function locations,
-            632 strings with 7040 characters,
-and the built_in function-call counts, 6327 in all, are:
-= -- 593
-> -- 440
-< -- 1
-+ -- 163
-- -- 161
-* -- 475
-:= -- 1124
-add.period$ -- 44
-call.type$ -- 15
-change.case$ -- 118
-chr.to.int$ -- 14
-cite$ -- 19
-duplicate$ -- 224
-empty$ -- 374
-format.name$ -- 172
-if$ -- 1228
+            645 strings with 7264 characters,
+and the built_in function-call counts, 6954 in all, are:
+= -- 653
+> -- 456
+< -- 3
++ -- 167
+- -- 165
+* -- 519
+:= -- 1225
+add.period$ -- 50
+call.type$ -- 17
+change.case$ -- 128
+chr.to.int$ -- 16
+cite$ -- 22
+duplicate$ -- 255
+empty$ -- 429
+format.name$ -- 180
+if$ -- 1357
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 15
-newline$ -- 78
-num.names$ -- 45
-pop$ -- 111
+missing$ -- 18
+newline$ -- 88
+num.names$ -- 51
+pop$ -- 125
 preamble$ -- 1
-purify$ -- 133
+purify$ -- 145
 quote$ -- 0
-skip$ -- 192
+skip$ -- 210
 stack$ -- 0
-substring$ -- 174
-swap$ -- 28
-text.length$ -- 1
-text.prefix$ -- 0
+substring$ -- 209
+swap$ -- 30
+text.length$ -- 3
+text.prefix$ -- 2
 top$ -- 0
-type$ -- 120
-warning$ -- 4
-while$ -- 51
-width$ -- 19
-write$ -- 188
-(There were 4 warnings)
+type$ -- 132
+warning$ -- 5
+while$ -- 56
+width$ -- 21
+write$ -- 214
+(There were 5 warnings)
