@@ -1,6 +1,12 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{PMG{\etalchar{+}}16}
 
+\bibitem[AM18]{survey}
+Naveed Akhtar and Ajmal Mian.
+\newblock Threat of adversarial attacks on deep learning in computer vision:
+  {A} survey.
+\newblock {\em CoRR}, abs/1801.00553, 2018.
+
 \bibitem[B18]{brendel2018decisionbased}
 Wieland~Brendel *, Jonas~Rauber *, and Matthias Bethge.
 \newblock Decision-based adversarial attacks: Reliable attacks against

@@ -7,45 +7,45 @@ Warning--empty journal in datasetCIFAR10
 Warning--empty year in datasetCIFAR10
 Warning--empty journal in datasetMNIST
 Warning--there's a number but no volume in datasetGTSRD
-You've used 14 entries,
+You've used 15 entries,
             2543 wiz_defined-function locations,
-            628 strings with 6915 characters,
-and the built_in function-call counts, 6002 in all, are:
-= -- 560
-> -- 421
+            632 strings with 7040 characters,
+and the built_in function-call counts, 6327 in all, are:
+= -- 593
+> -- 440
 < -- 1
-+ -- 157
-- -- 155
-* -- 455
-:= -- 1065
-add.period$ -- 41
-call.type$ -- 14
-change.case$ -- 112
-chr.to.int$ -- 13
-cite$ -- 18
-duplicate$ -- 211
-empty$ -- 354
-format.name$ -- 165
-if$ -- 1164
++ -- 163
+- -- 161
+* -- 475
+:= -- 1124
+add.period$ -- 44
+call.type$ -- 15
+change.case$ -- 118
+chr.to.int$ -- 14
+cite$ -- 19
+duplicate$ -- 224
+empty$ -- 374
+format.name$ -- 172
+if$ -- 1228
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 14
-newline$ -- 73
-num.names$ -- 42
-pop$ -- 108
+missing$ -- 15
+newline$ -- 78
+num.names$ -- 45
+pop$ -- 111
 preamble$ -- 1
-purify$ -- 126
+purify$ -- 133
 quote$ -- 0
-skip$ -- 178
+skip$ -- 192
 stack$ -- 0
-substring$ -- 167
-swap$ -- 27
+substring$ -- 174
+swap$ -- 28
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 112
+type$ -- 120
 warning$ -- 4
-while$ -- 48
-width$ -- 18
-write$ -- 175
+while$ -- 51
+width$ -- 19
+write$ -- 188
 (There were 4 warnings)
