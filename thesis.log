@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  19 NOV 2018 22:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  21 NOV 2018 11:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1867,19 +1867,19 @@ No complaints by nag.
 \tf@toc=\write10
 \openout10 = `thesis.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 176.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 176.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 177.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 177.
 (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 176.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 176.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 177.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 177.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 93CFF4A647468C2DD00360F6058978C0;713.
  ) 
 Here is how much of TeX's memory you used:
- 33161 strings out of 492649
- 599338 string characters out of 6129622
- 806368 words of memory out of 5000000
- 36196 multiletter control sequences out of 15000+600000
+ 33162 strings out of 492649
+ 599350 string characters out of 6129622
+ 806466 words of memory out of 5000000
+ 36197 multiletter control sequences out of 15000+600000
  101003 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,18n,94p,1971b,953s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1900,10 +1900,10 @@ ocal/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texli
 ve/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/t
 exlive/2018/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/
 2018/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on thesis.pdf (24 pages, 265942 bytes).
+Output written on thesis.pdf (24 pages, 266113 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 262 compressed objects within 3 object streams
+ 308 PDF objects out of 1000 (max. 8388607)
+ 263 compressed objects within 3 object streams
  63 named destinations out of 1000 (max. 500000)
  23159 words of extra memory for PDF output out of 24883 (max. 10000000)
 
