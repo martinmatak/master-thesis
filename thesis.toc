@@ -20,4 +20,9 @@
 \contentsline {section}{\numberline {1.5}Relevance to Logic and Computation}{5}{section.1.5}
 \contentsline {chapter}{\chapternumberline {2}Background}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}Brief introduction to Machine Learning}{7}{section.2.1}
-\contentsline {chapter}{Bibliography}{9}{chapter*.9}
+\contentsline {section}{\numberline {2.2}Neural networks}{9}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Feedforward neural networks}{9}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Gradient descent}{9}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Backpropagation}{9}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Convolutional neural networks}{9}{subsection.2.2.4}
+\contentsline {chapter}{Bibliography}{11}{chapter*.9}
