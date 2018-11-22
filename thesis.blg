@@ -1,47 +1,52 @@
 This is BibTeX, Version 0.99d (TeX Live 2018)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: thesis.aux
-I found no \bibdata command---while reading file thesis.aux
-I found no \bibstyle command---while reading file thesis.aux
+The style file: alpha.bst
+Database file #1: thesis-bibliography.bib
+Warning--empty year in iris-dataset
+Warning--empty journal in datasetCIFAR10
+Warning--empty year in datasetCIFAR10
+Warning--empty journal in datasetMNIST
+Warning--there's a number but no volume in datasetGTSRD
 You've used 17 entries,
-            0 wiz_defined-function locations,
-            108 strings with 976 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
-int.to.chr$ -- 0
+            2543 wiz_defined-function locations,
+            645 strings with 7264 characters,
+and the built_in function-call counts, 6954 in all, are:
+= -- 653
+> -- 456
+< -- 3
++ -- 167
+- -- 165
+* -- 519
+:= -- 1225
+add.period$ -- 50
+call.type$ -- 17
+change.case$ -- 128
+chr.to.int$ -- 16
+cite$ -- 22
+duplicate$ -- 255
+empty$ -- 429
+format.name$ -- 180
+if$ -- 1357
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
-purify$ -- 0
+missing$ -- 18
+newline$ -- 88
+num.names$ -- 51
+pop$ -- 125
+preamble$ -- 1
+purify$ -- 145
 quote$ -- 0
-skip$ -- 0
+skip$ -- 210
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
-text.prefix$ -- 0
+substring$ -- 209
+swap$ -- 30
+text.length$ -- 3
+text.prefix$ -- 2
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 0
-(There were 2 error messages)
+type$ -- 132
+warning$ -- 5
+while$ -- 56
+width$ -- 21
+write$ -- 214
+(There were 5 warnings)
