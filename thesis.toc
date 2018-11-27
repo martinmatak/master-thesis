@@ -23,6 +23,6 @@
 \contentsline {section}{\numberline {2.2}Neural networks}{9}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Feedforward neural networks}{9}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Gradient descent}{9}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Backpropagation}{11}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Convolutional neural networks}{11}{subsection.2.2.4}
-\contentsline {chapter}{Bibliography}{13}{chapter*.11}
+\contentsline {subsection}{\numberline {2.2.3}Backpropagation}{12}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Convolutional neural networks}{12}{subsection.2.2.4}
+\contentsline {chapter}{Bibliography}{13}{chapter*.12}
