@@ -15,7 +15,7 @@ Sometimes is \ref{eq:numerical-derivative-2} used instead of \ref{eq:numerical-d
 This approach is easy to implement, but it's only an approximation ($\epsilon$ cannot be arbitrary small) and it is too inefficient in practice because $L$ must be evaluated $dim(\pmb\theta)$ times (modern DNNs have millions of parameters). Instead of \textit{numerical differentiation}, preferable way is to obtain $\textit{analytic grdient}$, i.e. obtain $\nabla L (\pmb \theta)$ analytically using calculus. It's more accurate (no approximation) and much more efficient (single evaluation).
 
 
-Neural network is computational graph composed of other functions. Loss function $L$ of a neural network is again a graph. Derivatives in such graphs can be computed iteratively using the chain rule \ref{eq:chain-rule}. It's a formula for computing the derivative of composition of two or more functions. 
+Neural network is computational graph composed of other functions. Loss function $L$ of a neural network is again a graph. Derivatives in such graphs can be computed iteratively using the chain rule. It's a formula for computing the derivative of composition of two or more functions. 
 
 Let $f: \mathbb{R} \mapsto \mathbb{R}$, $g: \mathbb{R} \mapsto \mathbb{R}$ and $F: \mathbb{R} \mapsto \mathbb{R}$ s.t. $F(x) = f(g(x))$. Then by the chain rule, $F'(x) = f'(g(x))g'(x)$.
 

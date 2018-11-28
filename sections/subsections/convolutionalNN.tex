@@ -1,1 +1,10 @@
-convolutional NNs come here
+Convolutional Neural Network (CNN / ConvNet) is a well-known deep learning architecture inspired by the natural visual perception mechanism of the living creatures. Among different types of deep neural networks, CNNs have been most extensively studied. ConvNets are feed-forward neural networks which contain one or more \textit{convolutional layers}. Neurons in this architecture are purposely spatially arranged to form feature maps. ConvNet architectures make the explicit assumption that the inputs are images, which allows a creator of it to encode certain properties into the architecture. These properties make the forward function more efficient to implement and vastly reduce the amount of parameters in the network.
+
+Unlike a regular Neural Network that was introduced in the previous subsection, the layers of a ConvNet have neurons arranged in 3 dimensions: width, height, depth (not the same as depth of the network). This makes sense, because an image has width, height and number of channels (depth). To reduce number of parameters, the neurons in a layer are only connected to a small fixed-size region of the layer before it and weights are shared among neurons in the same feature map (layer). Such a layer is called a convolutional layer. Except for convolutional layer, in CNN architecture, there are usually \textit{Pooling Layer} (POOL) and \textit{Fully-Connected Layer} (FC), which is a classic layer introduced in a previous subsection. In CNNs, activation functions are also often referred to as separate layers. One of the most popular activation functions among CNNs is ReLu (TODO: definition, graph, reference to the paper)
+
+Pooling Layer is used to perform a downsampling operation along the spatial dimensions (width, height). After all, we must reduce an input image dimensions to produce an output of expected dimensions.  It is common to periodically insert a Pooling layer in-between successive Conv layers in a ConvNet architecture.
+
+A simple CNN for classification could have the architecture [INPUT - CONV - RELU - POOL - FC].
+
+TODO: Add image of CNN. Add paper which introduces CNN.
+
