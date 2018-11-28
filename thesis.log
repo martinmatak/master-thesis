@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  28 NOV 2018 11:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  28 NOV 2018 17:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**thesis.tex
+**thesis
 (./thesis.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
@@ -1896,26 +1896,25 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [8]
 (./sections/subsections/feedforward.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <24.88> on input line 78.
+(Font)              <24.88> on input line 80.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 78.
+(Font)              <20.74> on input line 80.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 78.
+(Font)              <17.28> on input line 80.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 80.
+(Font)              <14.4> on input line 82.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 80.
+(Font)              <10> on input line 82.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 80.
+(Font)              <7> on input line 82.
 )
 (./sections/subsections/gradient-descent.tex [9] [10] [11] [12])
-(./sections/subsections/backpropagation.tex)
-(./sections/subsections/convolutionalNN.tex)) [13] [14
-
-] (./thesis.ind)
-(./thesis.gls) (./thesis.acr) (./thesis.bbl
+(./sections/subsections/backpropagation.tex [13])
+(./sections/subsections/convolutionalNN.tex)) [14] (./thesis.ind) (./thesis.gls
+) (./thesis.acr) (./thesis.bbl
 bibitemlist
 [15
+
 
 ]) [16]
 No complaints by nag.
@@ -1931,13 +1930,13 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: A107F84E81E87DCCAF29574442042616;776.
  ) 
 Here is how much of TeX's memory you used:
- 34911 strings out of 492649
- 645192 string characters out of 6129622
- 855220 words of memory out of 5000000
- 37814 multiletter control sequences out of 15000+600000
- 141854 words of font info for 192 fonts, out of 8000000 for 9000
+ 34933 strings out of 492649
+ 645548 string characters out of 6129622
+ 855426 words of memory out of 5000000
+ 37822 multiletter control sequences out of 15000+600000
+ 150812 words of font info for 198 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,18n,94p,1971b,984s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,18n,94p,1967b,984s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
 cal/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/20
 18/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2018/texmf-d
@@ -1961,10 +1960,10 @@ usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/t
 exlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loc
 al/texlive/2018/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texl
 ive/2018/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on thesis.pdf (30 pages, 348761 bytes).
+Output written on thesis.pdf (30 pages, 353883 bytes).
 PDF statistics:
- 427 PDF objects out of 1000 (max. 8388607)
- 369 compressed objects within 4 object streams
- 109 named destinations out of 1000 (max. 500000)
- 31871 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 436 PDF objects out of 1000 (max. 8388607)
+ 378 compressed objects within 4 object streams
+ 113 named destinations out of 1000 (max. 500000)
+ 32895 words of extra memory for PDF output out of 35830 (max. 10000000)
 

@@ -76,6 +76,13 @@ Nicolas Papernot, Patrick~D. McDaniel, Somesh Jha, Matt Fredrikson, Z.~Berkay
 \newblock The limitations of deep learning in adversarial settings.
 \newblock {\em CoRR}, abs/1511.07528, 2015.
 
+\bibitem[RHW86]{Rumelhart:1986:LIR:104279.104293}
+D.~E. Rumelhart, G.~E. Hinton, and R.~J. Williams.
+\newblock Parallel distributed processing: Explorations in the microstructure
+  of cognition, vol. 1.
+\newblock chapter Learning Internal Representations by Error Propagation, pages
+  318--362. MIT Press, Cambridge, MA, USA, 1986.
+
 \bibitem[Rud16]{gradient-descent-overview}
 Sebastian Ruder.
 \newblock An overview of gradient descent optimization algorithms.
