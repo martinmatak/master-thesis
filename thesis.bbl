@@ -76,6 +76,11 @@ Nicolas Papernot, Patrick~D. McDaniel, Somesh Jha, Matt Fredrikson, Z.~Berkay
 \newblock The limitations of deep learning in adversarial settings.
 \newblock {\em CoRR}, abs/1511.07528, 2015.
 
+\bibitem[Rud16]{gradient-descent-overview}
+Sebastian Ruder.
+\newblock An overview of gradient descent optimization algorithms.
+\newblock {\em CoRR}, abs/1609.04747, 2016.
+
 \bibitem[SSSI12a]{datasetGTSRD}
 J.~Stallkamp, M.~Schlipsing, J.~Salmen, and C.~Igel.
 \newblock Man vs. computer: Benchmarking machine learning algorithms for

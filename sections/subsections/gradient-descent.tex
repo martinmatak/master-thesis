@@ -23,10 +23,12 @@ After we defined loss function $L(\pmb \theta)$  as in \ref{eq:loss-function}, w
 
 Gradient Descent is an iterative optimization algorithm that is used for finding the minimum of a function. It is based on the first derivative of the function which minimum needs to be found. This means that the function must be differentiable. 
 
-Let $\nabla f$ be a vector of all partial derivatives of a function $f$. Then a gradient descent is shown in the Algorithm \ref{alg:gradient-descent}.
+Let $\nabla f$ be a vector of all partial derivatives of a function $f: \mathbb{R}^N \mapsto \mathbb{R}^N$. Then $\nabla f(\pmb x) = (f_{x_1}(\pmb x), ..., f_{x_n}(\pmb x))$  encodes how fast $f$ changes with all arguments $x_1, ..., x_n$. That's exactly what is needed for optimizing $L(\pmb \theta)$. Compute the direction of greatest increase $\nabla L(\pmb \theta)$ and move in the opposite direction. The \textit{step size} is defined by \textit{learning rate} - hyperparameter $\alpha$.  
+
+Pseudo code for Gradient descent is shown in the Algorithm \ref{alg:gradient-descent}.
 
 \begin{algorithm}[htb]
-\caption{Gradient descent implementation}
+\caption{Gradient Descent}
 \label{alg:gradient-descent}
 
 \KwIn{$\pmb \theta, L, \alpha $}
@@ -40,9 +42,50 @@ Let $\nabla f$ be a vector of all partial derivatives of a function $f$. Then a 
 }
 \end{algorithm}
 
+This algorithm is simple since the only requirement is that $f$ is differentiable and efficient since it requires only first derivatives. A problem that can occur is that $\| \pmb \theta^{'}\|  \approx 0$ can happen at all critical points - minimum, maximum and saddle point.
 
-TODO: Stochasting gradient descent, momentum, nesterov momentum
- An interested reader can find an overview of gradient descent optimization algorithms in \ref{gradient-descent-overview}. 
+To speed up convergence of it, \textit{momentum} is introduced using hyperparameter $\beta$. It increases step size dynamically by using $velocity \pmb v$. Velocity builds up momentum if successive gradients are similar. Pseudo code for Gradient descent with momentum is shown in the Algorithm \ref{alg:gradient-descent-momentum}
+
+\begin{algorithm}[htb]
+\caption{Gradient Descent with momentum}
+\label{alg:gradient-descent-momentum}
+
+\KwIn{$\pmb \theta, L, \alpha, \beta $}
+
+$\pmb v \leftarrow \pmb 0$
+\While {$true$}{
+    $\pmb \theta^{'} \leftarrow \nabla L(\pmb \theta)$\;
+    \If {$\| \pmb \theta^{'}\|  \approx 0 $} {
+    		\Return\;
+    }
+    $\pmb v \leftarrow  \beta \pmb v - \alpha * \pmb \theta^{'}$
+    $\pmb \theta \leftarrow \pmb \theta + \pmb v$\;
+}
+\end{algorithm}
+
+Idea behind the Gradient Descent with \textit{Nesterov Momentum} which works often better than standard Gradient Descent with momentum is not to evaluate gradient at the current point, but at the point which would be the next, i.e. evaluate gradient at $\pmb \theta + \pmb v$ instead of at $\pmb \theta$. Pseudo code is shown in the Algorithm \ref{alg:gradient-descent-nesterov-momentum}
+
+\begin{algorithm}[htb]
+\caption{Gradient Descent with Nesterov momentum}
+\label{alg:gradient-descent-nesterov-momentum}
+
+\KwIn{$\pmb \theta, L, \alpha, \beta $}
+
+$\pmb v \leftarrow \pmb 0$
+\While {$true$}{
+    $\pmb \theta^{'} \leftarrow \nabla L(\pmb \theta + \pmb v)$\;
+    \If {$\| \pmb \theta^{'}\|  \approx 0 $} {
+    		\Return\;
+    }
+    $\pmb v \leftarrow  \beta \pmb v - \alpha * \pmb \theta^{'}$
+    $\pmb \theta \leftarrow \pmb \theta + \pmb v$\;
+}
+\end{algorithm}
+
+So far, $L(\pmb \theta)$ is computed based on the whole training dataset $\mathcal{D}$. Therefore, time complexity increases linearly with number of samples in $\mathcal{D}$. That can be problematic if $\mathcal{D}$ is large. Instead of having a whole dataset $\mathcal{D}$ as a \textit{batch}, we can evaluate $L(\pmb \theta)$ on a subset of the training dataset with $S$ number of samples. If $S = |\mathcal{D}|$, it is called \textit{Batch Gradient descent}. But we can split the training dataset $\mathcal{D}$ into several \textit{minibatches} (subsets) of cardinality $S$ and process them one by one (one per iteration). One full run through the training set is called \textit{epoch}. Usually training takes many epochs. Resulting algorithm is called \textit{Minibatch Gradient Descent} or \textit{Stochastic Gradient Descent} (SGD) if $S = 1$. In practice, it is often called SGD even if $S > 1$. Time for single iteration is now independent of dataset size and depends only on size of a minibatch. Typically, $S$ is 64, 128, 256 or 512. In general, $S$ is usually $2^{N}$ because of efficiency reasons (data parallelism). Decreasing $S$ decreases computation time per iteration, memory required on GPU 	(minibatch processed as whole) and accuracy of the gradient estimate. It is important to sample minibatches randomly to break (possible) ordering in a dataset. In practice, usually training set is shuffled once or before every epoch and then processed sequentially in minibatches. 
+
+
+There are many alternatives to gradient descent which have an advantage of not having to choose the learning rate. An interested reader can find an overview of gradient descent optimization algorithms in \cite{gradient-descent-overview}. 
 
 
 
