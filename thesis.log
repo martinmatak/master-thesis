@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  28 NOV 2018 17:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  28 NOV 2018 18:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1909,9 +1909,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 82.
 )
 (./sections/subsections/gradient-descent.tex [9] [10] [11] [12])
-(./sections/subsections/backpropagation.tex [13])
-(./sections/subsections/convolutionalNN.tex)) [14] (./thesis.ind) (./thesis.gls
-) (./thesis.acr) (./thesis.bbl
+(./sections/subsections/backpropagation.tex [13]
+
+LaTeX Warning: Reference `eq:chain-rule' on page 14 undefined on input line 18.
+
+
+) (./sections/subsections/convolutionalNN.tex)) [14] (./thesis.ind)
+(./thesis.gls) (./thesis.acr) (./thesis.bbl
 bibitemlist
 [15
 
@@ -1928,11 +1932,15 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 181.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 181.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: A107F84E81E87DCCAF29574442042616;776.
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 34933 strings out of 492649
- 645548 string characters out of 6129622
- 855426 words of memory out of 5000000
+ 34932 strings out of 492649
+ 645534 string characters out of 6129622
+ 855380 words of memory out of 5000000
  37822 multiletter control sequences out of 15000+600000
  150812 words of font info for 198 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1957,13 +1965,14 @@ ts/type1/public/lm/lmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pub
 lic/lm/lmri10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lms
 s12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></
 usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texl
-ive/2018/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on thesis.pdf (30 pages, 353883 bytes).
+exlive/2018/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2018
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/
+2018/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2018/te
+xmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on thesis.pdf (30 pages, 357148 bytes).
 PDF statistics:
- 436 PDF objects out of 1000 (max. 8388607)
- 378 compressed objects within 4 object streams
- 113 named destinations out of 1000 (max. 500000)
+ 438 PDF objects out of 1000 (max. 8388607)
+ 379 compressed objects within 4 object streams
+ 112 named destinations out of 1000 (max. 500000)
  32895 words of extra memory for PDF output out of 35830 (max. 10000000)
 
