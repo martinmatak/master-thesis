@@ -17,6 +17,7 @@
 \usepackage[ruled,linesnumbered,algochapter]{algorithm2e} % Enables the writing of pseudo code.
 \usepackage[usenames,dvipsnames,table]{xcolor} % Allows the definition and use of colors. This package has to be included before tikz.
 \usepackage{tikz}
+\usepackage{pgfplots}
 \usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows}
 
 \usepackage{nag}       % Issues warnings when best practices in writing LaTeX documents are violated.
@@ -128,32 +129,13 @@
 \mainmatter
 
 \chapter{Introduction}
-This is introduction chapter.	
-\section{Motivation and Problem Definition} 
-\label{motivation}
-\input{sections/motivation.tex}
-
-\section{Aim of the Work}
-\input{sections/aim.tex}
-
-\section{Methodological Approach} \label{approach}
-\input{sections/approach.tex}
-
-\section{State-of-the-Art}
-\input{sections/state-of-the-art.tex}
-
-
-\section{Relevance to Logic and Computation}
-\input{sections/relevance.tex}
-
+\input{chapters/introduction/introduction.tex}
 
 \chapter{Background}
-This is background chapter.	
-\section{Brief introduction to Machine Learning}
-\input{sections/brief-introduction.tex}
-\section{Neural networks}
-\input{sections/neural-networks.tex}
+\input{chapters/background/background.tex}
 
+\chapter{State-of-the-Art}
+\input{chapters/state-of-the-art/state-of-the-art.tex}
 
 \backmatter
 

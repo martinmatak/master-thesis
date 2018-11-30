@@ -19,5 +19,20 @@ A problem can occur if there is not enough data, i.e. an original dataset is sma
 
 Such a procedure is based on the idea of repeating the training and testing computation on different randomly chosen subsets or splits of the original dataset. The original set is split into $k$ equal disjoint subsets. Of the $k$ subsets, a single subset is retained as the validation set for testing the model, and the remaining $k-1$ subsets are used as training data. The process is then repeated $k$ times, with each of the $k$ subsets used exactly once as the validation data. The $k$ results can then be averaged to produce a test accuracy. 
 
-  
+Goal of this chapter is to give brief introduction to deep learning area. In the Section \ref{subsection:FNN} an introduction to the basic neural networks is provided. After that, in the Section \ref{subsection:gradient-descent} the gradient descent algorithm is introduced and variations of it. It is used for optimization of functions based on the derivations of it. The gradient descent represents the ground idea behind the backpropagation algorithm which is introduced in the Section \ref{subsection:backpropagation}. The backpropagation algorithm the most popular algorithm for training neural networks. Finally, in the Section \ref{subsection:convolutionalNN} the convolutional neural networks are presented. A convolutional neural network represents a typical choice of the architecture of the neural network when it comes to the domain of computer vision.
 
+\section{Feedforward neural networks}
+\label{subsection:FNN}
+\input{chapters/background/sections/feedforward.tex}
+
+\section{Gradient descent}
+\label{subsection:gradient-descent}
+\input{chapters/background/sections/gradient-descent.tex}
+
+\section{Backpropagation}
+\label{subsection:backpropagation}
+\input{chapters/background/sections/backpropagation.tex}
+
+\section{Convolutional neural networks}
+\label{subsection:convolutionalNN}
+\input{chapters/background/sections/convolutionalNN.tex}

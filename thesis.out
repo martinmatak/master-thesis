@@ -2,12 +2,14 @@
 \BOOKMARK [0][-]{chapter*.6}{Abstract}{}% 2
 \BOOKMARK [0][-]{section*.8}{Contents}{}% 3
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 4
-\BOOKMARK [1][-]{section.1.1}{Motivation and Problem Definition}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.1}{Problem Definition}{chapter.1}% 5
 \BOOKMARK [1][-]{section.1.2}{Aim of the Work}{chapter.1}% 6
 \BOOKMARK [1][-]{section.1.3}{Methodological Approach}{chapter.1}% 7
-\BOOKMARK [1][-]{section.1.4}{State-of-the-Art}{chapter.1}% 8
-\BOOKMARK [1][-]{section.1.5}{Relevance to Logic and Computation}{chapter.1}% 9
-\BOOKMARK [0][-]{chapter.2}{Background}{}% 10
-\BOOKMARK [1][-]{section.2.1}{Brief introduction to Machine Learning}{chapter.2}% 11
-\BOOKMARK [1][-]{section.2.2}{Neural networks}{chapter.2}% 12
-\BOOKMARK [0][-]{chapter*.14}{Bibliography}{}% 13
+\BOOKMARK [1][-]{section.1.4}{Outline}{chapter.1}% 8
+\BOOKMARK [0][-]{chapter.2}{Background}{}% 9
+\BOOKMARK [1][-]{section.2.1}{Feedforward neural networks}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.2}{Gradient descent}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.3}{Backpropagation}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.4}{Convolutional neural networks}{chapter.2}% 13
+\BOOKMARK [0][-]{chapter.3}{State-of-the-Art}{}% 14
+\BOOKMARK [0][-]{chapter*.15}{Bibliography}{}% 15

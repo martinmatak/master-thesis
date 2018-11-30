@@ -1,9 +1,3 @@
-As Artificial Intelligence (AI) is getting a greater impact in our everyday life, it is of utmost importance that it is safe for humans.  
-
-One of the tools used in AI are deep neural networks (DNNs) and neural networks in general. Deep neural networks are powerful learning models that achieve excellent performance on visual recognition problems \cite{krizhevsky2012imagenet}. Those results imply that DNNs can be used in different industry domains, e.g. traffic sign recognition, a domain in which DNNs even outperform humans \cite{outperformhumans}. 
-
-Nevertheless, neural networks tend to have some peculiar properties as well. If only several pixels in an image are changed, some neural networks produce incorrect results \cite{szegedy2013intriguing}. Such a behaviour is not allowed in safety-critical systems. For example, if an autonomous car recognizes a  \textit{STOP} sign as anything else but a \textit{STOP} sign, it can lead to deathly consequences. Therefore, it is important to verify the system. 
-
 The assumption in the rest of this proposal is that the neural network is performing a \textit{classification task} - mapping an input (image) to a discrete output value (e.g. mapping an image of a traffic sign to the name of the traffic sign).  Output values are often called labels or categories. There is a finite number of possible labels.
 
 To find errors in a system where a neural network is used, we need a framework which can trigger every possible output of the neural network.  We want to achieve that by using only one image as a starting point. 
