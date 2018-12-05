@@ -1,16 +1,16 @@
 An accuracy of a parametric model depends on the data provided to it and  parameters used. The same holds for neural networks. The parameters in the neural networks are weights and during the training we are trying to find \textit{the best} weights. To find them, we express how bad the model is using the \textit{loss function} or \textit{cost function}. It expresses how much wrong is the model (for a given data) using the given weights. When such a function is defined, all we do is try to find an input to that function i.e. weights, such that output of that function i.e. loss, is minimal. Most of the machine learning algorithms have some kind of an optimization in it. Optimization refers to the task of find $\pmb x$ s.t. $f(\pmb x)$ is maximal or minimal. In this thesis, optimization will always mean minimization, except when stated otherwise. Maximization can be accomplished by minimizing the function $-f(\pmb x)$.
 
-Since the main idea behind training the neural network is to minimize a loss function, two things need to be decided. The first thing is which loss function should be used and the second thing is which optimization algorithm will be used to find its minimum.
+Since training the neural network is actually minimizing a loss function that is represented by the neural network, two things need to be decided: a loss function that will be used and an optimization algorithm that will be used to find its minimum.
 
-Most popular classification loss is \textit{cross-entropy}. Given two probability mass functions (a mass function is a function that gives the probability that a discrete random variable is exactly equal to some value) $\pmb u$ and $\pmb v$ in $\mathbb{R}^T$, i.e. $\pmb u = (u_1, ..., u_T)$ and $\pmb v =  (v1_, ..., v_T)$, the cross-entropy between $\pmb u$ and $\pmb v$ is
+The most popular classification loss function is \textit{cross-entropy}. Given two probability mass functions (a mass function is a function that gives the probability that a discrete random variable is exactly equal to some value) $\pmb u$ and $\pmb v$ in $\mathbb{R}^T$, i.e. $\pmb u = (u_1, ..., u_T)$ and $\pmb v =  (v_1, ..., v_T)$, the cross-entropy between $\pmb u$ and $\pmb v$ is
  \begin{equation}
 H (\pmb u, \pmb v)= - \sum_{t=1}^T  u_t  \text{ln} v_t 
 \end{equation}
 
-To use cross-entropy for training a classifier, let $\pmb u$ enocde the ground-truth label, $u_c = 1$ where $c$ is index of the class. Let $\pmb v$ be the predicted softmax class scores. Now $H$ measures how dissimilar true and predicted probabilities are for a single sample.
+Let $\pmb u$ enocde the ground-truth label, $u_c = 1$ where $c$ is index of the class. Let $\pmb v$ be the predicted softmax class scores. Now $H$ measures how dissimilar true and predicted probabilities are for a single sample.
 
 Let $\mathcal{D}$ be a dataset such that
-$ \mathcal{D} = \{ (\pmb x_s, \pmb w_s)\}_{s=1}^{S}$ where $x_s$ is an input vector and $w_s$ is a vector encoding the ground truth (i.e. all indices have value $0$, except on the index of the class which $x_s$ represents where is value $1$).
+$ \mathcal{D} = \{ (\pmb x_s, \pmb w_s)\}_{s=1}^{S}$ where $x_s$ is an input vector and $w_s$ is a vector encoding the ground truth (i.e. all indices have value $0$, except on the index of the class which $x_s$ represents where the value is $1$).
 
 On this basis, \textit{cross-entropy loss} on $\mathcal{D}$ is defined as
 \begin{equation} \label{eq:loss-function}
@@ -21,11 +21,11 @@ Models trained with this loss are called \textit{softmax classifiers}. If $T = 2
 
 After we defined loss function $L(\pmb \theta)$  as in \ref{eq:loss-function}, we need to find an optimization algorithm to find its minimum. Since the function is not linear in $\pmb \theta$, a nonlinear optimization algorithm is needed. A popular choice in deep learning is \textit{Gradient Descent}
 
-Gradient Descent is an iterative optimization algorithm that is used for finding the minimum of a function. It is based on the first derivative of the function which minimum needs to be found. This means that the function must be differentiable. 
+The Gradient Descent is an iterative optimization algorithm that is used for finding the minimum of a function. It is based on the first derivative of the function whose minimum needs to be found. This means that the function must be differentiable. 
 
-Let $\nabla f$ be a vector of all partial derivatives of a function $f: \mathbb{R}^N \mapsto \mathbb{R}^N$. Then $\nabla f(\pmb x) = (f_{x_1}(\pmb x), ..., f_{x_n}(\pmb x))$  encodes how fast $f$ changes with all arguments $x_1, ..., x_n$. That's exactly what is needed for optimizing $L(\pmb \theta)$. Compute the direction of greatest increase $\nabla L(\pmb \theta)$ and move in the opposite direction. The \textit{step size} is defined by \textit{learning rate} - hyperparameter $\alpha$.  
+Let $\nabla f$ be a vector of all partial derivatives of a function $f: \mathbb{R}^N \mapsto \mathbb{R}^N$. Then $\nabla f(\pmb x) = (f_{x_1}(\pmb x), ..., f_{x_n}(\pmb x))$  encodes how fast $f$ changes with all arguments $x_1, ..., x_n$. That's exactly what is needed for optimizing $L(\pmb \theta)$. Compute the direction of the greatest increase, i.e. $\nabla L(\pmb \theta)$, and move in the opposite direction. The size of that move is called \textit{step size} and it is defined by \textit{learning rate} - hyperparameter $\alpha$.  
 
-Pseudo code for Gradient descent is shown in the Algorithm \ref{alg:gradient-descent}.
+Pseudo code for Gradient descent is presented in the Algorithm \ref{alg:gradient-descent}.
 
 \begin{algorithm}[htb]
 \caption{Gradient Descent}
@@ -42,9 +42,9 @@ Pseudo code for Gradient descent is shown in the Algorithm \ref{alg:gradient-des
 }
 \end{algorithm}
 
-This algorithm is simple since the only requirement is that $f$ is differentiable and efficient since it requires only first derivatives. A problem that can occur is that $\| \pmb \theta^{'}\|  \approx 0$ can happen at all critical points - minimum, maximum and saddle point.
+This algorithm is simple and efficient. Simple since the only requirement is that $f$ is differentiable and efficient because it requires only first derivatives. A problem that can occur is that $\| \pmb \theta^{'}\|  \approx 0$ can happen at all critical points - minimum, maximum and saddle point.
 
-To speed up convergence of it, \textit{momentum} is introduced using hyperparameter $\beta$. It increases step size dynamically by using $velocity \pmb v$. Velocity builds up momentum if successive gradients are similar. Pseudo code for Gradient descent with momentum is shown in the Algorithm \ref{alg:gradient-descent-momentum}
+To speed up convergence of it, \textit{momentum} is introduced using hyperparameter $\beta$. It increases step size dynamically by using $velocity$ $\pmb v$. Velocity builds up momentum if successive gradients are similar. Pseudo code for Gradient descent with momentum is shown in the Algorithm \ref{alg:gradient-descent-momentum}
 
 \begin{algorithm}[htb]
 \caption{Gradient Descent with momentum}
@@ -52,13 +52,13 @@ To speed up convergence of it, \textit{momentum} is introduced using hyperparame
 
 \KwIn{$\pmb \theta, L, \alpha, \beta $}
 
-$\pmb v \leftarrow \pmb 0$
+$\pmb v \leftarrow \pmb 0$\;
 \While {$true$}{
     $\pmb \theta^{'} \leftarrow \nabla L(\pmb \theta)$\;
     \If {$\| \pmb \theta^{'}\|  \approx 0 $} {
     		\Return\;
     }
-    $\pmb v \leftarrow  \beta \pmb v - \alpha * \pmb \theta^{'}$
+    $\pmb v \leftarrow  \beta \pmb v - \alpha * \pmb \theta^{'}$\;
     $\pmb \theta \leftarrow \pmb \theta + \pmb v$\;
 }
 \end{algorithm}
@@ -71,21 +71,21 @@ Idea behind the Gradient Descent with \textit{Nesterov Momentum} which works oft
 
 \KwIn{$\pmb \theta, L, \alpha, \beta $}
 
-$\pmb v \leftarrow \pmb 0$
+$\pmb v \leftarrow \pmb 0$ \;
 \While {$true$}{
     $\pmb \theta^{'} \leftarrow \nabla L(\pmb \theta + \pmb v)$\;
     \If {$\| \pmb \theta^{'}\|  \approx 0 $} {
     		\Return\;
     }
-    $\pmb v \leftarrow  \beta \pmb v - \alpha * \pmb \theta^{'}$
+    $\pmb v \leftarrow  \beta \pmb v - \alpha * \pmb \theta^{'}$\;
     $\pmb \theta \leftarrow \pmb \theta + \pmb v$\;
 }
 \end{algorithm}
 
-So far, $L(\pmb \theta)$ is computed based on the whole training dataset $\mathcal{D}$. Therefore, time complexity increases linearly with number of samples in $\mathcal{D}$. That can be problematic if $\mathcal{D}$ is large. Instead of having a whole dataset $\mathcal{D}$ as a \textit{batch}, we can evaluate $L(\pmb \theta)$ on a subset of the training dataset with $S$ number of samples. If $S = |\mathcal{D}|$, it is called \textit{Batch Gradient descent}. But we can split the training dataset $\mathcal{D}$ into several \textit{minibatches} (subsets) of cardinality $S$ and process them one by one (one per iteration). One full run through the training set is called \textit{epoch}. Usually training takes many epochs. Resulting algorithm is called \textit{Minibatch Gradient Descent} or \textit{Stochastic Gradient Descent} (SGD) if $S = 1$. In practice, it is often called SGD even if $S > 1$. Time for single iteration is now independent of dataset size and depends only on size of a minibatch. Typically, $S$ is 64, 128, 256 or 512. In general, $S$ is usually $2^{N}$ because of efficiency reasons (data parallelism). Decreasing $S$ decreases computation time per iteration, memory required on GPU 	(minibatch processed as whole) and accuracy of the gradient estimate. It is important to sample minibatches randomly to break (possible) ordering in a dataset. In practice, usually training set is shuffled once or before every epoch and then processed sequentially in minibatches. 
+So far, $L(\pmb \theta)$ is computed based on the whole training dataset $\mathcal{D}$. Therefore, time complexity increases linearly with number of samples in $\mathcal{D}$. That can be problematic if $\mathcal{D}$ is large. Instead of having a whole dataset $\mathcal{D}$ as a \textit{batch}, we can evaluate $L(\pmb \theta)$ on a subset of the training dataset with $S$ number of samples. If $S = |\mathcal{D}|$, it is called \textit{Batch Gradient descent}. But we can split the training dataset $\mathcal{D}$ into several \textit{minibatches} (subsets) of cardinality $S$ and process them one by one (one per iteration). One full run through the training set is called \textit{epoch}. Usually training takes many epochs. Resulting algorithm is called \textit{Minibatch Gradient Descent} or \textit{Stochastic Gradient Descent} (SGD) if $S = 1$. In practice, it is often called SGD even if $S > 1$. Time for a single iteration is now independent of dataset size and depends only on size of a minibatch. Typically, $S$ is 64, 128, 256 or 512. In general, $S$ is usually $2^{N}$ because of efficiency reasons (data parallelism). Decreasing $S$ decreases the computation time per iteration, the amount of memory required on GPU (minibatch processed as whole) and the accuracy of the gradient estimate. It is important to sample minibatches randomly to break (possible) ordering in a dataset. In practice, usually training set is shuffled once or before every epoch and then processed sequentially in minibatches. 
 
 
-There are many alternatives to gradient descent which have an advantage of not having to choose the learning rate. An interested reader can find an overview of gradient descent optimization algorithms in \cite{gradient-descent-overview}. 
+There are many alternatives to the gradient descent which have an advantage of not having to choose the learning rate. An interested reader can find an overview of gradient descent optimization algorithms in \cite{gradient-descent-overview}. 
 
 
 
