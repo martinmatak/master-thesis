@@ -1,10 +1,8 @@
 \textit{Feedforward neural networks} or \textit{multilayer peceptrons} (MLPs) are the essential deep learning models. A feedforward neural network defines a mapping $f (\pmb{x} ; \pmb{\theta}) = \pmb{y}$ and learns the value of the parameters $\pmb{\theta}$ that result in the best function approximation.
 
-One example of such a model is shown in the Figure \ref{fig:basic-cnn}. A neural network consists of several \textit{layers}. There is always one \textit{input} layer, followed by one or more \textit{hidden} layers and finally, there is an \textit{output layer}. The number of layers (without an input layer) defines a \textit{depth} of the model. There is no precise definition, but neural networks with more than three layers are called \textit{deep} neural networks. 
+A neural network consists of several \textit{layers}. There is always one \textit{input} layer, followed by one or more \textit{hidden} layers and finally, there is an \textit{output layer}. The number of layers (without an input layer) defines a \textit{depth} of the model. There is no precise definition, but neural networks with more than three layers are called \textit{deep} neural networks. 
 
-When it comes to feedforward neural networks, a network is an directed acyclic graph. Vertices of such a graph are called \textit{units} or \textit{neurons} and edges are called \textit{weights}. Vertices represent scalar functions of an input. Weights are the parameters $\pmb \theta$ which a neural network learns. Edges define data flow.
-
-The \textit{Convolutional Neural Networks} (CNNs) which are described in the Subsection \ref{subsection:convolutionalNN} are a specific kind of feedforward neural networks. If there are cycles in a graph, we are probably talking about the \textit{Recurrent Neural Networks} (RNNs)which are used in domains where a context is important. For instance in the Natural Language Processing. However, RNNs are out of the scope of this thesis and won't be further analysed.
+When it comes to feedforward neural networks, a network is a directed acyclic graph. Vertices of such a graph are called \textit{units} or \textit{neurons} and edges are called \textit{weights}. Vertices represent scalar functions of an input. Weights are the parameters $\pmb \theta$ which a neural network learns. Edges define data flow. One example of such a model is shown in the Figure \ref{fig:basic-cnn}.
 
 \begin{figure}
 \begin{tikzpicture}[
@@ -52,7 +50,9 @@ net/.style={
 \label{fig:basic-cnn}
 \end{figure}
 
-A typical architecture of one neuron can be seen in the Figure \ref{fig:basic-neuron}. That specific neuron performs an operation $ f(net) = y $ where $net = x1*w1 + x2*w2 + x3*w3 + bias$.  Bias is usually modelled as an additional input with the corresponding weight $w=1$. Then a neuron performs operation $ f(\pmb x \times \pmb w) = y$ where $\times$ denotes cross-product in between two vectors. Function $f$ is called an \textit{activation function} and usually is the same for all the neurons in the same layer. In the input layer that's just mapping from input to output, i.e. $f(x) = y$, but in the other layers, those are usually non-linear functions. 
+A typical architecture of one neuron can be seen in the Figure \ref{fig:basic-neuron}. That specific neuron performs an operation $ f(net) = y $ where $net = x1*w1 + x2*w2 + x3*w3 + bias$.  Bias is usually modelled as an additional input with the corresponding weight $w=1$. Then a neuron performs operation $ f(\pmb x \times \pmb w) = y$ where $\times$ denotes cross-product in between two vectors. Function $f$ is called an \textit{activation function} and usually is the same for all the neurons in the same layer. In the input layer that's just mapping from input to output, i.e. $f(x) = y$, but in the other layers those are usually non-linear functions. 
+
+The \textit{Convolutional Neural Networks} (CNNs), which are described in the Subsection \ref{subsection:convolutionalNN}, are a specific kind of feedforward neural networks. They are the most popular in the computer vision domain. If there are cycles in a graph, we are probably talking about the \textit{Recurrent Neural Networks} (RNNs) which are used in domains where a context is important. For instance in the Natural Language Processing. However, RNNs are out of the scope of this thesis and won't be further analysed.
 
 \begin{figure}
 \begin{tikzpicture}[

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  4 DEC 2018 12:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  5 DEC 2018 18:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1555,29 +1555,29 @@ Writing index file thesis.idx
 \glo@main@file=\write7
 \openout7 = `thesis.glo'.
 
-Package glossaries Info: Writing glossary file thesis.glo on input line 49.
+Package glossaries Info: Writing glossary file thesis.glo on input line 53.
 \glo@acronym@file=\write8
 \openout8 = `thesis.acn'.
 
-Package glossaries Info: Writing glossary file thesis.acn on input line 49.
+Package glossaries Info: Writing glossary file thesis.acn on input line 53.
 (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 100.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 104.
+LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 104.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1645,7 +1645,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 100.
+LaTeX Info: Redefining \microtypecontext on input line 104.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1675,10 +1675,10 @@ ABD: EveryShipout initializing macros
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 100.
+ on input line 104.
 
 \AtBeginShipoutBox=\box58
-Package hyperref Info: Link coloring OFF on input line 100.
+Package hyperref Info: Link coloring OFF on input line 104.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1689,10 +1689,10 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 100.
-LaTeX Info: Redefining \ref on input line 100.
-LaTeX Info: Redefining \pageref on input line 100.
-LaTeX Info: Redefining \nameref on input line 100.
+LaTeX Info: Redefining \nameref on input line 104.
+LaTeX Info: Redefining \ref on input line 104.
+LaTeX Info: Redefining \pageref on input line 104.
+LaTeX Info: Redefining \nameref on input line 104.
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write9
 \openout9 = `thesis.out'.
@@ -1730,7 +1730,7 @@ LaTeX Info: Redefining \nameref on input line 100.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 106.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 110.
 
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/t1lmss.fd
@@ -1740,77 +1740,77 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 106.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 110.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.40245pt on input line 106.
+(Font)              scaled to size 10.40245pt on input line 110.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 28.49991pt on input line 106.
+(Font)              scaled to size 28.49991pt on input line 110.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <30> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 106.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 110.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 28.49991pt on input line 106.
+(Font)              scaled to size 28.49991pt on input line 110.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 18.99994pt on input line 106.
+(Font)              scaled to size 18.99994pt on input line 110.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 106.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 110.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 18.99994pt on input line 106.
+(Font)              scaled to size 18.99994pt on input line 110.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 16.14995pt on input line 106.
+(Font)              scaled to size 16.14995pt on input line 110.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 106.
+(Font)              scaled to size 11.39996pt on input line 110.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 106.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 110.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 16.14995pt on input line 106.
+(Font)              scaled to size 16.14995pt on input line 110.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 13.29996pt on input line 106.
+(Font)              scaled to size 13.29996pt on input line 110.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 106.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 110.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.29996pt on input line 106.
+(Font)              scaled to size 13.29996pt on input line 110.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.44997pt on input line 106.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 106.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 106.
+(Font)              scaled to size 10.44997pt on input line 110.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 110.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 110.
 
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 106.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 110.
 
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 106
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 110
 .
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 106
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 110
 .
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <11> on input line 106.
+(Font)              <11> on input line 110.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.69997> on input line 106.
+(Font)              <7.69997> on input line 110.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5.5> on input line 106.
-LaTeX Font Info:    Try loading font information for U+msa on input line 106.
+(Font)              <5.5> on input line 110.
+LaTeX Font Info:    Try loading font information for U+msa on input line 110.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1818,7 +1818,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 106.
+LaTeX Font Info:    Try loading font information for U+msb on input line 110.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1829,28 +1829,28 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 <graphics/TU_INF_header.pdf, id=67, 512.91624pt x 47.17625pt>
 File: graphics/TU_INF_header.pdf Graphic file (type pdf)
 <use graphics/TU_INF_header.pdf>
-Package pdftex.def Info: graphics/TU_INF_header.pdf  used on input line 106.
+Package pdftex.def Info: graphics/TU_INF_header.pdf  used on input line 110.
 (pdftex.def)             Requested size: 512.915pt x 47.17612pt.
 <graphics/TU_INF_Logo_gray.pdf, id=68, 171.64125pt x 46.1725pt>
 File: graphics/TU_INF_Logo_gray.pdf Graphic file (type pdf)
 <use graphics/TU_INF_Logo_gray.pdf>
-Package pdftex.def Info: graphics/TU_INF_Logo_gray.pdf  used on input line 106.
+Package pdftex.def Info: graphics/TU_INF_Logo_gray.pdf  used on input line 110.
 
 (pdftex.def)             Requested size: 171.64081pt x 46.17236pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 106.
+(Font)              <10.95> on input line 110.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 106.
+(Font)              <8> on input line 110.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 106.
+(Font)              <6> on input line 110.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 110.
  [1
 
 \openout6 = `thesis.ist'.
@@ -1860,13 +1860,13 @@ Package babel Info: Redefining ngerman shorthand "~
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./graph
 ics/TU_INF_header.pdf> <./graphics/TU_INF_Logo_gray.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 106.
+(babel)             in language  on input line 110.
  [2
 
 ]
@@ -1903,14 +1903,14 @@ Package babel Info: Redefining ngerman shorthand "~
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.31494pt on input line 107.
+(Font)              scaled to size 7.31494pt on input line 111.
 File: graphics/TU_INF_header.pdf Graphic file (type pdf)
 <use graphics/TU_INF_header.pdf>
-Package pdftex.def Info: graphics/TU_INF_header.pdf  used on input line 107.
+Package pdftex.def Info: graphics/TU_INF_header.pdf  used on input line 111.
 (pdftex.def)             Requested size: 512.915pt x 47.17612pt.
 File: graphics/TU_INF_Logo_gray.pdf Graphic file (type pdf)
 <use graphics/TU_INF_Logo_gray.pdf>
-Package pdftex.def Info: graphics/TU_INF_Logo_gray.pdf  used on input line 107.
+Package pdftex.def Info: graphics/TU_INF_Logo_gray.pdf  used on input line 111.
 
 (pdftex.def)             Requested size: 171.64081pt x 46.17236pt.
  [3
@@ -1920,59 +1920,56 @@ Package pdftex.def Info: graphics/TU_INF_Logo_gray.pdf  used on input line 107.
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 112.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 112.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 112.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 112.
  [5
 
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 112.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 112.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 112.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 112.
  [6
 
-]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 111.
- [7
+] [7
 
 ]
 [8
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 118.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 114.
+(babel)             in language  on input line 118.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 120.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 120.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 120.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 120.
  [9
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 120.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 120.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 120.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 120.
  [10
 
 ] [11
@@ -2013,13 +2010,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (./chapters/background/sections/gradient-descent.tex [7] [8] [9] [10])
 (./chapters/background/sections/backpropagation.tex [11])
 (./chapters/background/sections/convolutionalNN.tex))
-Overfull \hbox (1.16954pt too wide) in paragraph at lines 31--136
+Overfull \hbox (1.16954pt too wide) in paragraph at lines 31--140
 \T1/lmr/m/n/10.95 (-20) POOL - FC]. For more in-for-ma-tion about CNNs, please 
 con-sider the orig-i-nal paper[[]].
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--136
+Underfull \hbox (badness 10000) in paragraph at lines 31--140
 
  []
 
@@ -2036,20 +2033,20 @@ No complaints by nag.
 \tf@toc=\write10
 \openout10 = `thesis.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 163.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 163.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
 (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 163.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 163.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 167.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 8A9E6393B072A5B3DD9B372FC3056A3E;851.
+(rerunfilecheck)             Checksum: 3CB1082C6F8ACC9094E3057E848B1040;851.
  ) 
 Here is how much of TeX's memory you used:
- 44626 strings out of 492649
- 973743 string characters out of 6129622
- 1288485 words of memory out of 5000000
- 47387 multiletter control sequences out of 15000+600000
- 144846 words of font info for 196 fonts, out of 8000000 for 9000
+ 44560 strings out of 492649
+ 972451 string characters out of 6129622
+ 1278885 words of memory out of 5000000
+ 47326 multiletter control sequences out of 15000+600000
+ 144763 words of font info for 195 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,18n,103p,1967b,1874s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/lo
@@ -2076,10 +2073,10 @@ exlive/2018/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2018
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/
 2018/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2018/te
 xmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on thesis.pdf (32 pages, 363992 bytes).
+Output written on thesis.pdf (32 pages, 362822 bytes).
 PDF statistics:
- 458 PDF objects out of 1000 (max. 8388607)
- 397 compressed objects within 4 object streams
- 114 named destinations out of 1000 (max. 500000)
+ 455 PDF objects out of 1000 (max. 8388607)
+ 394 compressed objects within 4 object streams
+ 111 named destinations out of 1000 (max. 500000)
  30351 words of extra memory for PDF output out of 35830 (max. 10000000)
 
