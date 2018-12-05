@@ -29,6 +29,12 @@
 \newcommand{\authorname}{Martin Matak} % The author name without titles.
 \newcommand{\thesistitle}{Attacks on Neural Networks} % The title of the thesis. The English version should be used, if it exists.
 
+% Add dot in figure number (fix of latex version)
+% Added by Martin Matak
+\makeatletter
+\renewcommand{\counterwithin}{\@ifstar{\@csinstar}{\@csin}}
+\makeatother
+
 % Set PDF document properties
 \hypersetup{
     pdfpagelayout   = TwoPageRight,           % How the document is shown in PDF viewers (optional).
