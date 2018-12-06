@@ -23,4 +23,4 @@
 \contentsline {section}{\numberline {2.3}Backpropagation}{11}{section.2.3}
 \contentsline {section}{\numberline {2.4}Convolutional neural networks}{12}{section.2.4}
 \contentsline {chapter}{\chapternumberline {3}State-of-the-Art}{15}{chapter.3}
-\contentsline {chapter}{Bibliography}{17}{chapter*.12}
+\contentsline {chapter}{Bibliography}{17}{chapter*.13}

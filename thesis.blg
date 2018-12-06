@@ -4,50 +4,46 @@ The top-level auxiliary file: thesis.aux
 The style file: alpha.bst
 Database file #1: thesis-bibliography.bib
 Warning--empty year in iris-dataset
-Warning--empty journal in datasetCIFAR10
-Warning--empty year in datasetCIFAR10
-Warning--empty journal in datasetMNIST
 Warning--empty booktitle in Rumelhart:1986:LIR:104279.104293
-Warning--there's a number but no volume in datasetGTSRD
-You've used 19 entries,
+You've used 7 entries,
             2543 wiz_defined-function locations,
-            659 strings with 7750 characters,
-and the built_in function-call counts, 7819 in all, are:
-= -- 744
-> -- 489
+            604 strings with 5801 characters,
+and the built_in function-call counts, 3103 in all, are:
+= -- 307
+> -- 150
 < -- 6
-+ -- 179
-- -- 176
-* -- 575
-:= -- 1358
-add.period$ -- 57
-call.type$ -- 19
-change.case$ -- 140
-chr.to.int$ -- 18
-cite$ -- 25
-duplicate$ -- 296
-empty$ -- 493
-format.name$ -- 194
-if$ -- 1543
-int.to.chr$ -- 2
++ -- 54
+- -- 53
+* -- 224
+:= -- 508
+add.period$ -- 22
+call.type$ -- 7
+change.case$ -- 48
+chr.to.int$ -- 7
+cite$ -- 9
+duplicate$ -- 127
+empty$ -- 216
+format.name$ -- 62
+if$ -- 636
+int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 20
-newline$ -- 98
-num.names$ -- 57
-pop$ -- 137
+missing$ -- 8
+newline$ -- 39
+num.names$ -- 21
+pop$ -- 50
 preamble$ -- 1
-purify$ -- 159
+purify$ -- 55
 quote$ -- 0
-skip$ -- 245
+skip$ -- 103
 stack$ -- 0
-substring$ -- 256
-swap$ -- 41
+substring$ -- 168
+swap$ -- 28
 text.length$ -- 6
 text.prefix$ -- 3
 top$ -- 0
-type$ -- 148
-warning$ -- 6
-while$ -- 64
-width$ -- 23
-write$ -- 241
-(There were 6 warnings)
+type$ -- 52
+warning$ -- 2
+while$ -- 27
+width$ -- 9
+write$ -- 94
+(There were 2 warnings)

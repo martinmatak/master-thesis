@@ -30,4 +30,13 @@ domain=-6:6
 
 Pooling Layer is used to perform a downsampling operation along the spatial dimensions (width, height). After all, we must reduce an input image dimensions to produce an output of expected dimensions.  It is common to periodically insert a Pooling layer in-between successive convolutional layers in a ConvNet architecture.
 
-A simple CNN for classification could have the architecture [INPUT - CONV - RELU - POOL - FC]. For more information about CNNs, please consider the original paper\cite{krizhevsky2012imagenet}. 
+A simple CNN for classification could have the architecture [INPUT - CONV - RELU - POOL - FC]. A similar architecture is shown in the Figure \ref{fig:cnn}.
+
+ For more information about CNNs, please consider the original paper\cite{krizhevsky2012imagenet}. 
+ 
+ \begin{figure}[h]
+\includegraphics[width=13cm]{cnn}
+\caption{A simple deep neural network, image taken from \url{floydhub.com}}
+\label{fig:cnn}
+
+\end{figure}
