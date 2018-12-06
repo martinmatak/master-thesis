@@ -12,4 +12,10 @@
 \BOOKMARK [1][-]{section.2.3}{Backpropagation}{chapter.2}% 12
 \BOOKMARK [1][-]{section.2.4}{Convolutional neural networks}{chapter.2}% 13
 \BOOKMARK [0][-]{chapter.3}{State-of-the-Art}{}% 14
-\BOOKMARK [0][-]{chapter*.13}{Bibliography}{}% 15
+\BOOKMARK [1][-]{section.3.1}{Fast Gradient Sign Method \(FGSM\)}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.2}{Jacobian-based Saliency Map Attack}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.3}{CW}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.4}{Transfer based approach}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.5}{Ensemble approach}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.6}{Boundary attack}{chapter.3}% 20
+\BOOKMARK [0][-]{chapter*.13}{Bibliography}{}% 21
