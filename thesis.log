@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  6 DEC 2018 18:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  7 DEC 2018 14:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2031,17 +2031,22 @@ Package microtype Info: Loading generic protrusion settings for font family
 LaTeX Warning: Reference `sec:boundary-attack' on page 15 undefined on input li
 ne 16.
 
-[15] (./chapters/state-of-the-art/sections/fgsm.tex)
-(./chapters/state-of-the-art/sections/jsma.tex)
+[15] (./chapters/state-of-the-art/sections/fgsm.tex
+<graphics/gibbon.png, id=380, 948.54375pt x 404.51125pt>
+File: graphics/gibbon.png Graphic file (type png)
+<use graphics/gibbon.png>
+Package pdftex.def Info: graphics/gibbon.png  used on input line 12.
+(pdftex.def)             Requested size: 369.88582pt x 157.74023pt.
+)
+(./chapters/state-of-the-art/sections/jsma.tex) [16 <./graphics/gibbon.png>]
 (./chapters/state-of-the-art/sections/cw.tex)
 (./chapters/state-of-the-art/sections/transfer-based.tex)
-(./chapters/state-of-the-art/sections/ensemble-approach.tex) [16]
-(./chapters/state-of-the-art/sections/boundary-attack.tex)) [17] [18
-
-]
+(./chapters/state-of-the-art/sections/ensemble-approach.tex)
+(./chapters/state-of-the-art/sections/boundary-attack.tex)) [17] [18]
 (./thesis.ind) (./thesis.gls) (./thesis.acr) (./thesis.bbl
 bibitemlist
 [19
+
 
 ]) [20]
 No complaints by nag.
@@ -2054,18 +2059,18 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 7DE9AADC30533F316C43F8D734739AAE;1258.
+(rerunfilecheck)             Checksum: F0D4EC738EA8F41AEDF9958CB75E396F;1258.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 44661 strings out of 492649
- 974698 string characters out of 6129622
- 1277474 words of memory out of 5000000
- 47386 multiletter control sequences out of 15000+600000
- 145337 words of font info for 197 fonts, out of 8000000 for 9000
+ 44668 strings out of 492649
+ 974819 string characters out of 6129622
+ 1277550 words of memory out of 5000000
+ 47390 multiletter control sequences out of 15000+600000
+ 145420 words of font info for 198 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,18n,103p,1967b,1874s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
@@ -2093,10 +2098,10 @@ exlive/2018/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2018
 2018/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/tex
 mf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2018/texmf-dist
 /fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on thesis.pdf (34 pages, 582031 bytes).
+Output written on thesis.pdf (34 pages, 1663883 bytes).
 PDF statistics:
- 514 PDF objects out of 1000 (max. 8388607)
- 447 compressed objects within 5 object streams
+ 520 PDF objects out of 1000 (max. 8388607)
+ 450 compressed objects within 5 object streams
  124 named destinations out of 1000 (max. 500000)
- 30916 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 30921 words of extra memory for PDF output out of 35830 (max. 10000000)
 
