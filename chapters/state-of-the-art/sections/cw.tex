@@ -1,2 +1,46 @@
- According to the authors, this attack is often much more effective (and never worse) than all the others presented in the literature. 
-Attacks are evaluated on three datasets: ImageNet, MNIST and CIFAR-10. They also report that JSMA is always failing on ImageNet dataset due to memory complexity of the algorithm, i.e. ImageNet dimensions of an image (229x229x3) are too big for JSMA. This implies that JSMA could not work in my thesis as well if an image of a person is too big. Reported results for CW attack are showing 100\% success against all three datasets.
+According to the authors, this attack is often much more effective (and never worse) than all the others presented in the literature. Attacks are evaluated on three datasets: ImageNet, MNIST and CIFAR-10. They also report that JSMA is always failing on ImageNet dataset due to memory complexity of the algorithm, i.e. ImageNet dimensions of an image are too big for JSMA. This implies that JSMA could not work in my thesis as well if an image of a person is too big. Reported results for CW attack are showing 100\% success against all three datasets.
+
+% L norm introduction
+
+To quantify similarity in between two images, different distance metrics can be used. This is used when comparing how much an adversarial image is different from the original input. There are three widely-used distance metrics in the literature for generating adversarial examples, all of which are $L_p$ norms. The $L_p$ distance is written $||x - x'||_p$, where the $p$-norm is defined as
+
+\[
+||v||_p =( \sum_{i = 1}^{n} |v_i|^p)^{1/p}. 
+\]
+
+In other words, $L_0$ measures how many pixels are changed, $L_2$ measures standard euclidean distance and $L_\infty$ measures the maximum change to any of the coordinates. It's discussable which metric measures the human perceptual of similarity, but neither of the $L_p$ metrics is optimal.
+
+% end of L norm introduction
+
+Authors introduce three new attacks for the $L_0$, $L_2$, and $L_{ \infty }$ distance metrics. It's worth mentioning that their $L_0$ attack is the first published attack which can cause targeted misclassification on the ImageNet dataset. All three of them are based on optimization techniques.
+
+In this thesis, $L_2$ attack will be used and hence I explain it now.
+
+Let $t$ be the target class, $\pmb Z$ be the output of the targeted DNN before the softmax layer with $\pmb Z_i$ as an output for the class $i$, $\kappa$ a parameter that controls the confidence with which the misclassification occurs, and $\pmb x$ be the original input.
+Given $\pmb x$ and target class $t$, search for $\omega$ that solves
+
+\[
+\text{minimize } ||\frac{1}{2}*(tanh(\omega) + 1) - \pmb x||_2^2 + c * f(\frac{1}{2}(tanh(\omega) + 1))
+\]
+with $f$ defined as 
+\[
+f(\pmb x') = max(max\{\pmb Z(\pmb x ')_i : i \neq t\} - \pmb Z(x)_t, - \kappa).
+\]
+
+The unrestricted perturbation $\pmb \delta^*$ is then defined as 
+\[
+	\pmb \delta^*_i = \frac{1}{2} * (tanh ( \omega_i) + 1) - \pmb x_i
+\]
+and after converting it to the restricted perturbation $\pmb \delta$ (details in the original paper), an adversarial example $\pmb x^*$ is produced as 
+\[
+\pmb x^* = \pmb x +\pmb  \delta.
+\]
+
+
+ 
+
+
+
+
+
+
