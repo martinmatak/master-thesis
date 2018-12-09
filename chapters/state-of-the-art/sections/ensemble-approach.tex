@@ -7,7 +7,6 @@ The basic idea is to generate an adversarial image for \textit{the ensemble of t
 \begin{equation}\label{eq:ensemble-objective}
 argmin_{\pmb x^*} - log ((\sum_{i=1}^k \alpha_i \pmb J_i(\pmb x^*)) \cdot \pmb y^*) + \lambda d(\pmb x, \pmb x^*)
 \end{equation}
-'
 
 where $\pmb y^*$ is a vector encoding the target label specified by the adversary, $(\sum_{i=1}^k \alpha_i \pmb J_i(\pmb x^*)$ is the ensemble model, and $\alpha_i$ are the ensemble weights s.t. $\sum_{i=1}^k \alpha_i = 1$.
 
