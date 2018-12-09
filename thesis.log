@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  8 DEC 2018 17:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  9 DEC 2018 18:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2040,14 +2040,13 @@ Package pdftex.def Info: graphics/gibbon.png  used on input line 12.
 )
 (./chapters/state-of-the-art/sections/jsma.tex [16 <./graphics/gibbon.png>])
 (./chapters/state-of-the-art/sections/cw.tex [17])
-(./chapters/state-of-the-art/sections/transfer-based.tex) [18]
-(./chapters/state-of-the-art/sections/ensemble-approach.tex)
-(./chapters/state-of-the-art/sections/boundary-attack.tex)) [19] [20
-
-]
-(./thesis.ind) (./thesis.gls) (./thesis.acr) (./thesis.bbl
+(./chapters/state-of-the-art/sections/transfer-based.tex [18])
+(./chapters/state-of-the-art/sections/ensemble-approach.tex [19])
+(./chapters/state-of-the-art/sections/boundary-attack.tex)) [20] (./thesis.ind)
+(./thesis.gls) (./thesis.acr) (./thesis.bbl
 bibitemlist
 [21
+
 
 ]) [22]
 No complaints by nag.
@@ -2067,10 +2066,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 44674 strings out of 492649
- 974873 string characters out of 6129622
- 1277602 words of memory out of 5000000
- 47390 multiletter control sequences out of 15000+600000
+ 44676 strings out of 492649
+ 974910 string characters out of 6129622
+ 1277650 words of memory out of 5000000
+ 47391 multiletter control sequences out of 15000+600000
  145586 words of font info for 200 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,18n,103p,1967b,1874s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2099,10 +2098,10 @@ exlive/2018/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2018
 2018/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/tex
 mf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2018/texmf-dist
 /fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on thesis.pdf (36 pages, 1674128 bytes).
+Output written on thesis.pdf (36 pages, 1678734 bytes).
 PDF statistics:
- 528 PDF objects out of 1000 (max. 8388607)
- 456 compressed objects within 5 object streams
- 126 named destinations out of 1000 (max. 500000)
+ 535 PDF objects out of 1000 (max. 8388607)
+ 463 compressed objects within 5 object streams
+ 127 named destinations out of 1000 (max. 500000)
  30921 words of extra memory for PDF output out of 35830 (max. 10000000)
 

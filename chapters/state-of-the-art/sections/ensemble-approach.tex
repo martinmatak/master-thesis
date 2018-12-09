@@ -1,2 +1,14 @@
-This approach is also based on transferability of an adversarial image, but instead of generating an adversarial image for one neural network, an attacker generates it for several of them. The underlying assumption is that if an adversarial example works as expected among several models, it will work as expected for the one more as well. 
+The authors \cite{ensemble-attack} show that using the transfer based approach, introduced in the Section \ref{sec:transfer-based}, for the targeted misclassification attack, the target labels don't transfer well. That said, transfer based approach seems good for misclassification, but not for targeted misclassification as well. Goal of this ensemble-based approach is to solve this issue.
 
+This approach is also based on transferability of an adversarial image, but instead of generating an adversarial image for one neural network, an attacker generates it for several of them. The underlying assumption is that if an adversarial example works as expected among several models, there is a higher chance that it will work as expected for the one more as well. 
+
+The basic idea is to generate an adversarial image for \textit{the ensemble of the models}. Formally, given $k$ white-box models with softmax outputs being $\pmb J_1$, ..., $\pmb J_k$, an original image $\pmb x$, and its ground truth vector $\pmb y$ (index of the ground truth class has value $1$, all other values are $0$), the ensemble-based approach solves the following optimization problem:
+
+\begin{equation}\label{eq:ensemble-objective}
+argmin_{\pmb x^*} - log ((\sum_{i=1}^k \alpha_i \pmb J_i(\pmb x^*)) \cdot \pmb y^*) + \lambda d(\pmb x, \pmb x^*)
+\end{equation}
+'
+
+where $\pmb y^*$ is a vector encoding the target label specified by the adversary, $(\sum_{i=1}^k \alpha_i \pmb J_i(\pmb x^*)$ is the ensemble model, and $\alpha_i$ are the ensemble weights s.t. $\sum_{i=1}^k \alpha_i = 1$.
+
+The authors use two approaches to solve this problem: optimization-based and fast gradient-based. Optimization-based approach uses state-of-the-art optimizer to solve the objective equation \ref{eq:ensemble-objective} and the authors observe that it outputs  a large proportion of the targeted adversarial images whose target labels can transfer. The exact percentage depends on the architectures used for the ensemble and for the targeted DNN and can vary from 11\% up to 99\%. Fast gradient-based approach using the ensemble model gives result no better than using the single model.

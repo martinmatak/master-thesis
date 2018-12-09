@@ -2,7 +2,7 @@ This technique is used to attack the DNN in the black-box settings. The idea is 
 
 The dataset on which the substitute neural network is trained should be the similar to the dataset on which the targeted neural network is trained. Ideally, that would be the same dataset, but the assumption is that an attacker doesn't have an access to that data. 
 
-An attacker generates a Synthetic Dataset. It starts by querying the targeted DNN with several examples and obtains labels for them. Afterwards, the attacker expands the dataset using the Jacobian-based Dataset Augmentation and trains the substitute neural network. For more details how this is done, please consult the original paper  \citep{DBLP:journals/corr/PapernotMGJCS16}.
+An attacker generates a Synthetic Dataset. It starts by querying the targeted DNN with several examples and obtains labels for them. Afterwards, the attacker expands the dataset using the Jacobian-based Dataset Augmentation and trains the substitute neural network. For more details how this is done, please consult the original paper  \cite{DBLP:journals/corr/PapernotMGJCS16}.
 
 
 The Authors present good results for misclassification attack against MNIST dataset and GTSRD dataset \cite{datasetGTSRD}. Targeted misclassification is not presented in the paper.
