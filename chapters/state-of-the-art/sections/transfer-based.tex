@@ -1,2 +1,8 @@
- Adversarial images are crafted then for a substitute DNN using a white-box approach. Those images are used then as adversarial images for a black-box DNN as well.
-The Authors present results for misclassification attack against MNIST dataset and GTSRD dataset \cite{datasetGTSRD}. 
+This technique is used to attack the DNN in the black-box settings. The idea is to create a \textit{substitute} DNN which should be similar to the targeted DNN. Quantization of similarity is omitted here because it's not well defined, but it should solve the same task.  Adversarial images are crafted then for a substitute DNN using a white-box approach, for instance FGSM \ref{sec:FGSM}. Those images are used then as adversarial images for a black-box DNN as well. The main idea is that the similar classifiers will the similar boundaries for a specific class and therefore a same adversarial example should be adversarial for both networks. 
+
+The dataset on which the substitute neural network is trained should be the similar to the dataset on which the targeted neural network is trained. Ideally, that would be the same dataset, but the assumption is that an attacker doesn't have an access to that data. 
+
+An attacker generates a Synthetic Dataset. It starts by querying the targeted DNN with several examples and obtains labels for them. Afterwards, the attacker expands the dataset using the Jacobian-based Dataset Augmentation and trains the substitute neural network. For more details how this is done, please consult the original paper  \citep{DBLP:journals/corr/PapernotMGJCS16}.
+
+
+The Authors present good results for misclassification attack against MNIST dataset and GTSRD dataset \cite{datasetGTSRD}. Targeted misclassification is not presented in the paper.
