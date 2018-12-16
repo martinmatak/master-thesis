@@ -1,7 +1,7 @@
 Now we already know how to train a neural network. We can use a cross-entropy loss function $L (\pmb \theta)$ and minibatch gradient descent with (Nesterov) momentum. For gradient descent, we must calculate $\nabla L (\pmb \theta)$.
 
 One way to obtain $\nabla L (\pmb \theta)$ is \textit{numerical differentiation}. 
-Let $p \in [1, dim(\pmb \theta)]$, $\epsilon \in \mathbb{R}$ be arbitrary small and $\pmb 1_p$ be a vector which is $1$ at position $p$ and $0$ otherwise. Then directly by definition of the derivative we obtain \ref{eq:numerical-derivative-1}
+Let $p \in [1, dim(\pmb \theta)]$, $\epsilon \in \mathbb{R}$ be arbitrary small, and $\pmb 1_p$ be a vector which is $1$ at position $p$ and $0$ otherwise. Then directly by definition of the derivative we obtain \ref{eq:numerical-derivative-1}
 
 \begin{equation}\label{eq:numerical-derivative-1}
 \nabla L (\pmb \theta) = (L(\pmb \theta + \pmb 1_p \epsilon) - L (\pmb \theta)) / \epsilon
@@ -12,11 +12,11 @@ Sometimes is \ref{eq:numerical-derivative-2} used instead of \ref{eq:numerical-d
 \nabla L (\pmb \theta) = (L(\pmb \theta + \pmb 1_p \epsilon) - L (\pmb \theta - \pmb 1_p \epsilon)) / 2 \epsilon
 \end{equation}
 
-This approach is easy to implement, but it's only an approximation ($\epsilon$ cannot be arbitrary small) and it is too inefficient in practice because $L$ must be evaluated $dim(\pmb\theta)$ times (modern DNNs have millions of parameters). Instead of \textit{numerical differentiation}, preferable way is to obtain $\textit{analytic grdient}$, i.e. obtain $\nabla L (\pmb \theta)$ analytically using calculus. It's more accurate (no approximation) and much more efficient (single evaluation).
+This approach is easy to implement, but it's only an approximation ($\epsilon$ cannot be arbitrary small) and it is too inefficient in practice because $L$ must be evaluated $dim(\pmb\theta)$ times (modern DNNs have millions of parameters). Instead of \textit{numerical differentiation}, preferable way is to obtain $\textit{analytic gradient}$, i.e. obtain $\nabla L (\pmb \theta)$ analytically using calculus. This approach is more accurate (no approximation) and much more efficient (single evaluation).
 
 
-A neural network is actually a computational graph composed of other functions. Loss function $L$ of the neural network is again a computational graph. Derivatives in such graphs can be computed iteratively using the \textit{chain rule}. It's used for computing the derivative of composition of two or more functions. 
+A neural network is actually a computational graph composed of other functions. The loss function $L$ of the neural network is again a computational graph. Derivatives in such graphs can be computed iteratively using the \textit{chain rule}. The chain rule is used for computing the derivative of composition of two or more functions. 
 
 Let $f: \mathbb{R} \mapsto \mathbb{R}$, $g: \mathbb{R} \mapsto \mathbb{R}$ and $F: \mathbb{R} \mapsto \mathbb{R}$ s.t. $F(x) = f(g(x))$. Then by the chain rule, $F'(x) = f'(g(x))g'(x)$.
 
-Based on the chain rule, a gradient of every weight can be efficiently computed and then updated as defined in the gradient descent method. The paper in which this famous algorithm is introduced is \cite{Rumelhart:1986:LIR:104279.104293}.
+Based on the chain rule, the gradient of every weight can be efficiently computed and then updated as defined in the gradient descent method. The paper in which this famous algorithm is introduced is \cite{Rumelhart:1986:LIR:104279.104293}.
