@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  9 DEC 2018 22:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  17 DEC 2018 22:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1984,12 +1984,19 @@ Package babel Info: Redefining ngerman shorthand "~
 
 ])
 (./chapters/introduction/sections/aim.tex
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 4.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 4.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
- [2])
+ [2] [3])
 (./chapters/introduction/sections/approach.tex)
-(./chapters/introduction/sections/outline.tex)) [3] [4]
+(./chapters/introduction/sections/outline.tex)) [4]
 (./chapters/background/background.tex [5
 
 ] [6]
@@ -2010,7 +2017,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (./chapters/background/sections/gradient-descent.tex [8] [9] [10])
 (./chapters/background/sections/backpropagation.tex [11])
 (./chapters/background/sections/convolutionalNN.tex [12]
-<cnn.jpg, id=340, 1259.70625pt x 425.59pt>
+<cnn.jpg, id=343, 1259.70625pt x 425.59pt>
 File: cnn.jpg Graphic file (type jpg)
 <use cnn.jpg>
 Package pdftex.def Info: cnn.jpg  used on input line 38.
@@ -2032,7 +2039,7 @@ LaTeX Warning: Reference `sec:boundary-attack' on page 15 undefined on input li
 ne 16.
 
 [15] (./chapters/state-of-the-art/sections/fgsm.tex
-<graphics/gibbon.png, id=380, 948.54375pt x 404.51125pt>
+<graphics/gibbon.png, id=383, 948.54375pt x 404.51125pt>
 File: graphics/gibbon.png Graphic file (type png)
 <use graphics/gibbon.png>
 Package pdftex.def Info: graphics/gibbon.png  used on input line 12.
@@ -2066,11 +2073,11 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 44678 strings out of 492649
- 974932 string characters out of 6129622
- 1277650 words of memory out of 5000000
- 47391 multiletter control sequences out of 15000+600000
- 145669 words of font info for 201 fonts, out of 8000000 for 9000
+ 44700 strings out of 492649
+ 975305 string characters out of 6129622
+ 1277762 words of memory out of 5000000
+ 47409 multiletter control sequences out of 15000+600000
+ 145539 words of font info for 200 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,18n,103p,1967b,1874s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
@@ -2098,10 +2105,10 @@ exlive/2018/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2018
 2018/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/tex
 mf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2018/texmf-dist
 /fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on thesis.pdf (36 pages, 1679804 bytes).
+Output written on thesis.pdf (36 pages, 1682592 bytes).
 PDF statistics:
- 539 PDF objects out of 1000 (max. 8388607)
- 467 compressed objects within 5 object streams
- 127 named destinations out of 1000 (max. 500000)
+ 542 PDF objects out of 1000 (max. 8388607)
+ 470 compressed objects within 5 object streams
+ 130 named destinations out of 1000 (max. 500000)
  30921 words of extra memory for PDF output out of 35830 (max. 10000000)
 

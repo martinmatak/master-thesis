@@ -1,15 +1,67 @@
-To the best of my knowledge, nobody executed an attack against a DNN in the domain of age estimation yet. Hence, one of the first questions which this thesis aims to answer is the question whether already existing techniques can be used for attacks in this domain.
+\textbf{The goals} of this thesis, in no particular order, are the following:
+\begin{itemize}
 
-In order to further define aim of this work, an explanation of the major difference between two types of attacks against a neural network is necessary, namely the difference between \textit{white-box} attack and \textit{black-box} attack. 
-In white-box attacks, an adversary has all the information about the DNN under attack. The internal structure of the neural network, all the implementation details and values of all the variables in any moment are known to the attacker. In other words, the attacker has access to the source code and nothing is hidden.
-On the other hand, in black-box attacks an adversary doesn't have access to all the information. Depending on the precise definition of "black-box", more or less information is provided. In this thesis, the only capability of the black-box adversary is to observe the labels assigned by the DNN to chosen inputs.
+  \item \textbf{create a classifier for age estimation};
+  	\begin{itemize}
+  		\item Implement a DNN which receives an image as an input and outputs how old the person in the image is. 
+     \end{itemize}
+     
+  \item \textbf{attack the classifier in a white-box environment};
+  	\begin{itemize}
+ 		\item In the \textit{white-box} environment, an adversary has all the information about the DNN under attack. The internal structure of the neural network, all the implementation details and values of all the variables in any moment are known to the attacker. In other words, the attacker has access to the source code and nothing is hidden.
+ 	 \end{itemize}
+ 	 
+ \item \textbf{attack the classifier in a black-box environment}; and
+ \begin{itemize}
+ 	\item In the \textit{black-box} environment, an adversary doesn't have access to all the information. Depending on the precise definition of "black-box", more or less information is provided. In this thesis, the only capability of the black-box adversary is to observe the labels assigned by the DNN to chosen inputs.
+ \end{itemize}
+ 
+ \item \textbf{write a short survey on adversarial algorithms}.
+  	 \begin{itemize}
+  	 \item Three different white-box attacks and three different black-box attacks are analyzed and discussed.  All of them are used to attack the DNN used for age estimation.
+ \end{itemize}	
+ 
+\end{itemize}
 
-A natural question is which algorithm is the best one for the white-box attack and which one for the black-box attack? Several algorithms are run in the different settings and results are compared. That provides an answer to the question which algorithm to use in which scenario.
+\textbf{The contributions} of this thesis, sorted by priority, can be enumerated as follows:
+\begin{enumerate}
 
-Furthermore, in the domain of age estimation, it makes sense to be less strict about the targeted label. For instance, if an image of a minor is classified as an image of a person over a fifty years old, this could lead to the same consequences, no matter if it is classified as a 55 or 65 years old person. More precisely, if the goal is to hit any label from a specific group of labels, I define that attack as \textit{semi-targeted misclassification}. Of course, a group of labels must be smaller than a whole set of possible labels, otherwise the task is trivial. In general, this attack makes sense in any environment where labels can be clustered.
+\item \textbf{the new Semi-targeted Black-box Attack is introduced};
+	\begin{itemize}
+	\item Furthermore, in the domain of age estimation, it makes sense to be less strict about the targeted label. For instance, if an image of a minor is classified as an image of a person over a fifty years old, this could lead to the same consequences, no matter if it is classified as a 55 or 65 years old person. More precisely, if the goal is to hit any label from a specific group of labels, I define that attack as \textit{semi-targeted misclassification}. Of course, a group of labels must be smaller than a whole set of possible labels, otherwise the task is trivial. In general, this attack makes sense in any environment where labels can be clustered.
 
 To this end, I adapted one already existing black-box approach is adapted to this more relaxed setting. Such a relaxation is not yet introduced in the literature since it is very domain specific. Consequently, the results can't be compared against previous work of that kind, but results are compared with targeted black-box misclassification attacks. This comparison is explained in more details in Section \ref{approach}. 
+	\end{itemize}
+	
+\item \textbf{adversarial algorithms are evaluated in the different environments}; and
+	\begin{itemize}
+		\item A natural question is which algorithm is the best one for the white-box attack and which one for the black-box attack? Several algorithms are run in the different settings and results are compared. That provides an answer to the question which algorithm to use in which scenario.
+	\end{itemize}
 
-In terms of development, a DNN is implemented which receives an image as an input and outputs how old the person in the image is. In other words, a DNN for age estimation is trained. All the attacks are executed against this DNN. 
+\item \textbf{a framework for the white-box and the black-box attacks is developed}.
+	\begin{itemize}
+	\item Next, the framework is constructed for a white-box and a black-box targeted misclassification attack. In other words, while treating the DNN as a white-box or a black-box, images  are constructed in a way that the targeted DNN outputs a specific year. Finally, the framework is extended with capability to craft semi-targeted black-box misclassification attacks.
+	\end{itemize}
+\end{enumerate}
 
-Next, the framework is constructed for a white-box and a black-box targeted misclassification attack. In other words, while treating the DNN as a white-box or a black-box, images  are constructed in a way that the targeted DNN outputs a specific year. Finally, the framework is extended with capability to craft semi-targeted black-box misclassification attacks.
+To achieve the goals of this thesis and consequently provide the contributions, I had to face and overcome \textbf{the challenges}: 
+\begin{itemize}
+
+\item \textbf{Can the already existing attacks be adapted on the age estimation task?}
+	\begin{itemize}
+		\item None of the attacks from related work is performed in the age estimation domain.
+	\end{itemize}
+	
+\item \textbf{Does image size have an impact on the attack?}
+	\begin{itemize}
+	\item Most of the attacks in related work are performed against the images with the small dimensions.
+	\end{itemize}
+	
+\item \textbf{How to measure attacks?}
+	\begin{itemize}
+	\item Is the accuracy of the classifier the only measure? 
+	\item If an image is changed too much, the attack becomes obvious.
+	\item If an API used in the black-box environment is queried too many times, the attack can easily get detected.
+	\end{itemize}
+\end{itemize}
+
