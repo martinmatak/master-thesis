@@ -1,24 +1,24 @@
-The attack is based on a greedy algorithm that picks pixels to modify one at a time, increasing the target classification on each iteration.  \textit{Adversarial Saliency Maps} - maps which measure how much every pixel is important for an image to be classified as a target class - are created. If a value is large, it means that changing that pixel will increase the likelihood of the image being classified as a target class. 
+This attack is based on a greedy algorithm that picks pixels to modify one at a time, increasing the target classification in each iteration.  \textit{Adversarial Saliency Maps} - maps that measure an impact of a pixel on an image being classified as a target class - are created. If a value is large, it means that changing that pixel will increase the likelihood of the image being classified as a target class. 
 
-The idea is as follows. Given the saliency map for a target class, the algorithm picks the pixel with the highest impact and modifies it. In the next iteration, the second most important pixel is changed and so on. This continues until either the attack succeeds to trick the classifier or too many pixels get changed and the attack becomes detectable. In the algorithm, instead of picking the one pixel, a pair of pixels is picked.
+The idea is , given the saliency map for a target class, the algorithm picks the pixel with the highest impact and modifies it. In the next iteration, the second most important pixel is changed and so on. This continues until either the attack succeeds to trick the classifier or too many pixels get changed and the attack becomes detectable. In the actual implementation of the algorithm, instead of picking one pixel, a pair of pixels is picked.
 
-To be more precise, let $t$ be the target class, $\pmb x$ be the input to the classifier and $\pmb F$ be the output of the softmax layer. The saliency map in terms of pair pixels $p, q$ is defined as:
+Formally, let $t$ be the target class, $\pmb x$ be the input to the classifier and $\pmb F$ be the output of the softmax layer. Then the adversarial saliency map in terms of pair pixels $p, q$ is defined as:
 
 \[
-\alpha_{pq} = \sum_{i \in \{p,q\}} \frac{\partial \pmb F(\pmb x)_t}{\partial \pmb x_i} 
+\alpha_{pq} = \sum_{i \in \{p,q\}} \frac{\partial \pmb F(\pmb x)_t}{\partial \pmb x_i},
 \]
 
 \[
 \beta_{pq} = ( \sum_{i \in \{p,q\}} \sum_{j \neq t} \frac{\partial \pmb F (\pmb x)_j }{\partial \pmb x _i}) - \alpha_{pq}
 \]
 
-so that $\alpha_{pq}$ represents the impact of changing the both pixels $p$ and $q$ on the input being classified as $t$ and $\beta_{pq}$ represents how
-much changing $p$ and $q$ will change all other outputs.
+so that $\alpha_{pq}$ represents the impact of changing the both pixels $p$ and $q$ on the input being classified as $t$, and $\beta_{pq}$ represents how
+much changing $p$ and $q$ will change all the other outputs.
 
-Now the algorithm picks $p$ and $q$ such that the target class gets more likely ( $\alpha_pq > 0$), but other classes get less likely ($\beta_pq < 0$) and that combination is as strong as possible, i.e. that $ - \alpha_{pq} * beta_{pq}$ is largest. This can be formalized as:
+Now the algorithm picks $p$ and $q$ such that the target class gets more likely ( $\alpha_{pq} > 0$), but other classes get less likely ($\beta_{pq} < 0$) and that combination is as strong as possible, i.e. that $ - \alpha_{pq} * \beta_{pq}$ is as large as possible. This can be formalized as:
 
 \[
-(p*, q*) = arg max_{p, q} (- \alpha_{pq} * \beta_{pq}) * (\alpha_{pq} > 0) * (\beta_{pq} < 0)
+(p^*, q^*) = arg max_{p, q} (- \alpha_{pq} * \beta_{pq}) * (\alpha_{pq} > 0) * (\beta_{pq} < 0)
 \]
 
-Starting with a normal sample, two by two pixels are picked and perturbed by a constant offset $\epsilon$. Authors show that the JSMA algorithm can effectively  produce MNIST samples that are correctly classified by human subjects but misclassified into a specific target class by a DNN with high success rate. 
+Starting with an original input, two by two pixels are picked and perturbed by a constant offset $\epsilon$. The authors \cite{DBLP:journals/corr/PapernotMJFCS15}show that JSMA attack can effectively produce MNIST samples that are correctly classified by human subjects, but misclassified into a specific target class by a DNN with a high success rate. 

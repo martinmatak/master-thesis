@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  18 DEC 2018 18:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  18 DEC 2018 23:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2053,13 +2053,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 <graphics/gibbon.png, id=391, 948.54375pt x 404.51125pt>
 File: graphics/gibbon.png Graphic file (type png)
 <use graphics/gibbon.png>
-Package pdftex.def Info: graphics/gibbon.png  used on input line 12.
+Package pdftex.def Info: graphics/gibbon.png  used on input line 14.
 (pdftex.def)             Requested size: 369.88582pt x 157.74023pt.
 )
 (./chapters/state-of-the-art/sections/jsma.tex [16 <./graphics/gibbon.png>])
 (./chapters/state-of-the-art/sections/cw.tex [17])
 (./chapters/state-of-the-art/sections/transfer-based.tex [18])
-(./chapters/state-of-the-art/sections/ensemble-approach.tex) [19]
+(./chapters/state-of-the-art/sections/ensemble-approach.tex [19])
 (./chapters/state-of-the-art/sections/boundary-attack.tex)) [20] (./thesis.ind)
 (./thesis.gls) (./thesis.acr) (./thesis.bbl
 bibitemlist
@@ -2080,11 +2080,11 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: FFAC557D90DA2BF6C34C85052F103230;1291.
  ) 
 Here is how much of TeX's memory you used:
- 44657 strings out of 492649
- 973585 string characters out of 6129622
+ 44659 strings out of 492649
+ 973607 string characters out of 6129622
  1276763 words of memory out of 5000000
  47341 multiletter control sequences out of 15000+600000
- 157337 words of font info for 219 fonts, out of 8000000 for 9000
+ 157467 words of font info for 220 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,18n,103p,1967b,1874s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
@@ -2113,10 +2113,10 @@ fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-d
 ist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/texmf-dist/font
 s/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
 /urw/helvetic/uhvr8a.pfb>
-Output written on thesis.pdf (36 pages, 1716736 bytes).
+Output written on thesis.pdf (36 pages, 1718586 bytes).
 PDF statistics:
- 556 PDF objects out of 1000 (max. 8388607)
- 483 compressed objects within 5 object streams
+ 561 PDF objects out of 1000 (max. 8388607)
+ 488 compressed objects within 5 object streams
  132 named destinations out of 1000 (max. 500000)
  35529 words of extra memory for PDF output out of 35830 (max. 10000000)
 
