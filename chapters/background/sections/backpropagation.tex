@@ -1,7 +1,7 @@
 Now we already know how to train a neural network. We can use a cross-entropy loss function $L (\pmb \theta)$ and minibatch gradient descent with (Nesterov) momentum. For gradient descent, we must calculate $\nabla L (\pmb \theta)$.
 
 One way to obtain $\nabla L (\pmb \theta)$ is \textit{numerical differentiation}. 
-Let $p \in [1, dim(\pmb \theta)]$, $\epsilon \in \mathbb{R}$ be arbitrary small, and $\pmb 1_p$ be a vector which is $1$ at position $p$ and $0$ otherwise. Then directly by definition of the derivative we obtain \ref{eq:numerical-derivative-1}
+Let $p \in [1, dim(\pmb \theta)]$, $\epsilon \in \mathbb{R}$ be arbitrary small, and $\pmb 1_p$ encode a ground-truth label. Then directly by definition of the derivative we obtain \ref{eq:numerical-derivative-1}
 
 \begin{equation}\label{eq:numerical-derivative-1}
 \nabla L (\pmb \theta) = (L(\pmb \theta + \pmb 1_p \epsilon) - L (\pmb \theta)) / \epsilon

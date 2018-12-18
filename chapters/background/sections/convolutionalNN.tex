@@ -4,7 +4,7 @@ Convolutional Neural Network is a well-known deep learning architecture inspired
 
 Unlike a regular Neural Network as introduced in the previous subsection, the layers of a ConvNet have neurons arranged in 3 dimensions: width, height, depth (not the same as depth of the network). This makes sense, because an image has width, height and number of channels (depth). To reduce number of parameters, the neurons in a layer are only connected to a small fixed-size region of the layer before it and weights are shared among neurons in the same feature map (layer). Such a layer is called a convolutional layer. Except for convolutional layers, in the CNN architecture, there are usually \textit{Pooling Layers} (POOL) and \textit{Fully-Connected Layers} (FC), which are classic layers as introduced in a previous subsection. In CNNs, activation functions are also often referred to as separate layers. One of the most popular activation functions among CNNs is the \textit{ReLU} activation function. It is defined as in  \ref{eq:relu}
 \begin{equation}\label{eq:relu}
-f(x) = max (0, x)
+f(x) = max (0, x) \footnote{This function is not differentiable at x=0, but software implementations of neural network training usually return one of the one-sided derivatives rather than reporting that the derivative is not defined or raising an error. Such a solution works well in practice.}
 \end{equation}
 and its graph can be seen in the Figure \ref{fig:relu}.
 

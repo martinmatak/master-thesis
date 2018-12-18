@@ -28,6 +28,12 @@ R.~A. FISHER.
 \newblock The use of multiple measurements in taxonomic problems.
 \newblock {\em Annals of Eugenics}, 7(2):179--188.
 
+\bibitem[GBC16]{Goodfellow-et-al-2016}
+Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
+\newblock {\em Deep Learning}.
+\newblock MIT Press, 2016.
+\newblock \url{http://www.deeplearningbook.org}.
+
 \bibitem[GSS15]{fgsm-original}
 Ian Goodfellow, Jonathon Shlens, and Christian Szegedy.
 \newblock Explaining and harnessing adversarial examples.
