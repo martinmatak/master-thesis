@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  18 DEC 2018 17:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  18 DEC 2018 18:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2006,26 +2006,33 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
  [7]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <24.88> on input line 83.
+(Font)              <24.88> on input line 85.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 83.
+(Font)              <20.74> on input line 85.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 83.
+(Font)              <17.28> on input line 85.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 85.
+(Font)              <14.4> on input line 87.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 85.
+(Font)              <10> on input line 87.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 85.
+(Font)              <7> on input line 87.
 )
-(./chapters/background/sections/gradient-descent.tex [8] [9] [10])
-(./chapters/background/sections/backpropagation.tex [11])
+(./chapters/background/sections/gradient-descent.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+[9] [10]) (./chapters/background/sections/backpropagation.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11])
 (./chapters/background/sections/convolutionalNN.tex [12]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 7.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 7.
-<cnn.jpg, id=344, 1259.70625pt x 425.59pt>
+ [13]
+<cnn.jpg, id=354, 1259.70625pt x 425.59pt>
 File: cnn.jpg Graphic file (type jpg)
 <use cnn.jpg>
 Package pdftex.def Info: cnn.jpg  used on input line 38.
@@ -2039,19 +2046,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+)) [14 <./cnn.jpg>] (./chapters/state-of-the-art/state-of-the-art.tex [15
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-)) [13] [14 <./cnn.jpg>] (./chapters/state-of-the-art/state-of-the-art.tex
-
-LaTeX Warning: Reference `sec:boundary-attack' on page 15 undefined on input li
-ne 16.
-
-[15
-
-] (./chapters/state-of-the-art/sections/fgsm.tex
-<graphics/gibbon.png, id=390, 948.54375pt x 404.51125pt>
+]
+(./chapters/state-of-the-art/sections/fgsm.tex
+<graphics/gibbon.png, id=391, 948.54375pt x 404.51125pt>
 File: graphics/gibbon.png Graphic file (type png)
 <use graphics/gibbon.png>
 Package pdftex.def Info: graphics/gibbon.png  used on input line 12.
@@ -2079,17 +2078,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: FFAC557D90DA2BF6C34C85052F103230;1291.
-
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 44660 strings out of 492649
- 973624 string characters out of 6129622
- 1273865 words of memory out of 5000000
- 47342 multiletter control sequences out of 15000+600000
- 157467 words of font info for 220 fonts, out of 8000000 for 9000
+ 44657 strings out of 492649
+ 973585 string characters out of 6129622
+ 1276763 words of memory out of 5000000
+ 47341 multiletter control sequences out of 15000+600000
+ 157337 words of font info for 219 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,18n,103p,1967b,1874s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
@@ -2118,10 +2113,10 @@ fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2018/texmf-d
 ist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/texmf-dist/font
 s/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
 /urw/helvetic/uhvr8a.pfb>
-Output written on thesis.pdf (36 pages, 1716076 bytes).
+Output written on thesis.pdf (36 pages, 1716736 bytes).
 PDF statistics:
- 555 PDF objects out of 1000 (max. 8388607)
- 482 compressed objects within 5 object streams
+ 556 PDF objects out of 1000 (max. 8388607)
+ 483 compressed objects within 5 object streams
  132 named destinations out of 1000 (max. 500000)
  35529 words of extra memory for PDF output out of 35830 (max. 10000000)
 
