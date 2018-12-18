@@ -28,9 +28,11 @@
 
 \item \textbf{the new Semi-targeted Black-box Attack is introduced};
 	\begin{itemize}
-	\item Furthermore, in the domain of age estimation, it makes sense to be less strict about the targeted label. For instance, if an image of a minor is classified as an image of a person over a fifty years old, this could lead to the same consequences, no matter if it is classified as a 55 or 65 years old person. More precisely, if the goal is to hit any label from a specific group of labels, I define that attack as \textit{semi-targeted misclassification}. Of course, a group of labels must be smaller than a whole set of possible labels, otherwise the task is trivial. In general, this attack makes sense in any environment where labels can be clustered.
+	\item In the domain of age estimation, it makes sense to be less strict about the targeted label. For instance, if an image of a minor is classified as an image of a person over a fifty years old, this could lead to the same consequences (e.g. access to an age-restricted content), no matter if the minor is classified as a 55 or 65 years old person. 
+	
+	Formally, if the goal is to hit any label from a specific group of labels, I define that attack as \textit{semi-targeted misclassification}. Of course, a group of labels must be smaller than a whole set of possible labels, otherwise the task is trivial. In general, this attack makes sense in any environment where labels can be ordered or at least clustered.
 
-To this end, I adapted one already existing black-box approach is adapted to this more relaxed setting. Such a relaxation is not yet introduced in the literature since it is very domain specific. Consequently, the results can't be compared against previous work of that kind, but results are compared with targeted black-box misclassification attacks. This comparison is explained in more details in Section \ref{approach}. 
+To this end, I adapted one already existing black-box approach to this more relaxed setting. Such a relaxation is not yet introduced in the literature since it is very domain specific. Consequently, the results can't be compared against previous work of that kind, but results are compared with targeted black-box misclassification attacks. This comparison is explained in more details in Section \ref{approach}. 
 	\end{itemize}
 	
 \item \textbf{adversarial algorithms are evaluated in the different environments}; and
@@ -40,7 +42,7 @@ To this end, I adapted one already existing black-box approach is adapted to thi
 
 \item \textbf{a framework for the white-box and the black-box attacks is developed}.
 	\begin{itemize}
-	\item Next, the framework is constructed for a white-box and a black-box targeted misclassification attack. In other words, while treating the DNN as a white-box or a black-box, images  are constructed in a way that the targeted DNN outputs a specific year. Finally, the framework is extended with capability to craft semi-targeted black-box misclassification attacks.
+	\item I developed the framework for a white-box and a black-box targeted misclassification attack. In other words, while treating the DNN as a white-box or a black-box, images can be constructed in a way that the targeted DNN outputs a specific year. I also extended the framework with capability to craft semi-targeted black-box misclassification attacks.
 	\end{itemize}
 \end{enumerate}
 
