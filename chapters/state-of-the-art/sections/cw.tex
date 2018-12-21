@@ -12,7 +12,7 @@ In other words, $L_0$ measures how many pixels are changed, $L_2$ measures stand
 
 The authors \cite{DBLP:journals/corr/CarliniW16a} introduce three new attacks for the $L_0$, $L_2$, and $L_{ \infty }$ distance metrics. It is worth mentioning that their $L_0$ attack is the first published attack which can cause targeted misclassification on the ImageNet dataset. All three of them are based on optimization techniques.
 
-In this thesis, $L_2$ attack is used and hence I explain it now.
+In this thesis, $L_2$ is used in the attack and hence I explain it now.
 
 Let $t$ be the target class, $\pmb Z$ be the output of the targeted DNN before the softmax layer with $\pmb Z_i$ as an output for the class $i$, $\kappa$ a parameter that controls the confidence with which the misclassification occurs, $c$ a constant value, and $\pmb x$ be the original input.
 Given $\pmb x$ and the target class $t$, search for $\omega$ that solves
@@ -34,7 +34,7 @@ and after converting it to the restricted perturbation $\pmb \delta$ (details in
 \pmb x^* = \pmb x +\pmb  \delta.
 \]
 
-According to the authors, this attack is often much more effective (and never worse) than all the others presented in the literature. Attacks are evaluated on the three datasets: ImageNet, MNIST and CIFAR-10. They also report that JSMA attack, an attack introduced in Section \ref{sec:JSMA}, is always failing on ImageNet dataset due to memory complexity of the algorithm, i.e. dimensions of images in ImageNet dataset are too big for JSMA attack. This implies that JSMA attack could not work in my thesis as well if an image of a person is too big. Reported results for CW attack are showing 100\% success against the all three datasets.
+According to the authors, this attack is often much more effective (and never worse) than all the others presented in the literature. Attacks are evaluated on the three datasets: ImageNet, MNIST and CIFAR-10. They also report that the JSMA attack, an attack introduced in Section \ref{sec:JSMA}, is always failing on the ImageNet dataset due to memory complexity of the algorithm, i.e. dimensions of images in ImageNet dataset are too big for JSMA attack. This implies that the JSMA attack would not work in my thesis as well if an image of a person is too big. Reported results for the CW attack are showing 100\% success against all three datasets.
 
 
 
