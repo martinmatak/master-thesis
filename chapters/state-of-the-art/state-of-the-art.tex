@@ -1,18 +1,18 @@
-Machine learning (ML) is a rapidly evolving field and a lot of papers have been published in ML area in the last few years. However, since the focus of this master thesis is on generating adversarial examples, a related work can be separated into two topics, depending if a DNN is treated as a white-box or a black-box. 
+Machine learning (ML) is a rapidly evolving field and a lot of papers have been published in ML area in the last few years. However, since the focus of this master thesis is on generating adversarial examples, the related work can be separated into two categories, one in which DNNs are treated as a white-box and one where they are treated as a black-box. 
 
-In terms of white-box attacks, \textit{Fast Gradient Sign Method} (FGSM) attack is presented in  in \cite{fgsm-original}. The attack computes an adversarial image for a non-targeted attack based on the direction of the gradient of a DNN. FGSM attack is presented in more details in Section \ref{sec:FGSM}.
+In terms of white-box attacks, the \textit{Fast Gradient Sign Method} (FGSM) attack is presented  in \cite{fgsm-original}. The attack computes an adversarial image for a non-targeted attack based on the direction of the gradient of a DNN. The FGSM attack is presented in more details in Section \ref{sec:FGSM}.
 
-In \cite{DBLP:journals/corr/PapernotMJFCS15}, \textit{Jacobian-based Saliency Map Attack} (JSMA) attack for generating adversarial examples is introduced. The attack is based on identifying regions in an image which have a higher impact on a DNN's output during the classification. JSMA attack is presented in more details in  Section \ref{sec:JSMA}.
+In \cite{DBLP:journals/corr/PapernotMJFCS15}, the \textit{Jacobian-based Saliency Map Attack} (JSMA) for generating adversarial examples is introduced. The attack is based on identifying regions in an image which have a higher impact on a DNN's output during the classification. JSMA attack is presented in more details in  Section \ref{sec:JSMA}.
 
-In \cite{DBLP:journals/corr/CarliniW16a}, \textit{Carlini \& Wagner} (CW) attack is presented. The attack is based on formulating an attack as an optimization problem and then using a state-of-the-art optimizer to solve it. The attack is presented in more details in Section \ref{sec:CW}.
+In \cite{DBLP:journals/corr/CarliniW16a}, the \textit{Carlini \& Wagner} (CW) attack is presented. The attack is based on formulating an attack as an optimization problem and then using a state-of-the-art optimizer to solve it. The attack is presented in more details in Section \ref{sec:CW}.
 
 All three attacks, FGSM, JSMA, and CW are used in the experiments in this thesis.
 
-On the black-box side of the attacks, \textit{transfer-based} approach introduced in \cite{DBLP:journals/corr/PapernotMGJCS16} is a popular choice. This approach uses a subsitute DNN that is trained on a similar dataset as the targeted DNN. More details about transfer-based approach can be found in Section \ref{sec:transfer-based}.
+On the black-box side of the attacks, the \textit{transfer-based} approach introduced in \cite{DBLP:journals/corr/PapernotMGJCS16} is a popular choice. This approach uses a subsitute DNN that is trained on a similar dataset as the targeted DNN. More details about the transfer-based approach can be found in Section \ref{sec:transfer-based}.
 
-In \cite{ensemble-attack}, the authors show that adversarial samples for a targeted misclassification don't transfer as well as in a pure misclassification attack. Authors suggest \textit{ensemble} approach which is described in Section \ref{sec:ensemble-approach}.
+In \cite{ensemble-attack}, the authors show that adversarial samples for a targeted misclassification don't transfer as well as in a pure misclassification attack. The authors suggest an \textit{ensemble} approach which is described in Section \ref{sec:ensemble-approach}.
 
-In \cite{brendel2018decisionbased}, the authors implement a completely different attack and call it \textit{Boundary Attack}. The attack starts with an image of a targeted class and then, step by step, the image is changed to an image of some other class while staying adversarial, i.e. classified as a target class by a DNN under the attack. Boundary attack is described in Section \ref{sec:boundary-attack}.
+In \cite{brendel2018decisionbased}, the authors implement a completely different attack and call it \textit{Boundary Attack}. The attack starts with an image of a targeted class and then, step by step, the image is changed to an image of some other class while staying adversarial, i.e. classified as a target class by a DNN under the attack. The boundary attack is described in Section \ref{sec:boundary-attack}.
 
 I direct the interested reader to the survey \cite{survey} of the different attack strategies and defenses for a more detailed overview.
 
