@@ -1,47 +1,53 @@
 This is BibTeX, Version 0.99d (TeX Live 2018)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: thesis.aux
-I found no \bibdata command---while reading file thesis.aux
-I found no \bibstyle command---while reading file thesis.aux
-You've used 18 entries,
-            0 wiz_defined-function locations,
-            110 strings with 1070 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
-int.to.chr$ -- 0
+The style file: alpha.bst
+Database file #1: thesis-bibliography.bib
+Warning--empty year in iris-dataset
+Warning--empty journal in datasetCIFAR10
+Warning--empty year in datasetCIFAR10
+Warning--empty journal in datasetMNIST
+Warning--empty booktitle in Rumelhart:1986:LIR:104279.104293
+Warning--there's a number but no volume in datasetGTSRD
+You've used 19 entries,
+            2543 wiz_defined-function locations,
+            660 strings with 7773 characters,
+and the built_in function-call counts, 7829 in all, are:
+= -- 742
+> -- 489
+< -- 6
++ -- 179
+- -- 176
+* -- 574
+:= -- 1358
+add.period$ -- 58
+call.type$ -- 19
+change.case$ -- 139
+chr.to.int$ -- 18
+cite$ -- 25
+duplicate$ -- 298
+empty$ -- 498
+format.name$ -- 194
+if$ -- 1547
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
-purify$ -- 0
+missing$ -- 21
+newline$ -- 99
+num.names$ -- 57
+pop$ -- 142
+preamble$ -- 1
+purify$ -- 159
 quote$ -- 0
-skip$ -- 0
+skip$ -- 243
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
-text.prefix$ -- 0
+substring$ -- 256
+swap$ -- 41
+text.length$ -- 6
+text.prefix$ -- 3
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 0
-(There were 2 error messages)
+type$ -- 144
+warning$ -- 6
+while$ -- 64
+width$ -- 23
+write$ -- 242
+(There were 6 warnings)

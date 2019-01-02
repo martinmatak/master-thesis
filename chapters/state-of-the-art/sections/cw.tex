@@ -1,10 +1,15 @@
 % L norm introduction
 
-To quantify similarity between two images, different distance metrics can be used. Quantification of similarity can be used when comparing how much an adversarial image is different from the original input. There are three widely-used distance metrics in the literature for generating adversarial examples, all of which are $L_p$ distances. The $L_p$ distance is written $||x - x'||_p$, where the $p$-norm is defined as
+To quantify similarity between two images, different distance metrics can be used. Quantification of similarity can be used when comparing how much an adversarial image is different from the original input. There are three widely-used distance metrics in the literature for generating adversarial examples , all of which are $L_p$ distances. The $L_p$ distance is written $||x - x'||_p$, where the $p$-norm is can be defined as
 
-\[
-||v||_p =( \sum_{i = 1}^{n} |v_i|^p)^{1/p}. 
-\]
+\begin{equation}
+  ||v||_p=\left\{
+  \begin{array}{@{}ll@{}}
+       |\{i | v_i \neq 0 \}|, & \text{if } p = 0 \\
+    ( \sum_{i = 1}^{n} |v_i|^p)^{1/p}, & \text{if } p \in [1, \infty) \\
+    max\{|v_1|, |v_2|, ..., |v_n|\} & \text{if } p = \infty
+  \end{array}\right.
+\end{equation} 
 
 In other words, $L_0$ measures how many pixels are changed, $L_2$ measures standard euclidean distance and $L_\infty$ measures the maximum change to any of the coordinates. It is open for discussion which metric performs the best job in measuring the human perceptual of similarity, but neither of the $L_p$ metrics is optimal for that.
 
