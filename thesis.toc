@@ -24,9 +24,8 @@
 \contentsline {section}{\numberline {2.4}Convolutional neural networks}{12}{section.2.4}
 \contentsline {chapter}{\chapternumberline {3}State-of-the-Art}{15}{chapter.3}
 \contentsline {section}{\numberline {3.1}Fast Gradient Sign Method (FGSM)}{16}{section.3.1}
-\contentsline {section}{\numberline {3.2}Jacobian-based Saliency Map Attack (JSMA)}{17}{section.3.2}
-\contentsline {section}{\numberline {3.3}Carlini \& Wagner (CW)}{17}{section.3.3}
+\contentsline {section}{\numberline {3.2}Jacobian-based Saliency Map Attack (JSMA)}{16}{section.3.2}
+\contentsline {section}{\numberline {3.3}Carlini \& Wagner (CW)}{18}{section.3.3}
 \contentsline {section}{\numberline {3.4}Transfer based approach}{19}{section.3.4}
 \contentsline {section}{\numberline {3.5}Ensemble approach}{19}{section.3.5}
 \contentsline {section}{\numberline {3.6}Boundary attack}{20}{section.3.6}
-\contentsline {chapter}{Bibliography}{21}{chapter*.14}

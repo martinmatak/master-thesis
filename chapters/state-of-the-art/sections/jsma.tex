@@ -1,4 +1,4 @@
-This attack is based on a greedy algorithm that picks pixels to modify one at a time, increasing the target classification in each iteration.  \textit{Adversarial Saliency Maps} - maps that measure an impact of a pixel on an image being classified as a target class - are created. If a value in this map is large, it means that changing that pixel will increase the likelihood of the image being classified as a target class. 
+This attack is based on a greedy algorithm that picks pixels to modify one at a time, increasing the the likelihood of the targeted class in each iteration.  \textit{Adversarial Saliency Maps} - maps that measure an impact of a pixel on an image being classified as a target class - are created. If a value in this map is large, it means that changing that pixel will increase the likelihood of the image being classified as a target class. 
 
 The idea is, given the saliency map for a target class, the algorithm picks the pixel with the highest impact and modifies it. In the next iteration, the second most important pixel is changed and so on. This continues until either the attack succeeds to trick the classifier or too many pixels get changed and the attack becomes detectable. In the actual implementation of the algorithm, instead of picking one pixel, a pair of pixels is picked.
 
@@ -15,10 +15,13 @@ Formally, let $t$ be the target class, $\pmb x$ be the input to the classifier a
 so that $\alpha_{pq}$ represents the impact of changing the both pixels $p$ and $q$ on the input being classified as $t$, and $\beta_{pq}$ represents how
 much changing $p$ and $q$ will change all the other outputs of the softmax layer.
 
-Now the algorithm picks $p$ and $q$ such that the target class gets more likely ( $\alpha_{pq} > 0$), but other classes get less likely ($\beta_{pq} < 0$) and that combination is as strong as possible, i.e. that $ - \alpha_{pq} * \beta_{pq}$ is as large as possible. This can be formalized as:
+Now the algorithm picks $p$ and $q$ such that the target class gets more likely ($\alpha_{pq} > 0$), but other classes get less likely ($\beta_{pq} < 0$) and that combination is as strong as possible, i.e. that $ - \alpha_{pq} * \beta_{pq}$ is as large as possible. This can be formalized as:
 
-\[
-(p^*, q^*) = arg max_{p, q} (- \alpha_{pq} * \beta_{pq}) * (\alpha_{pq} > 0) * (\beta_{pq} < 0)
-\]
+\begin{align*}
+(p^*, q^*) 
+				&= arg max_{p, q} (- \alpha_{pq} * \beta_{pq}) \\
+                  & \textnormal{ s.t. } \alpha_{pq} > 0 \textnormal{ and } \beta_{pq} < 0
+\end{align*}
 
-Starting with an original input, two by two pixels are picked and perturbed by a constant offset $\epsilon$. The authors \cite{DBLP:journals/corr/PapernotMJFCS15}show that JSMA attack can effectively produce MNIST samples that are correctly classified by human subjects, but misclassified into a specific target class by a DNN with a high success rate. 
+
+Starting with an original input, two by two pixels are picked and perturbed by a constant offset $\epsilon$. The authors \cite{DBLP:journals/corr/PapernotMJFCS15} show that JSMA attack can effectively produce MNIST samples that are correctly classified by human subjects, but misclassified into a specific target class by a DNN with a high success rate. 
