@@ -39,6 +39,11 @@ Ian Goodfellow, Jonathon Shlens, and Christian Szegedy.
 \newblock Explaining and harnessing adversarial examples.
 \newblock In {\em International Conference on Learning Representations}, 2015.
 
+\bibitem[KB14]{DBLP:journals/corr/KingmaB14}
+Diederik~P. Kingma and Jimmy Ba.
+\newblock Adam: {A} method for stochastic optimization.
+\newblock {\em CoRR}, abs/1412.6980, 2014.
+
 \bibitem[KNH]{datasetCIFAR10}
 Alex Krizhevsky, Vinod Nair, and Geoffrey Hinton.
 \newblock Cifar-10 (canadian institute for advanced research).

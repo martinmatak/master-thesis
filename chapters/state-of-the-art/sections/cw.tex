@@ -1,9 +1,9 @@
 % L norm introduction
 
-To quantify similarity between two images, different distance metrics can be used. Quantification of similarity can be used when comparing how much an adversarial image is different from the original input. There are three widely-used distance metrics in the literature for generating adversarial examples , all of which are $L_p$ distances. The $L_p$ distance is written $||x - x'||_p$, where the $p$-norm is can be defined as
+To quantify similarity between two images, different distance metrics can be used. Quantification of similarity can be used when comparing how much an adversarial image is different from the original input. There are three widely-used distance metrics in the literature for generating adversarial examples , all of which are $L_p$ distances. The $L_p$ distance is written $||\pmb x - \pmb x'||_p$, where the $p$-norm for purposes of this thesis can be defined as
 
 \begin{equation}
-  ||v||_p=\left\{
+  ||\pmb v||_p=\left\{
   \begin{array}{@{}ll@{}}
        |\{i | v_i \neq 0 \}|, & \text{if } p = 0 \\
     ( \sum_{i = 1}^{n} |v_i|^p)^{1/p}, & \text{if } p \in [1, \infty) \\
@@ -19,27 +19,65 @@ The authors \cite{DBLP:journals/corr/CarliniW16a} introduce three new attacks fo
 
 In this thesis, $L_2$ is used in the attack and hence I explain it now.
 
-Let $t$ be the target class, $\pmb Z$ be the output of the targeted DNN before the softmax layer with $\pmb Z_i$ as an output for the class $i$, $\kappa$ a parameter that controls the confidence with which the misclassification occurs, $c$ a constant value, and $\pmb x$ be the original input.
-Given $\pmb x$ and the target class $t$, search for $\omega$ that solves
+The authors start by using the initial formulation of adversarial examples \cite{szegedy2013intriguing} and define the problem of finding an adversarial sample $\pmb x$ as follows:
+
+\begin{align*}
+\text{minimize } & \mathcal{D}(\pmb x, \pmb x + \pmb \delta) \\
+\text{such that } & \mathcal{C} (\pmb x + \pmb \delta) = t \\
+                  & \pmb x + \pmb \delta \in [0, 1]^n
+\end{align*}
+
+where $t$ is the target class, $\pmb \delta$ is perturbation added to the original input $\pmb x$, $\mathcal{C}$ is a function performed by the classifier, and $\mathcal{D}$ is either $L_0$, $L_2$ or $L_\infty$. 
+
+Since the constraint $\mathcal{C} (\pmb x + \pmb \delta) = t$ is highly non-linear and therefore hard to solve directly for existing algorithms, the authors introduce the function $f$ such that  $\mathcal{C} (\pmb x + \pmb \delta) = t$ if and only if $f(\pmb x + \pmb \delta) \leq 0$. Now problem can be formulated as
+
+\begin{align*}
+\text{minimize  } & \mathcal{D}(\pmb x, \pmb x + \pmb \delta) \\
+\text{such that }& f(\pmb x + \pmb \delta) \leq 0 \\
+                  & \pmb x + \pmb \delta \in [0, 1]^n
+\end{align*}
+
+or using the alternative formulation: 
+
+\begin{align*}
+\text{minimize  }& \mathcal{D}(\pmb x, \pmb x + \pmb \delta) + c \cdot f(\pmb x+\pmb \delta) \\
+\text{such that }& \pmb x + \pmb \delta \in [0, 1]^n
+\end{align*}
+
+where $c > 0$ is a suitably chosen constant. The authors in their implementation use a modified binary search to find the optimal value of $c$. 
+
+Let $\pmb Z$ be the output of the targeted DNN second-to-last layer, the logits,  with $\pmb Z_i$ as an output for the class $i$.
+
+The function $f$ that the authors find the most effective is: 
+
+\begin{equation}
+f(\pmb x') = max(max(\{\pmb Z(\pmb x ')_i : i \neq t\}) - \pmb Z(\pmb x')_t, 0).
+\label{fun:obj-fun}
+\end{equation}
+
+To ensure the modification yields a valid image, there is a constraint  $\pmb x + \pmb \delta \in [0, 1]^n$. The authors refer to this constraint as a "box constraint". The Adam \cite{DBLP:journals/corr/KingmaB14} optimizer does not support box constraints  natively and the authors modify the box constraint as follows in order to be able to use the Adam optimizer. A new variable $\pmb \omega$ is introduced and instead of optimizing over the variable $\pmb \delta$, an optimization is done over $\pmb \omega$, setting 
 
 \[
-argmin_{\omega} ||\frac{1}{2}*(tanh(\omega) + 1) - \pmb x||_2^2 + c * f(\frac{1}{2}(tanh(\omega) + 1))
-\]
-with $f$ defined as 
+\delta_i = \frac{1}{2}(tanh(\omega_i) + 1) - x_i.
+\] 
+
+Now the solution will automatically be valid since from $-1 \leq tanh(\omega_i) \leq 1$ it follows that $0 \leq x_i + \delta_i \leq 1$.
+
+Finally, for $\mathcal{D} = L_2$, the attack can be formalized as follows. Given the original sample $\pmb x$ and the target class $t$, search for $\pmb \omega$ that solves
+
 \[
-f(\pmb x') = max(max\{\pmb Z(\pmb x ')_i : i \neq t\} - \pmb Z(x)_t, - \kappa).
+\text{minimize  }||\pmb x - \frac{1}{2}(tanh(\pmb \omega) + \pmb 1)||_2^2 + c \cdot  f(\frac{1}{2}(tanh(\pmb \omega) + \pmb 1))
 \]
 
-The unrestricted perturbation $\pmb \delta^*$ is then defined as 
+with $f$ similar to the objective function defined in \ref{fun:obj-fun}, but this time defined as
+
 \[
-	\pmb \delta^*_i = \frac{1}{2} * (tanh ( \omega_i) + 1) - \pmb x_i
-\]
-and after converting it to the restricted perturbation $\pmb \delta$ (details in the original paper \cite{DBLP:journals/corr/CarliniW16a}), an adversarial example $\pmb x^*$ is produced as 
-\[
-\pmb x^* = \pmb x +\pmb  \delta.
+f(\pmb x') = max(max\{\pmb Z(\pmb x ')_i : i \neq t\} - \pmb Z(\pmb x)_t, - \kappa).
 \]
 
-According to the authors, this attack is often much more effective (and never worse) than all the others presented in the literature. Attacks are evaluated on the three datasets: ImageNet, MNIST and CIFAR-10. They also report that the JSMA attack, an attack introduced in Section \ref{sec:JSMA}, is always failing on the ImageNet dataset due to memory complexity of the algorithm, i.e. dimensions of images in ImageNet dataset are too big for JSMA attack. This implies that the JSMA attack would not work in my thesis as well if an image of a person is too big. Reported results for the CW attack are showing 100\% success against all three datasets.
+where $\kappa$ is a parameter that controls the confidence with which the misclassification occurs. The authors in their implementation set $\kappa = 0$. The adversarial example is then crafted as $\pmb x' = \pmb x + \pmb \delta$. For more details about the attack, please consider \cite{DBLP:journals/corr/CarliniW16a}.
+
+According to the authors, this attack is often much more effective (and never worse) than all the others presented in the literature. Attacks are evaluated on the three datasets: ImageNet, MNIST and CIFAR-10. They also report that the JSMA attack, an attack introduced in Section \ref{sec:JSMA}, is not able to craft an adversarial example when the ImageNet dataset is used due to memory complexity of the algorithm, i.e. dimensions of images in ImageNet dataset are too big for JSMA attack. This implies that the JSMA attack would not work in my thesis as well if an image of a person is too big. Reported results for the CW attack are showing 100\% success against all three datasets.
 
 
 
