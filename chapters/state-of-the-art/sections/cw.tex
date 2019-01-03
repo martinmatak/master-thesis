@@ -63,7 +63,7 @@ To ensure the modification yields a valid image, there is a constraint  $\pmb x 
 
 Now the solution will automatically be valid since from $-1 \leq tanh(\omega_i) \leq 1$ it follows that $0 \leq x_i + \delta_i \leq 1$.
 
-Finally, for $\mathcal{D} = L_2$, the attack can be formalized as follows. Given the original sample $\pmb x$ and the target class $t$, search for $\pmb \omega$ that solves
+Finally, for $\mathcal{D} = L_2$, the attack can be formalized as follows. Given the original sample $\pmb x$ and the target class $t$, search for $\pmb \omega$ that solves \footnote{Here $\pmb 1$ represents a vector of same dimensionality as $\pmb x$ and $\pmb \omega$, it has value $1$ at every index and it shouldn't be confused with a ground-truth vector $\pmb 1_p$. }
 
 \[
 \text{minimize  }||\pmb x - \frac{1}{2}(tanh(\pmb \omega) + \pmb 1)||_2^2 + c \cdot  f(\frac{1}{2}(tanh(\pmb \omega) + \pmb 1))
