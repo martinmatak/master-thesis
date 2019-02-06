@@ -1,0 +1,9 @@
+To evaluate effectiveness of the attacks, I trained a classifier for age estimation. 
+First I describe the dataset I used to train the classifier and then I present results of training. 
+
+For training data, I created a dataset based on two datasets: APPA-REAL \cite{agustsson2017appareal} and UTK Face Dataset\footnote{https://susanqq.github.io/UTKFace/}.
+
+The APPA-REAL database contains 7,591 images with associated age labels. The dataset is split into 4113 train, 1500 valid and 1978 test images. For each image in the dataset, there is also the corresponding image which contains the cropped face.
+
+The UTK Face dataset consists of over 20,000 face images with annotations of age. I preprocessed every image to extract a face\footnote{every face is cropped with 40\% margin} from it. For face detection, I used Dlib \cite{dlib09} library.
+
