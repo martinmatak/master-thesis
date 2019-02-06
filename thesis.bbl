@@ -23,6 +23,13 @@ J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, and L.~Fei-Fei.
 \newblock {ImageNet: A Large-Scale Hierarchical Image Database}.
 \newblock In {\em CVPR09}, 2009.
 
+\bibitem[EA17]{agustsson2017appareal}
+S~Escalera X Baro I Guyon R~Rothe. E~Agustsson, R~Timofte.
+\newblock Apparent and real age estimation in still images with deep residual
+  regressors on appa-real database.
+\newblock In {\em 12th IEEE International Conference and Workshops on Automatic
+  Face and Gesture Recognition (FG), 2017}. IEEE, 2017.
+
 \bibitem[FIS]{iris-dataset}
 R.~A. FISHER.
 \newblock The use of multiple measurements in taxonomic problems.
@@ -39,10 +46,20 @@ Ian Goodfellow, Jonathon Shlens, and Christian Szegedy.
 \newblock Explaining and harnessing adversarial examples.
 \newblock In {\em International Conference on Learning Representations}, 2015.
 
+\bibitem[HZRS15]{DBLP:journals/corr/HeZRS15}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Deep residual learning for image recognition.
+\newblock {\em CoRR}, abs/1512.03385, 2015.
+
 \bibitem[KB14]{DBLP:journals/corr/KingmaB14}
 Diederik~P. Kingma and Jimmy Ba.
 \newblock Adam: {A} method for stochastic optimization.
 \newblock {\em CoRR}, abs/1412.6980, 2014.
+
+\bibitem[Kin09]{dlib09}
+Davis~E. King.
+\newblock Dlib-ml: A machine learning toolkit.
+\newblock {\em Journal of Machine Learning Research}, 10:1755--1758, 2009.
 
 \bibitem[KNH]{datasetCIFAR10}
 Alex Krizhevsky, Vinod Nair, and Geoffrey Hinton.
@@ -106,10 +123,21 @@ Johannes Stallkamp, Marc Schlipsing, Jan Salmen, and Christian Igel.
   traffic sign recognition.
 \newblock {\em Neural Networks}, 32:323--332, 2012.
 
+\bibitem[SZ14]{DBLP:journals/corr/SimonyanZ14a}
+Karen Simonyan and Andrew Zisserman.
+\newblock Very deep convolutional networks for large-scale image recognition.
+\newblock {\em CoRR}, abs/1409.1556, 2014.
+
 \bibitem[SZS{\etalchar{+}}13]{szegedy2013intriguing}
 Christian Szegedy, Wojciech Zaremba, Ilya Sutskever, Joan Bruna, Dumitru Erhan,
   Ian Goodfellow, and Rob Fergus.
 \newblock Intriguing properties of neural networks.
 \newblock {\em arXiv preprint arXiv:1312.6199}, 2013.
+
+\bibitem[YCBL14]{yosinski2014transferable}
+Jason Yosinski, Jeff Clune, Yoshua Bengio, and Hod Lipson.
+\newblock How transferable are features in deep neural networks?
+\newblock In {\em Advances in neural information processing systems}, pages
+  3320--3328, 2014.
 
 \end{thebibliography}
