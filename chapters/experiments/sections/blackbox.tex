@@ -1,6 +1,9 @@
 When it comes to blackbox attacks, three approaches are evaluated: Transfer based approach, Ensemble approach and Boundary attack.
 
-In the transfer based approach, first the targeted blackbox is queried with 100 different images and MAE is computed. Then a substitute network is trained using those 100 images. However, labels for those images are obtained by querying the targeted blackbox. Then the dataset is iteratively expanded via jacobian dataset augmentation technique . Finally, the FGSM attack is used to produce adversarial samples. Results are presented in the table XY.
+In the transfer based approach, I take 1000 samples that are previously unseen to target neural network and obtain labels for them by querying the target neural network. Then a substitute network, a pretrained version of ResNet-50 on ImageNet, is trained on those 1000 samples with labels that are obtained from the target network. The idea of such a process is to achieve the similar decision boundaries for the substitute network as they are in the targeted network.
+
+Next, I take random 100 samples that are yet unseen by both networks and evaluate  MAE of the targeted neural network and the substitute network on those 100 images. Then I craft adversarial samples for the substitute neural network using those 100 images. Target labels for adversarial samples are set in the same manner as in whitebox attacks. Finally, I evaluate MAE of the targeted neural network and the substitute network on those 100 adversarial samples.Results are presented in the table XY. 
+
 
 Regarding the ensemble approach, ???
 
