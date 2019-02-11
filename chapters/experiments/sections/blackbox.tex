@@ -1,9 +1,66 @@
 When it comes to blackbox attacks, three approaches are evaluated: Transfer based approach, Ensemble approach and Boundary attack.
 
-In the transfer based approach, I take 1000 samples that are previously unseen to target neural network and obtain labels for them by querying the target neural network. Then a substitute network, a pretrained version of ResNet-50 on ImageNet, is trained on those 1000 samples with labels that are obtained from the target network. The idea of such a process is to achieve the similar decision boundaries for the substitute network as they are in the targeted network.
+In the transfer based approach, I take 1000 samples that are previously unseen to target neural network and obtain labels for them by querying the target neural network. Then a substitute network that is pretrained on the ImageNet dataset is trained on those 1000 samples with labels that are obtained from the target network. The idea of such a process is to achieve the similar decision boundaries for the substitute network as they are in the targeted network.
 
-Next, I take random 100 samples that are yet unseen by both networks and evaluate  MAE of the targeted neural network and the substitute network on those 100 images. Then I craft adversarial samples for the substitute neural network using those 100 images. Target labels for adversarial samples are set in the same manner as in whitebox attacks. Finally, I evaluate MAE of the targeted neural network and the substitute network on those 100 adversarial samples.Results are presented in the table XY. 
+Next, I take random 100 samples that are yet unseen by both networks and evaluate  MAE of the targeted neural network and the substitute network on those 100 images. Then I craft adversarial samples for the substitute neural network using those 100 images. Target labels for adversarial samples are set in the same manner as in whitebox attacks. Finally, I evaluate MAE of the targeted neural network and the substitute network on those 100 adversarial samples. Results are presented in Tables \ref{table:bbox-fgsm-resnet}, \ref{table:bbox-fgsm-vgg16}, \ref{table:bbox-cw-resnet}, and \ref{table:bbox-cw-vgg16}. 
 
+
+\begin{table}[]
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+ & \multicolumn{2}{c|}{Clean Samples} & \multicolumn{2}{c|}{Adversarial samples} \\ \hline
+Target model id & Blackbox MAE & Substitute MAE & Blackbox MAE & Substitute MAE \\ \hline
+1 & 6.21 & 14.17 & 6.61 & 14.20 \\ \hline
+2 & 8.61 & 13.20  &  8.17 & 13.39  \\ \hline
+3 & 12.68 & 12.75 & 12.68  & 13.68 \\ \hline
+4 &  15.14 & 16.36 &  15.14 & 16.56 \\ \hline
+\end{tabular}
+\caption{Results using the ResNet-50 architecture for the substitute network and FGSM attack for crafting adversarial samples for it}
+\label{table:bbox-fgsm-resnet}
+\end{table}
+
+%\begin{table}[]
+%\begin{tabular}{|c|c|c|c|c|}
+%\hline
+% & \multicolumn{2}{c|}{Clean Samples} & \multicolumn{2}{c|}{Adversarial samples} \\ \hline
+%Target model id & Blackbox MAE & Substitute MAE & Blackbox MAE & Substitute MAE \\ \hline
+%1 &   &  &  &  \\ \hline
+%2 &  &  &  &  \\ \hline
+%3 &  &  &  &  \\ \hline
+%4 &  &  &  &  \\ \hline
+%\end{tabular}
+%\caption{Results using the VGG16 architecture for the substitute network and FGSM attack for crafting adversarial samples for it}
+%\label{table:bbox-fgsm-vgg16}
+%\end{table}
+
+\begin{table}[]
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+ & \multicolumn{2}{c|}{Clean Samples} & \multicolumn{2}{c|}{Adversarial samples} \\ \hline
+Target model id & Blackbox MAE & Substitute MAE & Blackbox MAE & Substitute MAE \\ \hline
+1 &  & &  &  \\ \hline
+2 &  &  &  &  \\ \hline
+3 &  &  &  &  \\ \hline
+4 &  &  &  &  \\ \hline
+\end{tabular}
+\caption{Results using the ResNet-50 architecture for the substitute network and CW attack for crafting adversarial samples for it}
+\label{table:bbox-cw-resnet}
+\end{table}
+
+%\begin{table}[]
+%\begin{tabular}{|c|c|c|c|c|}
+%\hline
+% & \multicolumn{2}{c|}{Clean Samples} & \multicolumn{2}{c|}{Adversarial samples} \\ \hline
+%Target model id & Blackbox MAE & Substitute MAE & Blackbox MAE & Substitute MAE \\ \hline
+%1 &  & &  &  \\ \hline
+%2 &  &  &  &  \\ \hline
+%3 &  &  &  &  \\ \hline
+%4 &  &  &  &  \\ \hline
+%\end{tabular}
+%\caption{Results using the VGG16 architecture for the substitute network and CW attack for crafting adversarial samples for it}
+%\label{table:bbox-cw-vgg16}
+%\end{table}
+%
 
 Regarding the ensemble approach, ???
 
