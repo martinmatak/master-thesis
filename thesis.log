@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  11 FEB 2019 08:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  12 FEB 2019 10:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2099,15 +2099,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [25 <./graphics/appa-train.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 4.
+               Default added (so using `tbp') on input line 3.
 
-) (./chapters/experiments/sections/blackbox.tex
 
-LaTeX Warning: Reference `table:bbox-fgsm-vgg16' on page 26 undefined on input 
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 17.
+
+) (./chapters/experiments/sections/blackbox.tex [26]
+
+LaTeX Warning: Reference `table:bbox-fgsm-vgg16' on page 27 undefined on input 
 line 5.
 
 
-LaTeX Warning: Reference `table:bbox-cw-vgg16' on page 26 undefined on input li
+LaTeX Warning: Reference `table:bbox-cw-vgg16' on page 27 undefined on input li
 ne 5.
 
 
@@ -2128,7 +2132,7 @@ Overfull \hbox (24.81155pt too wide) in paragraph at lines 37--46
 [][] 
  []
 
-[26])) [27] [28
+)) [27] [28
 
 ] (./thesis.ind) (./thesis.gls) (./thesis.acr) (./thesis.bbl
 bibitemlist
@@ -2145,17 +2149,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 177218CAF04A1CFA2D8A86385DD2DE59;1522.
+(rerunfilecheck)             Checksum: 63C42E07D8E5C0743EF899F3024D395C;1522.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 44744 strings out of 492649
- 975543 string characters out of 6129622
- 1278544 words of memory out of 5000000
- 47382 multiletter control sequences out of 15000+600000
+ 44746 strings out of 492649
+ 975577 string characters out of 6129622
+ 1278637 words of memory out of 5000000
+ 47383 multiletter control sequences out of 15000+600000
  157299 words of font info for 219 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,18n,103p,1967b,1874s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2186,10 +2190,10 @@ fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
 ype1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw
 /helvetic/uhvb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/helvet
 ic/uhvr8a.pfb>
-Output written on thesis.pdf (45 pages, 1780952 bytes).
+Output written on thesis.pdf (45 pages, 1781381 bytes).
 PDF statistics:
- 676 PDF objects out of 1000 (max. 8388607)
- 588 compressed objects within 6 object streams
- 162 named destinations out of 1000 (max. 500000)
+ 679 PDF objects out of 1000 (max. 8388607)
+ 591 compressed objects within 6 object streams
+ 163 named destinations out of 1000 (max. 500000)
  35571 words of extra memory for PDF output out of 35830 (max. 10000000)
 
