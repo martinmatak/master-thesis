@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  12 FEB 2019 10:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  18 FEB 2019 23:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2101,44 +2101,132 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 3.
 
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 17.
-
 ) (./chapters/experiments/sections/blackbox.tex [26]
 
-LaTeX Warning: Reference `table:bbox-fgsm-vgg16' on page 27 undefined on input 
-line 5.
-
-
-LaTeX Warning: Reference `table:bbox-cw-vgg16' on page 27 undefined on input li
-ne 5.
-
-
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 8.
+               Default added (so using `tbp') on input line 12.
 
 
-Overfull \hbox (24.81155pt too wide) in paragraph at lines 9--18
+Overfull \hbox (24.81155pt too wide) in paragraph at lines 13--20
 [][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 36.
+               Default added (so using `tbp') on input line 25.
 
 
-Overfull \hbox (24.81155pt too wide) in paragraph at lines 37--46
+Overfull \hbox (24.81155pt too wide) in paragraph at lines 26--33
 [][] 
  []
 
-)) [27] [28
+<graphics/image0.jpg, id=531, 16188.48pt x 16188.48pt>
+File: graphics/image0.jpg Graphic file (type jpg)
+<use graphics/image0.jpg>
+Package pdftex.def Info: graphics/image0.jpg  used on input line 43.
+(pdftex.def)             Requested size: 142.0342pt x 142.0342pt.
+<graphics/image1000.jpg, id=532, 224.84pt x 224.84pt>
+File: graphics/image1000.jpg Graphic file (type jpg)
+<use graphics/image1000.jpg>
+Package pdftex.def Info: graphics/image1000.jpg  used on input line 48.
+(pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
 
-] (./thesis.ind) (./thesis.gls) (./thesis.acr) (./thesis.bbl
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 41--51
+[]$[]$ $[]$ 
+ []
+
+<graphics/image2000.jpg, id=533, 224.84pt x 224.84pt>
+File: graphics/image2000.jpg Graphic file (type jpg)
+<use graphics/image2000.jpg>
+Package pdftex.def Info: graphics/image2000.jpg  used on input line 54.
+(pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
+<graphics/image4000.jpg, id=534, 224.84pt x 224.84pt>
+File: graphics/image4000.jpg Graphic file (type jpg)
+<use graphics/image4000.jpg>
+Package pdftex.def Info: graphics/image4000.jpg  used on input line 59.
+(pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 52--62
+[]$[]$ $[]$ 
+ []
+
+<graphics/image8000.jpg, id=535, 224.84pt x 224.84pt>
+File: graphics/image8000.jpg Graphic file (type jpg)
+<use graphics/image8000.jpg>
+Package pdftex.def Info: graphics/image8000.jpg  used on input line 65.
+(pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
+<graphics/image12000.jpg, id=536, 224.84pt x 224.84pt>
+File: graphics/image12000.jpg Graphic file (type jpg)
+<use graphics/image12000.jpg>
+Package pdftex.def Info: graphics/image12000.jpg  used on input line 70.
+(pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 63--73
+[]$[]$ $[]$ 
+ []
+
+<graphics/image16000.jpg, id=537, 224.84pt x 224.84pt>
+File: graphics/image16000.jpg Graphic file (type jpg)
+<use graphics/image16000.jpg>
+Package pdftex.def Info: graphics/image16000.jpg  used on input line 76.
+(pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
+<graphics/final_adversarial.jpg, id=538, 224.84pt x 224.84pt>
+File: graphics/final_adversarial.jpg Graphic file (type jpg)
+<use graphics/final_adversarial.jpg>
+Package pdftex.def Info: graphics/final_adversarial.jpg  used on input line 81.
+
+(pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 74--84
+[]$[]$ $[]$ 
+ []
+
+
+LaTeX Warning: Float too large for page by 89.75348pt on input line 87.
+
+<graphics/softmaxbenign.png, id=539, 429.2838pt x 350.5095pt>
+File: graphics/softmaxbenign.png Graphic file (type png)
+<use graphics/softmaxbenign.png>
+Package pdftex.def Info: graphics/softmaxbenign.png  used on input line 92.
+(pdftex.def)             Requested size: 174.2389pt x 142.26578pt.
+<graphics/softmax4000.png, id=540, 429.2838pt x 350.5095pt>
+File: graphics/softmax4000.png Graphic file (type png)
+<use graphics/softmax4000.png>
+Package pdftex.def Info: graphics/softmax4000.png  used on input line 97.
+(pdftex.def)             Requested size: 174.2389pt x 142.26578pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 90--100
+[]$[]$ $[]$ 
+ []
+
+<graphics/softmax16000.png, id=541, 429.2838pt x 350.5095pt>
+File: graphics/softmax16000.png Graphic file (type png)
+<use graphics/softmax16000.png>
+Package pdftex.def Info: graphics/softmax16000.png  used on input line 104.
+(pdftex.def)             Requested size: 174.2389pt x 142.26578pt.
+<graphics/softmaxadversarial.png, id=542, 429.2838pt x 350.5095pt>
+File: graphics/softmaxadversarial.png Graphic file (type png)
+<use graphics/softmaxadversarial.png>
+Package pdftex.def Info: graphics/softmaxadversarial.png  used on input line 10
+9.
+(pdftex.def)             Requested size: 174.2389pt x 142.26578pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 102--112
+[]$[]$ $[]$ 
+ []
+
+)) [27] [28 <./graphics/image0.jpg> <./graphics/image1000.jpg> <./graphics/imag
+e2000.jpg> <./graphics/image4000.jpg> <./graphics/image8000.jpg> <./graphics/im
+age12000.jpg> <./graphics/image16000.jpg> <./graphics/final_adversarial.jpg>]
+[29 <./graphics/softmaxbenign.png> <./graphics/softmax4000.png> <./graphics/sof
+tmax16000.png> <./graphics/softmaxadversarial.png>] [30
+
+] (./thesis.ind)
+(./thesis.gls) (./thesis.acr) (./thesis.bbl
 bibitemlist
-[29
+[31
 
-] [30]) [31]
+] [32]) [33]
 No complaints by nag.
 \tf@toc=\write10
 \openout10 = `thesis.toc'.
@@ -2149,18 +2237,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 63C42E07D8E5C0743EF899F3024D395C;1522.
-
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: F8A097B8D5D905C081194D69810D39CD;1522.
  ) 
 Here is how much of TeX's memory you used:
- 44746 strings out of 492649
- 975577 string characters out of 6129622
- 1278637 words of memory out of 5000000
- 47383 multiletter control sequences out of 15000+600000
- 157299 words of font info for 219 fonts, out of 8000000 for 9000
+ 44820 strings out of 492649
+ 977355 string characters out of 6129622
+ 1279035 words of memory out of 5000000
+ 47438 multiletter control sequences out of 15000+600000
+ 160455 words of font info for 222 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,18n,103p,1967b,1874s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
@@ -2190,10 +2274,10 @@ fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
 ype1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw
 /helvetic/uhvb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/helvet
 ic/uhvr8a.pfb>
-Output written on thesis.pdf (45 pages, 1781381 bytes).
+Output written on thesis.pdf (47 pages, 2065047 bytes).
 PDF statistics:
- 679 PDF objects out of 1000 (max. 8388607)
- 591 compressed objects within 6 object streams
- 163 named destinations out of 1000 (max. 500000)
- 35571 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 710 PDF objects out of 1000 (max. 8388607)
+ 602 compressed objects within 7 object streams
+ 166 named destinations out of 1000 (max. 500000)
+ 37679 words of extra memory for PDF output out of 42996 (max. 10000000)
 

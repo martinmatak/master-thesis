@@ -1,8 +1,12 @@
-When it comes to blackbox attacks, three approaches are evaluated: Transfer based approach, Ensemble approach and Boundary attack.
+When it comes to blackbox attacks, two existing approaches are evaluated: the Transfer based approach and the Boundary attack.
 
 In the transfer based approach, I take 1000 samples that are previously unseen to target neural network and obtain labels for them by querying the target neural network. Then a substitute network that is pretrained on the ImageNet dataset is trained on those 1000 samples with labels that are obtained from the target network. The idea of such a process is to achieve the similar decision boundaries for the substitute network as they are in the targeted network.
 
-Next, I take random 100 samples that are yet unseen by both networks and evaluate  MAE of the targeted neural network and the substitute network on those 100 images. Then I craft adversarial samples for the substitute neural network using those 100 images. Target labels for adversarial samples are set in the same manner as in whitebox attacks. Finally, I evaluate MAE of the targeted neural network and the substitute network on those 100 adversarial samples. Results are presented in Tables \ref{table:bbox-fgsm-resnet}, \ref{table:bbox-fgsm-vgg16}, \ref{table:bbox-cw-resnet}, and \ref{table:bbox-cw-vgg16}. 
+Next, I take random 100 samples that are yet unseen by both networks and evaluate  MAE of the targeted neural network and the substitute network on those 100 images. Then I craft adversarial samples for the substitute neural network using those 100 images. Target labels for adversarial samples are set in the same manner as in whitebox attacks. Finally, I evaluate MAE of the targeted neural network and the substitute network on those 100 adversarial samples.
+
+From Table \ref{table:trained-models} it can be observed that the VGG16 architecture doesn't perform as good as the ResNet-50 architecture. Since the idea behind the attacks is to trick a classifier that performs good, in this section only attacks against the ResNet-50 architecture are considered.
+
+Results are presented in Tables \ref{table:bbox-fgsm-resnet} and \ref{table:bbox-cw-resnet}.
 
 
 \begin{table}[]
@@ -12,26 +16,11 @@ Next, I take random 100 samples that are yet unseen by both networks and evaluat
 Target model id & Blackbox MAE & Substitute MAE & Blackbox MAE & Substitute MAE \\ \hline
 1 & 6.21 & 14.17 & 6.61 & 14.20 \\ \hline
 2 & 8.61 & 13.20  &  8.17 & 13.39  \\ \hline
-3 & 12.68 & 12.75 & 12.68  & 13.68 \\ \hline
-4 &  15.14 & 16.36 &  15.14 & 16.56 \\ \hline
 \end{tabular}
 \caption{Results using the ResNet-50 architecture for the substitute network and FGSM attack for crafting adversarial samples for it}
 \label{table:bbox-fgsm-resnet}
 \end{table}
 
-%\begin{table}[]
-%\begin{tabular}{|c|c|c|c|c|}
-%\hline
-% & \multicolumn{2}{c|}{Clean Samples} & \multicolumn{2}{c|}{Adversarial samples} \\ \hline
-%Target model id & Blackbox MAE & Substitute MAE & Blackbox MAE & Substitute MAE \\ \hline
-%1 &   &  &  &  \\ \hline
-%2 &  &  &  &  \\ \hline
-%3 &  &  &  &  \\ \hline
-%4 &  &  &  &  \\ \hline
-%\end{tabular}
-%\caption{Results using the VGG16 architecture for the substitute network and FGSM attack for crafting adversarial samples for it}
-%\label{table:bbox-fgsm-vgg16}
-%\end{table}
 
 \begin{table}[]
 \begin{tabular}{|c|c|c|c|c|}
@@ -40,30 +29,87 @@ Target model id & Blackbox MAE & Substitute MAE & Blackbox MAE & Substitute MAE 
 Target model id & Blackbox MAE & Substitute MAE & Blackbox MAE & Substitute MAE \\ \hline
 1 &  & &  &  \\ \hline
 2 &  &  &  &  \\ \hline
-3 &  &  &  &  \\ \hline
-4 &  &  &  &  \\ \hline
 \end{tabular}
 \caption{Results using the ResNet-50 architecture for the substitute network and CW attack for crafting adversarial samples for it}
 \label{table:bbox-cw-resnet}
 \end{table}
 
-%\begin{table}[]
-%\begin{tabular}{|c|c|c|c|c|}
-%\hline
-% & \multicolumn{2}{c|}{Clean Samples} & \multicolumn{2}{c|}{Adversarial samples} \\ \hline
-%Target model id & Blackbox MAE & Substitute MAE & Blackbox MAE & Substitute MAE \\ \hline
-%1 &  & &  &  \\ \hline
-%2 &  &  &  &  \\ \hline
-%3 &  &  &  &  \\ \hline
-%4 &  &  &  &  \\ \hline
-%\end{tabular}
-%\caption{Results using the VGG16 architecture for the substitute network and CW attack for crafting adversarial samples for it}
-%\label{table:bbox-cw-vgg16}
-%\end{table}
-%
-
-Regarding the ensemble approach, ???
-
-Finally, when it comes to boundary attack, I start with the image of 50 years old and make it look as 10, 20, 30, 40, 60, 70, 80 and 90 years old. Every attack is limited to 10 000 queries. Results are presented in image XY and table XY.
+When it comes to the boundary attack, it's hard to do any quantitative analysis because because the attack, as described in Section \ref{sec:boundary-attack}, is fundamentally different that the transfer-based approach. Instead, I generate several samples and discuss them. One sample can be seen in Figure \ref{fig:trump-adv} and the corresponding results in \ref{fig:trump-softmax}. The other samples can be found in Appendix. discussion follows in the chapter TODO.
 
 
+\begin{figure}
+\begin{subfigure}{.5\textwidth}
+  \centering%
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{image0.jpg}
+  \caption{The starting image}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{image1000.jpg}
+  \caption{1000 queries}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{image2000.jpg}
+  \caption{2000 queries}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{image4000.jpg}
+  \caption{4000 queries}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{image8000.jpg}
+  \caption{8000 queries}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{image12000.jpg}
+  \caption{12000 queries}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{image16000.jpg}
+  \caption{16000 queries}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{final_adversarial.jpg}
+  \caption{Final adversarial sample}
+\end{subfigure}
+
+\caption{Although an adversary is changing the image, the blackbox classifier is not changing the prediction (68 years old)}
+\label{fig:trump-adv}
+\end{figure}
+
+\begin{figure}
+\begin{subfigure}{.5\textwidth}
+  \centering%
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{softmaxbenign.png}
+  \caption{Predictions for the original image}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{softmax4000.png}
+  \caption{4000 queries}
+\end{subfigure}
+
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{softmax16000.png}
+  \caption{16000 queries}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{softmaxadversarial.png}
+  \caption{Predictions for the final adversarial sample}
+\end{subfigure}
+
+\caption{Predictions of the blackbox classifier for images corresponding to Figure \ref{fig:trump-adv}}
+\label{fig:trump-softmax}
+\end{figure}
