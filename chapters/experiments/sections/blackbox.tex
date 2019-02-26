@@ -34,7 +34,7 @@ Target model id & Blackbox MAE & Substitute MAE & Blackbox MAE & Substitute MAE 
 \label{table:bbox-cw-resnet}
 \end{table}
 
-When it comes to the boundary attack, it's hard to do any quantitative analysis because the attack, as described in Section \ref{sec:boundary-attack}, is fundamentally different that the transfer based approach. Instead, I generate several samples and discuss them. One sample can be seen in Figure \ref{fig:trump-adv} and the corresponding results in \ref{fig:trump-softmax}. The other samples can be found in Appendix. discussion follows in the chapter TODO.
+When it comes to the boundary attack, it's hard to do any quantitative analysis because the attack, as described in Section \ref{sec:boundary-attack}, is fundamentally different that the transfer based approach. Instead, I generate several samples and discuss them. One sample can be seen in Figure \ref{fig:trump-adv} and the corresponding results in \ref{fig:trump-softmax}. TODO: ADD reference to other images. The other samples can be found in Appendix. discussion follows in the chapter TODO.
 
 
 \begin{figure}
@@ -81,35 +81,68 @@ When it comes to the boundary attack, it's hard to do any quantitative analysis 
   \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{final_adversarial.jpg}
   \caption{Final adversarial sample}
 \end{subfigure}
-
 \caption{Although an adversary is changing the image, the blackbox classifier is not changing the prediction (68 years old)}
 \label{fig:trump-adv}
 \end{figure}
 
 \begin{figure}
 \begin{subfigure}{.5\textwidth}
-  \centering%
-  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{softmaxbenign.png}
-  \caption{Predictions for the original image}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{image0.jpg}
+  \caption{Starting image}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
   \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{softmaxbenign.png}
+  \caption{Predictions for the starting image}
+\end{subfigure}
+\caption{Starting image and the corresponding prediction}
+\label{fig:starting-image-softmax}
+\end{figure}
+
+\begin{figure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{source_image.jpg}
+  \caption{The targeted image}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{softmaxsource_image.png}
+  \caption{Predictions for the targeted image}
+\end{subfigure}
+
+\caption{Targeted image and the corresponding predictions}
+\label{fig:targeted-image-softmax}
+\end{figure}
+
+\begin{figure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering%
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{softmax3000.png}
+  \caption{3000 queries}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering%
   \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{softmax4000.png}
   \caption{4000 queries}
 \end{subfigure}
 
 
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{softmax16000.png}
-  \caption{16000 queries}
+  \centering%
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{softmax8000.png}
+  \caption{8000 queries}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
-  \centering
+  \centering%
   \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{softmaxadversarial.png}
-  \caption{Predictions for the final adversarial sample}
+  \caption{The final adversarial sample (77 000 queries)}
 \end{subfigure}
 
-\caption{Predictions of the blackbox classifier for images corresponding to Figure \ref{fig:trump-adv}}
+\caption{Predictions of the blackbox classifier for images corresponding to Figure \ref{fig:trump-adv}. In all the graphs, age 68 is predicted with the maximum probability.}
 \label{fig:trump-softmax}
 \end{figure}
+
+
