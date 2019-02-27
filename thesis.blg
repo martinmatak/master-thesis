@@ -27,45 +27,45 @@ Warning--empty year in datasetCIFAR10
 Warning--empty journal in datasetMNIST
 Warning--empty booktitle in Rumelhart:1986:LIR:104279.104293
 Warning--there's a number but no volume in datasetGTSRD
-You've used 25 entries,
+You've used 26 entries,
             2543 wiz_defined-function locations,
-            692 strings with 8812 characters,
-and the built_in function-call counts, 10198 in all, are:
-= -- 982
-> -- 605
+            697 strings with 9023 characters,
+and the built_in function-call counts, 10563 in all, are:
+= -- 1018
+> -- 630
 < -- 9
-+ -- 219
-- -- 216
-* -- 729
-:= -- 1748
-add.period$ -- 77
-call.type$ -- 25
-change.case$ -- 177
-chr.to.int$ -- 24
-cite$ -- 31
-duplicate$ -- 398
-empty$ -- 667
-format.name$ -- 241
-if$ -- 2037
++ -- 228
+- -- 225
+* -- 755
+:= -- 1815
+add.period$ -- 80
+call.type$ -- 26
+change.case$ -- 184
+chr.to.int$ -- 25
+cite$ -- 32
+duplicate$ -- 411
+empty$ -- 687
+format.name$ -- 251
+if$ -- 2107
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 27
-newline$ -- 129
-num.names$ -- 75
-pop$ -- 174
+missing$ -- 28
+newline$ -- 134
+num.names$ -- 78
+pop$ -- 178
 preamble$ -- 1
-purify$ -- 203
+purify$ -- 211
 quote$ -- 0
-skip$ -- 334
+skip$ -- 347
 stack$ -- 0
-substring$ -- 365
-swap$ -- 60
+substring$ -- 372
+swap$ -- 61
 text.length$ -- 9
 text.prefix$ -- 4
 top$ -- 0
-type$ -- 192
+type$ -- 200
 warning$ -- 6
-while$ -- 84
-width$ -- 28
-write$ -- 320
+while$ -- 87
+width$ -- 29
+write$ -- 333
 (There were 9 error messages)

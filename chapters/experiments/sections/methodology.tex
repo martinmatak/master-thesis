@@ -7,7 +7,7 @@ The APPA-REAL dataset contains 7,591 images with associated age labels. The data
 
 The UTK Face dataset consists of 23252 images with associated age labels. I preprocessed every image to extract a face\footnote{every face is cropped with 40\% margin} from it. For face detection, I used Dlib \cite{dlib09} library. Distribution of samples over age is presented in Figure \ref{fig:utk-stats}.
 
-In constructed my training dataset as union of all the images from the UTK Face dataset and training images from the APPA-REAL dataset . For my validation dataset and my test dataset I used validation images and test images from the APPA-REAL validation and test dataset, respectively. 
+I constructed my training dataset as union of all the images from the UTK Face dataset and training images from the APPA-REAL dataset . For my validation dataset and my test dataset I used validation images and test images from the APPA-REAL validation and test dataset, respectively. 
 
 \begin{figure}[h]
 \includegraphics[width=13cm]{utk-stats}
@@ -23,13 +23,13 @@ In constructed my training dataset as union of all the images from the UTK Face 
 
 Instead of training a DNN from scratch, I used a pretrained DNN that is trained on the ImageNet dataset and fine-tuned it for age estimation. In other words, I downloaded already existing model of a DNN and re-trained it for my specific task, i.e. age estimation. This technique is called \textit{transfer learning} and more information about it can be found in \cite{yosinski2014transferable}.
 
-Instead of measuring accuracy of a classifier, in the age estimation domain usually a mean absolute error is measured. If a person who is 65 years old gets classified as 66 years old, a classifier did actually a good job although it didn't predict the correct class. However, if a person who is 65 years old gets classified as 6 years old, that is a significantly bigger mistake than classifying it as 66 years old. Yet, when computing an accuracy, there is no difference if a predicted class is 6 or 66 if a ground truth is 65. That is intuition why mean absolute error is used instead of accuracy as a metric.
+Instead of measuring accuracy of a classifier, in the age estimation domain usually a mean absolute error (MAE) is measured. If a person who is 65 years old gets classified as 66 years old, a classifier did actually a good job although it didn't predict the correct class. However, if a person who is 65 years old gets classified as 6 years old, that is a significantly bigger mistake than classifying it as 66 years old. Yet, when computing an accuracy, there is no difference if a predicted class is 6 or 66 if a ground truth is 65. That is intuition why mean absolute error is used instead of accuracy as a metric.
 
 When it comes to (targeted) misclassification, there is something in age estimation domain that needs to be taken care of. If a person is classified a year or two older, it is not a huge success for a (targeted) misclassification. In the experiments that follow, targeted version of attacks is used, but a label is set as follows. If a person is under 50 years old, the target label is 90 years old. If a person is 50 years old or older, the target label is 10 years old. 
 
 The idea behind such a setting is to maximize mean average error, i.e. make classificator as wrong as possible, using the targeted version of known attacks.  This is how I reused targeted attacks in a novel setting. Initially I put targeted labels to 0 and 100 instead of 10 and 90, respectively, but I observed a worse performance. Probably because they are on the edge of the considered age range.
 
-Two different optimizers are used in the experiments for minimizing a loss function: SGD, introduced in Section \ref{subsection:gradient-descent}, and Adam \cite{DBLP:journals/corr/KingmaB14}. Two different DNN architectures are used for training: ResNet-50 \cite{DBLP:journals/corr/HeZRS15} and VGG16 \cite{DBLP:journals/corr/SimonyanZ14a}. Their performance is presented in Table \ref{table:trained-models}.
+Two different optimizers are used in the experiments for minimizing a loss function: SGD, introduced in Section \ref{subsection:gradient-descent}, and Adam \cite{DBLP:journals/corr/KingmaB14}. Three different DNN architectures are used for training: VGG16 \cite{DBLP:journals/corr/SimonyanZ14a}, ResNet-50 \cite{DBLP:journals/corr/HeZRS15}, and InceptionResNetV2\cite{DBLP:journals/corr/SzegedyIV16}. The VGG16 architecture didn't show nearly good results as the other two did and hence I discarded it. Results of training the models based on the ResNet-50 architecture and the InceptionResNetV2 architecture are presented in Table \ref{table:trained-models}.
 
 \begin{table}[]
 \centering
@@ -38,11 +38,11 @@ Two different optimizers are used in the experiments for minimizing a loss funct
 Id & Architecture & Optimizer & Validation Loss & \textbf{Validation MAE} \\ \hline
 1 & ResNet-50 & SGD & 3.436 & 5.151 \\ \hline
 2 & ResNet-50 & Adam & 3.456 & 6.772 \\ \hline
-3 & VGG16 & SGD & 16.603 & 11.255 \\ \hline
-4 & VGG16 & Adam & 15.494 & 11.685 \\ \hline
+3 & InceptionResNetV2 & SGD & TODO & TODO  \\ \hline
+4 & InceptionResNetV2 & Adam & TODO & TODO \\ \hline
 \end{tabular}
 \caption{Different models trained}
 \label{table:trained-models}
 \end{table}
 
-For evaluation, 100 random samples are taken from the APPA-REAL test dataset. Neither of models from Table \ref{table:trained-models} has never seen any of these samples before.
+For evaluation, 100 random samples are taken from the APPA-REAL test dataset. Neither of models from Table \ref{table:trained-models} has ever seen any of these samples before.

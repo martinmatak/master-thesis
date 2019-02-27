@@ -4,8 +4,6 @@ In the transfer based approach, I take 1000 samples that are previously unseen t
 
 Next, I take random 100 samples that are yet unseen by both networks and evaluate  MAE of the targeted neural network and the substitute network on those 100 images. Then I craft adversarial samples for the substitute neural network using those 100 images. Target labels for adversarial samples are set in the same manner as in whitebox attacks. Finally, I evaluate MAE of the targeted neural network and the substitute network on those 100 adversarial samples.
 
-From Table \ref{table:trained-models} it can be observed that the VGG16 architecture doesn't perform as good as the ResNet-50 architecture. Since the idea behind the attacks is to trick a classifier that performs good, in this section only attacks against the ResNet-50 architecture are considered.
-
 Results are presented in Tables \ref{table:bbox-fgsm-resnet} and \ref{table:bbox-cw-resnet}.
 
 
@@ -16,6 +14,8 @@ Results are presented in Tables \ref{table:bbox-fgsm-resnet} and \ref{table:bbox
 Target model id & Blackbox MAE & Substitute MAE & Blackbox MAE & Substitute MAE \\ \hline
 1 & 6.21 & 14.17 & 6.61 & 14.20 \\ \hline
 2 & 8.61 & 13.20  &  8.17 & 13.39  \\ \hline
+3 & TODO & TODO  & TODO & TODO  \\ \hline
+4 & TODO & TODO & TODO & TODO \\ \hline
 \end{tabular}
 \caption{Results using the ResNet-50 architecture for the substitute network and FGSM attack for crafting adversarial samples for it}
 \label{table:bbox-fgsm-resnet}
@@ -28,7 +28,9 @@ Target model id & Blackbox MAE & Substitute MAE & Blackbox MAE & Substitute MAE 
  & \multicolumn{2}{c|}{Clean Samples} & \multicolumn{2}{c|}{Adversarial samples} \\ \hline
 Target model id & Blackbox MAE & Substitute MAE & Blackbox MAE & Substitute MAE \\ \hline
 1 & 6.21 & 15.92 & 6.10 & 15.93 \\ \hline
-2 &  &  &  &  \\ \hline
+2 &  TODO & TODO  & TODO &  \\ \hline
+3 &  TODO & TODO  & TODO &  \\ \hline
+4 &  TODO & TODO  & TODO &  \\ \hline
 \end{tabular}
 \caption{Results using the ResNet-50 architecture for the substitute network and CW attack for crafting adversarial samples for it}
 \label{table:bbox-cw-resnet}

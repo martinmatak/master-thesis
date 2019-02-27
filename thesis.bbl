@@ -111,6 +111,12 @@ Sebastian Ruder.
 \newblock An overview of gradient descent optimization algorithms.
 \newblock {\em CoRR}, abs/1609.04747, 2016.
 
+\bibitem[SIV16]{DBLP:journals/corr/SzegedyIV16}
+Christian Szegedy, Sergey Ioffe, and Vincent Vanhoucke.
+\newblock Inception-v4, inception-resnet and the impact of residual connections
+  on learning.
+\newblock {\em CoRR}, abs/1602.07261, 2016.
+
 \bibitem[SSSI12a]{datasetGTSRD}
 J.~Stallkamp, M.~Schlipsing, J.~Salmen, and C.~Igel.
 \newblock Man vs. computer: Benchmarking machine learning algorithms for
