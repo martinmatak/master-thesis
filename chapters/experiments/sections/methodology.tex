@@ -29,7 +29,7 @@ When it comes to (targeted) misclassification, there is something in age estimat
 
 The idea behind such a setting is to maximize mean average error, i.e. make classificator as wrong as possible, using the targeted version of known attacks.  This is how I reused targeted attacks in a novel setting. Initially I put targeted labels to 0 and 100 instead of 10 and 90, respectively, but I observed a worse performance. Probably because they are on the edge of the considered age range.
 
-Two different optimizers are used in the experiments for minimizing a loss function: SGD, introduced in Section \ref{subsection:gradient-descent}, and Adam \cite{DBLP:journals/corr/KingmaB14}. Three different DNN architectures are used for training: VGG16 \cite{DBLP:journals/corr/SimonyanZ14a}, ResNet-50 \cite{DBLP:journals/corr/HeZRS15}, and InceptionResNetV2\cite{DBLP:journals/corr/SzegedyIV16}. Results of training the models based on the ResNet-50 architecture and the InceptionResNetV2 architecture are presented in Table \ref{table:trained-models}. The VGG16 architecture didn't show nearly good results as the other two did, i.e. it always predicted the value of the most frequent label, and hence I discarded it. However, if the VGG16 architecture is trained on the significantly larger IMDB-WIKI dataset, it produces good results \cite{Rothe-IJCV-2016}. 
+Two different optimizers are used in the experiments for minimizing a loss function: SGD, introduced in Section \ref{subsection:gradient-descent}, and Adam \cite{DBLP:journals/corr/KingmaB14}. Three different DNN architectures are used for training: VGG16 \cite{DBLP:journals/corr/SimonyanZ14a}, ResNet-50 \cite{DBLP:journals/corr/HeZRS15}, and InceptionResNetV2\cite{DBLP:journals/corr/SzegedyIV16}. Results of training the models based on the ResNet-50 architecture and the InceptionResNetV2 architecture are presented in Table \ref{table:trained-models}. The VGG16 architecture didn't show nearly good results as the other two did, i.e. it always predicted the value of the most frequent label, and hence I discarded it. However, if the VGG16 architecture is trained on the significantly larger IMDB-WIKI dataset, it can produce good results \cite{Rothe-IJCV-2016}. 
 
 \begin{table}[]
 \centering
@@ -38,8 +38,8 @@ Two different optimizers are used in the experiments for minimizing a loss funct
 Id & Architecture & Optimizer & Validation Loss & \textbf{Validation MAE} \\ \hline
 1 & ResNet-50 & SGD & 3.436 & 5.151 \\ \hline
 2 & ResNet-50 & Adam & 3.456 & 6.772 \\ \hline
-3 & InceptionResNetV2 & SGD & TODO & TODO  \\ \hline
-4 & InceptionResNetV2 & Adam & TODO & TODO \\ \hline
+3 & InceptionResNetV2 & SGD & 3.086 & 4.505  \\ \hline
+4 & InceptionResNetV2 & Adam & 3.268 & 3.922 \\ \hline
 \end{tabular}
 \caption{Different models trained}
 \label{table:trained-models}

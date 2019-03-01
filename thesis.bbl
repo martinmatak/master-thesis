@@ -106,6 +106,12 @@ D.~E. Rumelhart, G.~E. Hinton, and R.~J. Williams.
 \newblock chapter Learning Internal Representations by Error Propagation, pages
   318--362. MIT Press, Cambridge, MA, USA, 1986.
 
+\bibitem[RTG16]{Rothe-IJCV-2016}
+Rasmus Rothe, Radu Timofte, and Luc~Van Gool.
+\newblock Deep expectation of real and apparent age from a single image without
+  facial landmarks.
+\newblock {\em International Journal of Computer Vision (IJCV)}, July 2016.
+
 \bibitem[Rud16]{gradient-descent-overview}
 Sebastian Ruder.
 \newblock An overview of gradient descent optimization algorithms.
