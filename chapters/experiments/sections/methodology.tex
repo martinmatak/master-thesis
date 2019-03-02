@@ -27,7 +27,7 @@ Instead of measuring accuracy of a classifier, in the age estimation domain usua
 
 When it comes to (targeted) misclassification, there is something in age estimation domain that needs to be taken care of. If a person is classified a year or two older, it is not a huge success for a (targeted) misclassification. In the experiments that follow, targeted version of attacks is used, but a label is set as follows. If a person is under 50 years old, the target label is 90 years old. If a person is 50 years old or older, the target label is 10 years old. 
 
-The idea behind such a setting is to maximize mean average error, i.e. make classificator as wrong as possible, using the targeted version of known attacks.  This is how I reused targeted attacks in a novel setting. Initially I put targeted labels to 0 and 100 instead of 10 and 90, respectively, but I observed a worse performance. Probably because they are on the edge of the considered age range.
+The idea behind such a setting is to maximize mean absolute error, i.e. make classificator as wrong as possible, using the targeted version of known attacks.  This is how I reused targeted attacks in a novel setting. Initially I put targeted labels to 0 and 100 instead of 10 and 90, respectively, but I observed a worse performance. Probably because they are on the edge of the considered age range.
 
 Two different optimizers are used in the experiments for minimizing a loss function: SGD, introduced in Section \ref{subsection:gradient-descent}, and Adam \cite{DBLP:journals/corr/KingmaB14}. Three different DNN architectures are used for training: VGG16 \cite{DBLP:journals/corr/SimonyanZ14a}, ResNet-50 \cite{DBLP:journals/corr/HeZRS15}, and InceptionResNetV2\cite{DBLP:journals/corr/SzegedyIV16}. Results of training the models based on the ResNet-50 architecture and the InceptionResNetV2 architecture are presented in Table \ref{table:trained-models}. The VGG16 architecture didn't show nearly good results as the other two did, i.e. it always predicted the value of the most frequent label, and hence I discarded it. However, if the VGG16 architecture is trained on the significantly larger IMDB-WIKI dataset, it can produce good results \cite{Rothe-IJCV-2016}. 
 
@@ -45,4 +45,4 @@ Id & Architecture & Optimizer & Validation Loss & \textbf{Validation MAE} \\ \hl
 \label{table:trained-models}
 \end{table}
 
-For evaluation, 100 random samples are taken from the APPA-REAL test dataset. Neither of models from Table \ref{table:trained-models} has ever seen any of these samples before.
+For evaluation of attacks, 100 random samples are taken from the APPA-REAL test dataset. Neither of models from Table \ref{table:trained-models} has ever seen any of these samples before.

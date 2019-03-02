@@ -1,14 +1,45 @@
-When it comes to whitebox attacks, three approaches are evaluated: FGSM, CW and JSMA.  FGSM is used with $eps=5$ (the parameter that sets how large the perturbation may be). Number of iterations in CW is bounded to 1000. In Table \ref{table:whitebox-results} results are presented. The experiment for the CW attack with 10000 iterations yielded very similar results as with 1000 iterations. The results are discussed in the next chapter.\textbf{TODO: reference to the next chapter}.
+When it comes to whitebox attacks, three approaches are evaluated: FGSM, CW and JSMA. In Table \ref{table:whitebox-results} results are presented. Hyperparameters used in the FGSM and the CW attack are listed in Table \ref{table:fgsm-params} and Table \ref{table:cw-params}, respectively. The results are discussed in Section \ref{sec:discussion}
 
 \begin{table}[]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+eps & 5 \\  \hline
+clip min & 0  \\ \hline
+clip max & 255 \\ \hline
+y\_target & 10 or 90 \\ \hline
+\end{tabular}
+\caption{Values of the hyperparameters used in the FGSM attack}
+\label{table:fgsm-params}
+\end{table}
+
+\begin{table}[]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+binary\_search\_steps & 8 \\ \hline
+y\_target & 10 or 90 \\ \hline
+abort\_early & True \\ \hline
+max\_iterations & 5000 \\ \hline
+learning\_rate & 1 \\ \hline
+clip\_max & 255 \\ \hline
+clip\_min & 0 \\ \hline
+initial\_const & 0.1 \\ \hline
+\end{tabular}
+\caption{Values of the hyperparameters  used in the CW attack}
+\label{table:cw-params}
+\end{table}
+
+\begin{table}[]
+\centering
 \begin{tabular}{|cccccccc|}
 \hline
 \multicolumn{2}{|c|}{} & \multicolumn{2}{c|}{FGSM} & \multicolumn{2}{c|}{CW} & \multicolumn{2}{c|}{JSMA} \\ \hline
 \multicolumn{1}{|c|}{\begin{tabular}[c]{@{}c@{}}model\\ id\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}clean\\ MAE\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}adv\\ MAE\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}avg\\ L2\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}adv\\ MAE\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}avg\\ L2\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}adv\\ MAE\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}avg\\ L2\end{tabular}} \\ \hline
 1 & 6.21 & 29.89 & 1879.63 & 19.73 & 195.49 & - & - \\ \hline
 2 & 8.61 & 41.48 & 1879.49 & 8.61 & 0.0 & - & - \\ \hline
-3 & TODO & TODO & TODO & TODO & 0.0 & - & - \\ \hline
-4 & TODO& TODO & TODO & 1TODO & 0.0 & - & - \\ \hline
+3 & 4.82 & 23.96 & 2511.15 & TODO & 0.0 & - & - \\ \hline
+4 & 4.46 & 13.67 & 2511.10 & 1TODO & 0.0 & - & - \\ \hline
 \end{tabular}
 \caption{Results of different adversarial attacks. The "-" sign means that an attack couldn't be executed.}
 \label{table:whitebox-results}
