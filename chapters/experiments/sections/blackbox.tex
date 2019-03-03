@@ -7,7 +7,7 @@ In my second attempt, I tried to use somewhat simpler architecture. The substitu
 
 In my third attempt?!
 
-Finally, since the goal is to have similar boundaries as the targeted neural network, those boundaries could be obtained by just querying the targeted neural network and then learning the substitute neural network based on the results of queries. That skips a step of the jacobian augmentation of the dataset though. 
+Finally, since the goal is to have similar boundaries as the targeted neural network, those boundaries could be obtained by just querying the targeted neural network and then learning the substitute neural network based on the results of queries. That skips a step of the jacobian augmentation of the dataset though. Further argumentation of this decision can be found in Section \ref{sec:threats-to-validity}.
 
 To get information about boundaries of the targeted neural network,  I take 1000 samples that are previously unseen to targeted neural network, obtain labels for those samples and train the substitute neural network based on those results. TODO: Distribution of ages in those 1000 samples
 
