@@ -1,71 +1,47 @@
 This is BibTeX, Version 0.99d (TeX Live 2018)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: thesis.aux
-The style file: alpha.bst
-Database file #1: thesis-bibliography.bib
-Too many commas in name 1 of "E Agustsson, R Timofte, S Escalera, X Baro, I Guyon, R Rothe." for entry agustsson2017appareal
-while executing---line 1185 of file alpha.bst
-Too many commas in name 1 of "E Agustsson, R Timofte, S Escalera, X Baro, I Guyon, R Rothe." for entry agustsson2017appareal
-while executing---line 1185 of file alpha.bst
-Too many commas in name 1 of "E Agustsson, R Timofte, S Escalera, X Baro, I Guyon, R Rothe." for entry agustsson2017appareal
-while executing---line 1185 of file alpha.bst
-Too many commas in name 1 of "E Agustsson, R Timofte, S Escalera, X Baro, I Guyon, R Rothe." for entry agustsson2017appareal
-while executing---line 1185 of file alpha.bst
-Too many commas in name 1 of "E Agustsson, R Timofte, S Escalera, X Baro, I Guyon, R Rothe." for entry agustsson2017appareal
-while executing---line 1185 of file alpha.bst
-Too many commas in name 1 of "E Agustsson, R Timofte, S Escalera, X Baro, I Guyon, R Rothe." for entry agustsson2017appareal
-while executing---line 1185 of file alpha.bst
-Too many commas in name 1 of "E Agustsson, R Timofte, S Escalera, X Baro, I Guyon, R Rothe." for entry agustsson2017appareal
-while executing---line 1250 of file alpha.bst
-Too many commas in name 1 of "E Agustsson, R Timofte, S Escalera, X Baro, I Guyon, R Rothe." for entry agustsson2017appareal
-while executing---line 1250 of file alpha.bst
-Too many commas in name 1 of "E Agustsson, R Timofte, S Escalera, X Baro, I Guyon, R Rothe." for entry agustsson2017appareal
-while executing---line 1250 of file alpha.bst
-Warning--empty year in iris-dataset
-Warning--empty journal in datasetCIFAR10
-Warning--empty year in datasetCIFAR10
-Warning--empty journal in datasetMNIST
-Warning--empty booktitle in Rumelhart:1986:LIR:104279.104293
-Warning--there's a number but no volume in datasetGTSRD
-You've used 27 entries,
-            2543 wiz_defined-function locations,
-            702 strings with 9232 characters,
-and the built_in function-call counts, 10926 in all, are:
-= -- 1053
-> -- 655
-< -- 9
-+ -- 237
-- -- 234
-* -- 782
-:= -- 1881
-add.period$ -- 83
-call.type$ -- 27
-change.case$ -- 191
-chr.to.int$ -- 26
-cite$ -- 33
-duplicate$ -- 424
-empty$ -- 707
-format.name$ -- 261
-if$ -- 2176
-int.to.chr$ -- 2
+I found no \bibdata command---while reading file thesis.aux
+I found no \bibstyle command---while reading file thesis.aux
+You've used 28 entries,
+            0 wiz_defined-function locations,
+            126 strings with 1427 characters,
+and the built_in function-call counts, 0 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 0
+:= -- 0
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 0
+format.name$ -- 0
+if$ -- 0
+int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 29
-newline$ -- 139
-num.names$ -- 81
-pop$ -- 184
-preamble$ -- 1
-purify$ -- 219
+missing$ -- 0
+newline$ -- 0
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 0
+purify$ -- 0
 quote$ -- 0
-skip$ -- 359
+skip$ -- 0
 stack$ -- 0
-substring$ -- 379
-swap$ -- 62
-text.length$ -- 9
-text.prefix$ -- 4
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
 top$ -- 0
-type$ -- 208
-warning$ -- 6
-while$ -- 90
-width$ -- 30
-write$ -- 345
-(There were 9 error messages)
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 0
+(There were 2 error messages)
