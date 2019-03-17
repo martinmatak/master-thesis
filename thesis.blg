@@ -1,47 +1,71 @@
 This is BibTeX, Version 0.99d (TeX Live 2018)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: thesis.aux
-I found no \bibdata command---while reading file thesis.aux
-I found no \bibstyle command---while reading file thesis.aux
+The style file: alpha.bst
+Database file #1: thesis-bibliography.bib
+Too many commas in name 1 of "E Agustsson, R Timofte, S Escalera, X Baro, I Guyon, R Rothe." for entry agustsson2017appareal
+while executing---line 1185 of file alpha.bst
+Too many commas in name 1 of "E Agustsson, R Timofte, S Escalera, X Baro, I Guyon, R Rothe." for entry agustsson2017appareal
+while executing---line 1185 of file alpha.bst
+Too many commas in name 1 of "E Agustsson, R Timofte, S Escalera, X Baro, I Guyon, R Rothe." for entry agustsson2017appareal
+while executing---line 1185 of file alpha.bst
+Too many commas in name 1 of "E Agustsson, R Timofte, S Escalera, X Baro, I Guyon, R Rothe." for entry agustsson2017appareal
+while executing---line 1185 of file alpha.bst
+Too many commas in name 1 of "E Agustsson, R Timofte, S Escalera, X Baro, I Guyon, R Rothe." for entry agustsson2017appareal
+while executing---line 1185 of file alpha.bst
+Too many commas in name 1 of "E Agustsson, R Timofte, S Escalera, X Baro, I Guyon, R Rothe." for entry agustsson2017appareal
+while executing---line 1185 of file alpha.bst
+Too many commas in name 1 of "E Agustsson, R Timofte, S Escalera, X Baro, I Guyon, R Rothe." for entry agustsson2017appareal
+while executing---line 1250 of file alpha.bst
+Too many commas in name 1 of "E Agustsson, R Timofte, S Escalera, X Baro, I Guyon, R Rothe." for entry agustsson2017appareal
+while executing---line 1250 of file alpha.bst
+Too many commas in name 1 of "E Agustsson, R Timofte, S Escalera, X Baro, I Guyon, R Rothe." for entry agustsson2017appareal
+while executing---line 1250 of file alpha.bst
+Warning--empty year in iris-dataset
+Warning--empty journal in datasetCIFAR10
+Warning--empty year in datasetCIFAR10
+Warning--empty journal in datasetMNIST
+Warning--empty booktitle in Rumelhart:1986:LIR:104279.104293
+Warning--there's a number but no volume in datasetGTSRD
 You've used 28 entries,
-            0 wiz_defined-function locations,
-            126 strings with 1427 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
-int.to.chr$ -- 0
+            2543 wiz_defined-function locations,
+            706 strings with 9802 characters,
+and the built_in function-call counts, 11967 in all, are:
+= -- 1131
+> -- 790
+< -- 9
++ -- 290
+- -- 287
+* -- 896
+:= -- 2080
+add.period$ -- 86
+call.type$ -- 28
+change.case$ -- 220
+chr.to.int$ -- 27
+cite$ -- 34
+duplicate$ -- 437
+empty$ -- 727
+format.name$ -- 314
+if$ -- 2354
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
-purify$ -- 0
+missing$ -- 30
+newline$ -- 144
+num.names$ -- 84
+pop$ -- 212
+preamble$ -- 1
+purify$ -- 249
 quote$ -- 0
-skip$ -- 0
+skip$ -- 370
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
-text.prefix$ -- 0
+substring$ -- 386
+swap$ -- 63
+text.length$ -- 9
+text.prefix$ -- 4
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 0
-(There were 2 error messages)
+type$ -- 216
+warning$ -- 6
+while$ -- 93
+width$ -- 31
+write$ -- 357
+(There were 9 error messages)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  17 MAR 2019 12:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  17 MAR 2019 13:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1826,12 +1826,12 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<graphics/TU_INF_header.pdf, id=131, 512.91624pt x 47.17625pt>
+<graphics/TU_INF_header.pdf, id=135, 512.91624pt x 47.17625pt>
 File: graphics/TU_INF_header.pdf Graphic file (type pdf)
 <use graphics/TU_INF_header.pdf>
 Package pdftex.def Info: graphics/TU_INF_header.pdf  used on input line 112.
 (pdftex.def)             Requested size: 512.915pt x 47.17612pt.
-<graphics/TU_INF_Logo_gray.pdf, id=132, 171.64125pt x 46.1725pt>
+<graphics/TU_INF_Logo_gray.pdf, id=136, 171.64125pt x 46.1725pt>
 File: graphics/TU_INF_Logo_gray.pdf Graphic file (type pdf)
 <use graphics/TU_INF_Logo_gray.pdf>
 Package pdftex.def Info: graphics/TU_INF_Logo_gray.pdf  used on input line 112.
@@ -1978,18 +1978,6 @@ Package babel Info: Redefining ngerman shorthand "~
 
 ] (./thesis.toc [13]) [14]
 (./chapters/introduction/introduction.tex
-
-LaTeX Warning: Citation `krizhevsky2012imagenet' on page 1 undefined on input l
-ine 3.
-
-
-LaTeX Warning: Citation `outperformhumans' on page 1 undefined on input line 3.
-
-
-
-LaTeX Warning: Citation `szegedy2013intriguing' on page 1 undefined on input li
-ne 5.
-
 (./chapters/introduction/sections/motivation.tex [1
 
 
@@ -2008,17 +1996,10 @@ Package microtype Info: Character `029' is missing
  [2] [3])
 (./chapters/introduction/sections/approach.tex)
 (./chapters/introduction/sections/outline.tex)) [4]
-(./chapters/background/background.tex
+(./chapters/background/background.tex [5
 
-LaTeX Warning: Citation `Mitchell:1997:ML:541177' on page 5 undefined on input 
-line 1.
-
-
-LaTeX Warning: Citation `iris-dataset' on page 5 undefined on input line 10.
-
-[5
-
-] [6] (./chapters/background/sections/feedforward.tex
+] [6]
+(./chapters/background/sections/feedforward.tex
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2040,39 +2021,23 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
-
-LaTeX Warning: Citation `Goodfellow-et-al-2016' on page 9 undefined on input li
-ne 5.
-
-[9] [10]
-
-LaTeX Warning: Citation `gradient-descent-overview' on page 11 undefined on inp
-ut line 90.
-
-) (./chapters/background/sections/backpropagation.tex
+[9] [10]) (./chapters/background/sections/backpropagation.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11]
-
-LaTeX Warning: Citation `Rumelhart:1986:LIR:104279.104293' on page 12 undefined
- on input line 22.
-
-) (./chapters/background/sections/convolutionalNN.tex [12]
+ [11])
+(./chapters/background/sections/convolutionalNN.tex [12]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 7.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 7.
  [13]
-
-LaTeX Warning: Citation `krizhevsky2012imagenet' on page 14 undefined on input 
-line 35.
-
-<cnn.jpg, id=387, 1259.70625pt x 425.59pt>
+<cnn.jpg, id=409, 1259.70625pt x 425.59pt>
 File: cnn.jpg Graphic file (type jpg)
 <use cnn.jpg>
 Package pdftex.def Info: cnn.jpg  used on input line 38.
 (pdftex.def)             Requested size: 369.88582pt x 124.9635pt.
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 39.
+
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
@@ -2080,129 +2045,39 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-)) [14 <./cnn.jpg>] (./chapters/state-of-the-art/state-of-the-art.tex
-
-LaTeX Warning: Citation `fgsm-original' on page 15 undefined on input line 3.
-
-
-LaTeX Warning: Citation `DBLP:journals/corr/PapernotMJFCS15' on page 15 undefin
-ed on input line 5.
-
-
-LaTeX Warning: Citation `DBLP:journals/corr/CarliniW16a' on page 15 undefined o
-n input line 7.
-
-
-LaTeX Warning: Citation `DBLP:journals/corr/PapernotMGJCS16' on page 15 undefin
-ed on input line 11.
-
-
-LaTeX Warning: Citation `ensemble-attack' on page 15 undefined on input line 13
-.
-
-
-LaTeX Warning: Citation `brendel2018decisionbased' on page 15 undefined on inpu
-t line 15.
-
-[15
+)) [14 <./cnn.jpg>] (./chapters/state-of-the-art/state-of-the-art.tex [15
 
 ]
-
-LaTeX Warning: Citation `survey' on page 16 undefined on input line 17.
-
 (./chapters/state-of-the-art/sections/fgsm.tex
-
-LaTeX Warning: Citation `fgsm-original' on page 16 undefined on input line 1.
-
-
-LaTeX Warning: Citation `datasetImageNet' on page 16 undefined on input line 12
-.
-
-
-LaTeX Warning: Citation `datasetMNIST' on page 16 undefined on input line 12.
-
-
-LaTeX Warning: Citation `datasetCIFAR10' on page 16 undefined on input line 12.
-
-
-<graphics/gibbon.png, id=407, 948.54375pt x 404.51125pt>
+<graphics/gibbon.png, id=446, 948.54375pt x 404.51125pt>
 File: graphics/gibbon.png Graphic file (type png)
 <use graphics/gibbon.png>
 Package pdftex.def Info: graphics/gibbon.png  used on input line 15.
 (pdftex.def)             Requested size: 369.88582pt x 157.74023pt.
 
-LaTeX Warning: Citation `fgsm-original' on page 16 undefined on input line 16.
-
-
-LaTeX Warning: Citation `fgsm-original' on page 16 undefined on input line 16.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (./chapters/state-of-the-art/sections/jsma.tex [16]
+) (./chapters/state-of-the-art/sections/jsma.tex [16]) [17 <./graphics/gibbon.p
+ng>] (./chapters/state-of-the-art/sections/cw.tex [18] [19])
+(./chapters/state-of-the-art/sections/transfer-based.tex)
+(./chapters/state-of-the-art/sections/ensemble-approach.tex
+Underfull \vbox (badness 1742) has occurred while \output is active []
 
-LaTeX Warning: Citation `DBLP:journals/corr/PapernotMJFCS15' on page 17 undefin
-ed on input line 27.
-
-) [17 <./graphics/gibbon.png>] (./chapters/state-of-the-art/sections/cw.tex
-
-LaTeX Warning: Citation `DBLP:journals/corr/CarliniW16a' on page 18 undefined o
-n input line 18.
-
-
-LaTeX Warning: Citation `szegedy2013intriguing' on page 18 undefined on input l
-ine 22.
-
-[18]
-
-LaTeX Warning: Citation `DBLP:journals/corr/KingmaB14' on page 19 undefined on 
-input line 58.
-
-
-LaTeX Warning: Citation `DBLP:journals/corr/CarliniW16a' on page 19 undefined o
-n input line 78.
-
-[19]) (./chapters/state-of-the-art/sections/transfer-based.tex
-
-LaTeX Warning: Citation `DBLP:journals/corr/PapernotMGJCS16' on page 20 undefin
-ed on input line 7.
-
-
-LaTeX Warning: Citation `datasetGTSRD' on page 20 undefined on input line 9.
-
-) (./chapters/state-of-the-art/sections/ensemble-approach.tex
-
-LaTeX Warning: Citation `ensemble-attack' on page 20 undefined on input line 1.
-
-
-[20]) (./chapters/state-of-the-art/sections/boundary-attack.tex
-
-LaTeX Warning: Citation `brendel2018decisionbased' on page 21 undefined on inpu
-t line 3.
-
-[21]
-
-LaTeX Warning: Citation `brendel2018decisionbased' on page 22 undefined on inpu
-t line 9.
-
-)) [22] (./chapters/experiments/experiments.tex
+ [20])
+(./chapters/state-of-the-art/sections/boundary-attack.tex [21])) [22]
+(./chapters/experiments/experiments.tex
 (./chapters/experiments/sections/methodology.tex
-
-LaTeX Warning: Citation `agustsson2017appareal' on page 23 undefined on input l
-ine 4.
-
-
-LaTeX Warning: Citation `dlib09' on page 23 undefined on input line 8.
-
-<graphics/utk-stats.png, id=461, 432.1746pt x 350.5095pt>
+<graphics/utk-stats.png, id=520, 432.1746pt x 350.5095pt>
 File: graphics/utk-stats.png Graphic file (type png)
 <use graphics/utk-stats.png>
 Package pdftex.def Info: graphics/utk-stats.png  used on input line 13.
 (pdftex.def)             Requested size: 369.88582pt x 299.99895pt.
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<graphics/appa-train.png, id=462, 425.6703pt x 350.5095pt>
+<graphics/appa-train.png, id=521, 425.6703pt x 350.5095pt>
 File: graphics/appa-train.png Graphic file (type png)
 <use graphics/appa-train.png>
 Package pdftex.def Info: graphics/appa-train.png  used on input line 19.
@@ -2210,33 +2085,9 @@ Package pdftex.def Info: graphics/appa-train.png  used on input line 19.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Citation `yosinski2014transferable' on page 23 undefined on inpu
-t line 24.
-
 [23
 
 ] [24 <./graphics/utk-stats.png>]
-
-LaTeX Warning: Citation `DBLP:journals/corr/KingmaB14' on page 25 undefined on 
-input line 32.
-
-
-LaTeX Warning: Citation `DBLP:journals/corr/SimonyanZ14a' on page 25 undefined 
-on input line 32.
-
-
-LaTeX Warning: Citation `DBLP:journals/corr/HeZRS15' on page 25 undefined on in
-put line 32.
-
-
-LaTeX Warning: Citation `DBLP:journals/corr/SzegedyIV16' on page 25 undefined o
-n input line 32.
-
-
-LaTeX Warning: Citation `Rothe-IJCV-2016' on page 25 undefined on input line 32
-.
-
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 34.
@@ -2245,17 +2096,21 @@ LaTeX Warning: No positions in optional float specifier.
 ]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 5.
+               Default added (so using `tbp') on input line 9.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 18.
+               Default added (so using `tbp') on input line 22.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 35.
+               Default added (so using `tbp') on input line 39.
 
-) (./chapters/experiments/sections/blackbox.tex [26]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 54.
+
+) (./chapters/experiments/sections/blackbox.tex [26] [27]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 22.
@@ -2274,12 +2129,12 @@ Overfull \hbox (24.81155pt too wide) in paragraph at lines 38--47
 [][] 
  []
 
-<graphics/image0.jpg, id=505, 16188.48pt x 16188.48pt>
+<graphics/image0.jpg, id=586, 16188.48pt x 16188.48pt>
 File: graphics/image0.jpg Graphic file (type jpg)
 <use graphics/image0.jpg>
 Package pdftex.def Info: graphics/image0.jpg  used on input line 55.
 (pdftex.def)             Requested size: 142.0342pt x 142.0342pt.
-<graphics/image1000.jpg, id=506, 224.84pt x 224.84pt>
+<graphics/image1000.jpg, id=587, 224.84pt x 224.84pt>
 File: graphics/image1000.jpg Graphic file (type jpg)
 <use graphics/image1000.jpg>
 Package pdftex.def Info: graphics/image1000.jpg  used on input line 60.
@@ -2289,12 +2144,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 53--63
 []$[]$ $[]$ 
  []
 
-<graphics/image2000.jpg, id=507, 224.84pt x 224.84pt>
+<graphics/image2000.jpg, id=588, 224.84pt x 224.84pt>
 File: graphics/image2000.jpg Graphic file (type jpg)
 <use graphics/image2000.jpg>
 Package pdftex.def Info: graphics/image2000.jpg  used on input line 66.
 (pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
-<graphics/image4000.jpg, id=508, 224.84pt x 224.84pt>
+<graphics/image4000.jpg, id=589, 224.84pt x 224.84pt>
 File: graphics/image4000.jpg Graphic file (type jpg)
 <use graphics/image4000.jpg>
 Package pdftex.def Info: graphics/image4000.jpg  used on input line 71.
@@ -2304,12 +2159,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 64--74
 []$[]$ $[]$ 
  []
 
-<graphics/image8000.jpg, id=509, 224.84pt x 224.84pt>
+<graphics/image8000.jpg, id=590, 224.84pt x 224.84pt>
 File: graphics/image8000.jpg Graphic file (type jpg)
 <use graphics/image8000.jpg>
 Package pdftex.def Info: graphics/image8000.jpg  used on input line 77.
 (pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
-<graphics/image12000.jpg, id=510, 224.84pt x 224.84pt>
+<graphics/image12000.jpg, id=591, 224.84pt x 224.84pt>
 File: graphics/image12000.jpg Graphic file (type jpg)
 <use graphics/image12000.jpg>
 Package pdftex.def Info: graphics/image12000.jpg  used on input line 82.
@@ -2319,12 +2174,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 75--85
 []$[]$ $[]$ 
  []
 
-<graphics/image16000.jpg, id=511, 224.84pt x 224.84pt>
+<graphics/image16000.jpg, id=592, 224.84pt x 224.84pt>
 File: graphics/image16000.jpg Graphic file (type jpg)
 <use graphics/image16000.jpg>
 Package pdftex.def Info: graphics/image16000.jpg  used on input line 88.
 (pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
-<graphics/final_adversarial.jpg, id=512, 224.84pt x 224.84pt>
+<graphics/final_adversarial.jpg, id=593, 224.84pt x 224.84pt>
 File: graphics/final_adversarial.jpg Graphic file (type jpg)
 <use graphics/final_adversarial.jpg>
 Package pdftex.def Info: graphics/final_adversarial.jpg  used on input line 93.
@@ -2338,12 +2193,11 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 86--96
 
 LaTeX Warning: Float too large for page by 89.75348pt on input line 98.
 
-[27]
 File: graphics/image0.jpg Graphic file (type jpg)
 <use graphics/image0.jpg>
 Package pdftex.def Info: graphics/image0.jpg  used on input line 103.
 (pdftex.def)             Requested size: 142.0342pt x 142.0342pt.
-<graphics/softmaxbenign.png, id=519, 429.2838pt x 350.5095pt>
+<graphics/softmaxbenign.png, id=594, 429.2838pt x 350.5095pt>
 File: graphics/softmaxbenign.png Graphic file (type png)
 <use graphics/softmaxbenign.png>
 Package pdftex.def Info: graphics/softmaxbenign.png  used on input line 108.
@@ -2353,12 +2207,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 101--111
 []$[]$ $[]$ 
  []
 
-<graphics/source_image.jpg, id=520, 224.84pt x 224.84pt>
+<graphics/source_image.jpg, id=595, 224.84pt x 224.84pt>
 File: graphics/source_image.jpg Graphic file (type jpg)
 <use graphics/source_image.jpg>
 Package pdftex.def Info: graphics/source_image.jpg  used on input line 118.
 (pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
-<graphics/softmaxsource_image.png, id=521, 429.2838pt x 350.5095pt>
+<graphics/softmaxsource_image.png, id=596, 429.2838pt x 350.5095pt>
 File: graphics/softmaxsource_image.png Graphic file (type png)
 <use graphics/softmaxsource_image.png>
 Package pdftex.def Info: graphics/softmaxsource_image.png  used on input line 1
@@ -2369,12 +2223,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 116--126
 []$[]$ $[]$ 
  []
 
-<graphics/softmax3000.png, id=522, 429.2838pt x 350.5095pt>
+<graphics/softmax3000.png, id=597, 429.2838pt x 350.5095pt>
 File: graphics/softmax3000.png Graphic file (type png)
 <use graphics/softmax3000.png>
 Package pdftex.def Info: graphics/softmax3000.png  used on input line 135.
 (pdftex.def)             Requested size: 174.2389pt x 142.26578pt.
-<graphics/softmax4000.png, id=523, 429.2838pt x 350.5095pt>
+<graphics/softmax4000.png, id=598, 429.2838pt x 350.5095pt>
 File: graphics/softmax4000.png Graphic file (type png)
 <use graphics/softmax4000.png>
 Package pdftex.def Info: graphics/softmax4000.png  used on input line 140.
@@ -2384,12 +2238,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 133--143
 []$[]$ $[]$ 
  []
 
-<graphics/softmax8000.png, id=524, 429.2838pt x 350.5095pt>
+<graphics/softmax8000.png, id=599, 429.2838pt x 350.5095pt>
 File: graphics/softmax8000.png Graphic file (type png)
 <use graphics/softmax8000.png>
 Package pdftex.def Info: graphics/softmax8000.png  used on input line 147.
 (pdftex.def)             Requested size: 174.2389pt x 142.26578pt.
-<graphics/softmaxadversarial.png, id=525, 429.2838pt x 350.5095pt>
+<graphics/softmaxadversarial.png, id=600, 429.2838pt x 350.5095pt>
 File: graphics/softmaxadversarial.png Graphic file (type png)
 <use graphics/softmaxadversarial.png>
 Package pdftex.def Info: graphics/softmaxadversarial.png  used on input line 15
@@ -2414,11 +2268,6 @@ ftmaxsource_image.png>] [31 <./graphics/softmax3000.png> <./graphics/softmax400
 (./chapters/critical-reflection/critical-reflection.tex
 (./chapters/critical-reflection/sections/discussion.tex)
 (./chapters/critical-reflection/sections/threats-to-validity.tex
-
-LaTeX Warning: Citation `papernot2018cleverhans' on page 35 undefined on input 
-line 3.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 3--3
 [][] [][][]\T1/lmr/m/n/9 (+20) https://stackoverflow.com/questions/54580105/mem
 ory-consumption-of-jacobian-dataset-
@@ -2431,7 +2280,11 @@ ory-consumption-of-jacobian-dataset-
 (./chapters/summary-and-future-work/sections/future-work.tex)) [37] [38
 
 ]
-(./thesis.ind) (./thesis.gls) (./thesis.acr) (./thesis.bbl)
+(./thesis.ind) (./thesis.gls) (./thesis.acr) (./thesis.bbl
+bibitemlist
+[39
+
+] [40]) [41]
 No complaints by nag.
 \tf@toc=\write10
 \openout10 = `thesis.toc'.
@@ -2442,18 +2295,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 182.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 40EBE823C2CD13B54F93AE1809859D2E;1883.
-
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: B3991B048CFA7ECDB2B0C5D97756F77B;1933.
  ) 
 Here is how much of TeX's memory you used:
- 44860 strings out of 492649
- 978908 string characters out of 6129622
- 1278810 words of memory out of 5000000
- 47452 multiletter control sequences out of 15000+600000
- 160668 words of font info for 224 fonts, out of 8000000 for 9000
+ 44922 strings out of 492649
+ 980335 string characters out of 6129622
+ 1280345 words of memory out of 5000000
+ 47483 multiletter control sequences out of 15000+600000
+ 160538 words of font info for 223 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,18n,103p,1967b,1874s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
@@ -2483,10 +2332,10 @@ fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
 ype1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw
 /helvetic/uhvb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/helvet
 ic/uhvr8a.pfb>
-Output written on thesis.pdf (52 pages, 2107843 bytes).
+Output written on thesis.pdf (55 pages, 2125149 bytes).
 PDF statistics:
- 715 PDF objects out of 1000 (max. 8388607)
- 599 compressed objects within 6 object streams
- 159 named destinations out of 1000 (max. 500000)
- 37742 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 814 PDF objects out of 1000 (max. 8388607)
+ 693 compressed objects within 7 object streams
+ 192 named destinations out of 1000 (max. 500000)
+ 37750 words of extra memory for PDF output out of 42996 (max. 10000000)
 
