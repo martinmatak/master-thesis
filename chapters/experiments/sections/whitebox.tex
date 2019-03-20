@@ -1,8 +1,87 @@
 When it comes to whitebox attacks, three approaches are evaluated: FGSM, CW and JSMA. Hyperparameters used in the FGSM and the CW attack are listed in Table \ref{table:fgsm-params} and Table \ref{table:cw-params}, respectively. In Table \ref{table:whitebox-results} results are presented.
 
-It is interesting to notice that the FGSM attack managed to change MAE for the model with id 2 from 9.5 to 47.79. In other words, the targeted model on average predicted that a person in the adversarial image is 38 years younger or older than a person in the original image!
+It is interesting to notice that the FGSM attack managed to change MAE for the model with id 2 from 9.5 to 47.79. In other words, the targeted model on average predicted that a person in the adversarial image is 38 years younger or older than a person in the original image! 
 
-TODO: Add sample for FGSM fool
+Several original samples and the corresponding adversarial samples crafted in this experiment are presented in Figure \label{fig:fgsm-attack}. It can be observed that the attack adds a similar pattern to every image. However, when hyperparameter $eps$ is reduced to $1.0$, it is almost impossible to notice the perturbation as it can be seen in Figure \label{fig:fgsm-attack-eps1}. But it still can be noticed that there is some perturbation. Lines in adversarial images are not that sharp as in original images and some pixels are not natural e.g. line between left cheek and the background in the image (d).
+
+\begin{figure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{original_image_fgsm_1.jpg}
+  \caption{Original sample classified as 28 years old}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{adversarial_image_fgsm_1.jpg}
+  \caption{Adversarial sample classified as 85 years old}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{original_image_fgsm_2.jpg}
+  \caption{Original sample classified as 59 years old}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{adversarial_image_fgsm_2.jpg}
+  \caption{Adversarial sample classified as 23 years old}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{original_image_fgsm_3.jpg}
+  \caption{Original sample classified as 28 years old}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{adversarial_image_fgsm_3.jpg}
+  \caption{Adversarial sample classified as 85 years old}
+\end{subfigure}
+
+\caption{Original samples (left) and adversarial samples (right) crafted using the FGSM algorithm (\textit{eps} set to 5.0) and evaluated against the model with id 2}
+\label{fig:fgsm-attack}
+\end{figure}
+
+\begin{figure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{original_image_fgsm_1-eps1.jpg}
+  \caption{Original sample classified as 28 years old}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{adversarial_image_fgsm_1-eps1.jpg}
+  \caption{Adversarial sample classified as 59 years old}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{original_image_fgsm_2-eps1.jpg}
+  \caption{Original sample classified as 59 years old}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{adversarial_image_fgsm_2-eps1.jpg}
+  \caption{Adversarial sample classified as 28 years old}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{original_image_fgsm_3-eps1.jpg}
+  \caption{Original sample classified as 28 years old}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{adversarial_image_fgsm_3-eps1.jpg}
+  \caption{Adversarial sample classified as 64 years old}
+\end{subfigure}
+
+\caption{Original samples (left) and adversarial samples (right) crafted using the FGSM algorithm (\textit{eps} set to 1.0) and evaluated against the model with id 2}
+\label{fig:fgsm-attack-eps1}
+\end{figure}
+
 
 The CW attack, given the hyperparameters in Table \ref{table:cw-params}, managed to move MAE for model with id 1 from 6.69 to 29.45.  In other words, the targeted model on average predicted that a person in the adversarial image is 23 years younger or older than a person in the original image. This is not that much as FGSM managed for the model with id 2, but it is significant.
 

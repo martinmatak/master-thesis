@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  20 MAR 2019 15:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.10.9)  20 MAR 2019 17:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1560,7 +1560,14 @@ Package glossaries Info: Writing glossary file thesis.glo on input line 55.
 \openout8 = `thesis.acn'.
 
 Package glossaries Info: Writing glossary file thesis.acn on input line 55.
-(./thesis.aux)
+(./thesis.aux
+
+LaTeX Warning: Label `fig:fgsm-attack' multiply defined.
+
+
+LaTeX Warning: Label `fig:fgsm-attack-eps1' multiply defined.
+
+)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
@@ -2094,29 +2101,138 @@ LaTeX Warning: No positions in optional float specifier.
 
 ) (./chapters/experiments/sections/whitebox.tex [25 <./graphics/appa-train.png>
 ]
+<graphics/original_image_fgsm_1.jpg, id=561, 1732.4725pt x 1731.46875pt>
+File: graphics/original_image_fgsm_1.jpg Graphic file (type jpg)
+<use graphics/original_image_fgsm_1.jpg>
+Package pdftex.def Info: graphics/original_image_fgsm_1.jpg  used on input line
+ 11.
+(pdftex.def)             Requested size: 142.32802pt x 142.24556pt.
+<graphics/adversarial_image_fgsm_1.jpg, id=562, 224.84pt x 224.84pt>
+File: graphics/adversarial_image_fgsm_1.jpg Graphic file (type jpg)
+<use graphics/adversarial_image_fgsm_1.jpg>
+Package pdftex.def Info: graphics/adversarial_image_fgsm_1.jpg  used on input l
+ine 16.
+(pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 9--19
+[]$[]$ $[]$ 
+ []
+
+<graphics/original_image_fgsm_2.jpg, id=563, 837.1275pt x 836.12375pt>
+File: graphics/original_image_fgsm_2.jpg Graphic file (type jpg)
+<use graphics/original_image_fgsm_2.jpg>
+Package pdftex.def Info: graphics/original_image_fgsm_2.jpg  used on input line
+ 22.
+(pdftex.def)             Requested size: 142.42474pt x 142.25398pt.
+<graphics/adversarial_image_fgsm_2.jpg, id=564, 224.84pt x 224.84pt>
+File: graphics/adversarial_image_fgsm_2.jpg Graphic file (type jpg)
+<use graphics/adversarial_image_fgsm_2.jpg>
+Package pdftex.def Info: graphics/adversarial_image_fgsm_2.jpg  used on input l
+ine 27.
+(pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 20--30
+[]$[]$ $[]$ 
+ []
+
+<graphics/original_image_fgsm_3.jpg, id=565, 1203.49625pt x 1204.5pt>
+File: graphics/original_image_fgsm_3.jpg Graphic file (type jpg)
+<use graphics/original_image_fgsm_3.jpg>
+Package pdftex.def Info: graphics/original_image_fgsm_3.jpg  used on input line
+ 33.
+(pdftex.def)             Requested size: 142.1362pt x 142.25475pt.
+<graphics/adversarial_image_fgsm_3.jpg, id=566, 224.84pt x 224.84pt>
+File: graphics/adversarial_image_fgsm_3.jpg Graphic file (type jpg)
+<use graphics/adversarial_image_fgsm_3.jpg>
+Package pdftex.def Info: graphics/adversarial_image_fgsm_3.jpg  used on input l
+ine 38.
+(pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 31--41
+[]$[]$ $[]$ 
+ []
+
+<graphics/original_image_fgsm_1-eps1.jpg, id=567, 1732.4725pt x 1731.46875pt>
+File: graphics/original_image_fgsm_1-eps1.jpg Graphic file (type jpg)
+<use graphics/original_image_fgsm_1-eps1.jpg>
+Package pdftex.def Info: graphics/original_image_fgsm_1-eps1.jpg  used on input
+ line 50.
+(pdftex.def)             Requested size: 142.32802pt x 142.24556pt.
+<graphics/adversarial_image_fgsm_1-eps1.jpg, id=568, 224.84pt x 224.84pt>
+File: graphics/adversarial_image_fgsm_1-eps1.jpg Graphic file (type jpg)
+<use graphics/adversarial_image_fgsm_1-eps1.jpg>
+Package pdftex.def Info: graphics/adversarial_image_fgsm_1-eps1.jpg  used on in
+put line 55.
+(pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 48--58
+[]$[]$ $[]$ 
+ []
+
+<graphics/original_image_fgsm_2-eps1.jpg, id=569, 837.1275pt x 836.12375pt>
+File: graphics/original_image_fgsm_2-eps1.jpg Graphic file (type jpg)
+<use graphics/original_image_fgsm_2-eps1.jpg>
+Package pdftex.def Info: graphics/original_image_fgsm_2-eps1.jpg  used on input
+ line 61.
+(pdftex.def)             Requested size: 142.42474pt x 142.25398pt.
+<graphics/adversarial_image_fgsm_2-eps1.jpg, id=570, 224.84pt x 224.84pt>
+File: graphics/adversarial_image_fgsm_2-eps1.jpg Graphic file (type jpg)
+<use graphics/adversarial_image_fgsm_2-eps1.jpg>
+Package pdftex.def Info: graphics/adversarial_image_fgsm_2-eps1.jpg  used on in
+put line 66.
+(pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 59--69
+[]$[]$ $[]$ 
+ []
+
+<graphics/original_image_fgsm_3-eps1.jpg, id=571, 1203.49625pt x 1204.5pt>
+File: graphics/original_image_fgsm_3-eps1.jpg Graphic file (type jpg)
+<use graphics/original_image_fgsm_3-eps1.jpg>
+Package pdftex.def Info: graphics/original_image_fgsm_3-eps1.jpg  used on input
+ line 72.
+(pdftex.def)             Requested size: 142.1362pt x 142.25475pt.
+<graphics/adversarial_image_fgsm_3-eps1.jpg, id=572, 224.84pt x 224.84pt>
+File: graphics/adversarial_image_fgsm_3-eps1.jpg Graphic file (type jpg)
+<use graphics/adversarial_image_fgsm_3-eps1.jpg>
+Package pdftex.def Info: graphics/adversarial_image_fgsm_3-eps1.jpg  used on in
+put line 77.
+(pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 70--80
+[]$[]$ $[]$ 
+ []
+
+[26] [27 <./graphics/original_image_fgsm_1.jpg> <./graphics/adversarial_image_f
+gsm_1.jpg> <./graphics/original_image_fgsm_2.jpg> <./graphics/adversarial_image
+_fgsm_2.jpg> <./graphics/original_image_fgsm_3.jpg> <./graphics/adversarial_ima
+ge_fgsm_3.jpg>] [28 <./graphics/original_image_fgsm_1-eps1.jpg> <./graphics/adv
+ersarial_image_fgsm_1-eps1.jpg> <./graphics/original_image_fgsm_2-eps1.jpg> <./
+graphics/adversarial_image_fgsm_2-eps1.jpg> <./graphics/original_image_fgsm_3-e
+ps1.jpg> <./graphics/adversarial_image_fgsm_3-eps1.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 19.
+               Default added (so using `tbp') on input line 98.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 32.
+               Default added (so using `tbp') on input line 111.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 49.
+               Default added (so using `tbp') on input line 128.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 64.
+               Default added (so using `tbp') on input line 143.
 
-) (./chapters/experiments/sections/blackbox.tex [26] [27]
-<graphics/custom-dataset.png, id=585, 419.8887pt x 318.7107pt>
+) (./chapters/experiments/sections/blackbox.tex [29]
+<graphics/custom-dataset.png, id=608, 419.8887pt x 318.7107pt>
 File: graphics/custom-dataset.png Graphic file (type png)
 <use graphics/custom-dataset.png>
 Package pdftex.def Info: graphics/custom-dataset.png  used on input line 8.
 (pdftex.def)             Requested size: 369.88582pt x 280.76291pt.
- [28 <./graphics/custom-dataset.png>]
+ [30 <./graphics/custom-dataset.png>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 28.
@@ -2135,12 +2251,12 @@ Overfull \hbox (24.81155pt too wide) in paragraph at lines 44--53
 [][] 
  []
 
-<graphics/image0.jpg, id=598, 16188.48pt x 16188.48pt>
+<graphics/image0.jpg, id=621, 16188.48pt x 16188.48pt>
 File: graphics/image0.jpg Graphic file (type jpg)
 <use graphics/image0.jpg>
 Package pdftex.def Info: graphics/image0.jpg  used on input line 61.
 (pdftex.def)             Requested size: 142.0342pt x 142.0342pt.
-<graphics/image1000.jpg, id=599, 224.84pt x 224.84pt>
+<graphics/image1000.jpg, id=622, 224.84pt x 224.84pt>
 File: graphics/image1000.jpg Graphic file (type jpg)
 <use graphics/image1000.jpg>
 Package pdftex.def Info: graphics/image1000.jpg  used on input line 66.
@@ -2150,12 +2266,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 59--69
 []$[]$ $[]$ 
  []
 
-<graphics/image2000.jpg, id=600, 224.84pt x 224.84pt>
+<graphics/image2000.jpg, id=623, 224.84pt x 224.84pt>
 File: graphics/image2000.jpg Graphic file (type jpg)
 <use graphics/image2000.jpg>
 Package pdftex.def Info: graphics/image2000.jpg  used on input line 72.
 (pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
-<graphics/image4000.jpg, id=601, 224.84pt x 224.84pt>
+<graphics/image4000.jpg, id=624, 224.84pt x 224.84pt>
 File: graphics/image4000.jpg Graphic file (type jpg)
 <use graphics/image4000.jpg>
 Package pdftex.def Info: graphics/image4000.jpg  used on input line 77.
@@ -2165,12 +2281,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 70--80
 []$[]$ $[]$ 
  []
 
-<graphics/image8000.jpg, id=602, 224.84pt x 224.84pt>
+<graphics/image8000.jpg, id=625, 224.84pt x 224.84pt>
 File: graphics/image8000.jpg Graphic file (type jpg)
 <use graphics/image8000.jpg>
 Package pdftex.def Info: graphics/image8000.jpg  used on input line 83.
 (pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
-<graphics/image12000.jpg, id=603, 224.84pt x 224.84pt>
+<graphics/image12000.jpg, id=626, 224.84pt x 224.84pt>
 File: graphics/image12000.jpg Graphic file (type jpg)
 <use graphics/image12000.jpg>
 Package pdftex.def Info: graphics/image12000.jpg  used on input line 88.
@@ -2180,12 +2296,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 81--91
 []$[]$ $[]$ 
  []
 
-<graphics/image16000.jpg, id=604, 224.84pt x 224.84pt>
+<graphics/image16000.jpg, id=627, 224.84pt x 224.84pt>
 File: graphics/image16000.jpg Graphic file (type jpg)
 <use graphics/image16000.jpg>
 Package pdftex.def Info: graphics/image16000.jpg  used on input line 94.
 (pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
-<graphics/final_adversarial.jpg, id=605, 224.84pt x 224.84pt>
+<graphics/final_adversarial.jpg, id=628, 224.84pt x 224.84pt>
 File: graphics/final_adversarial.jpg Graphic file (type jpg)
 <use graphics/final_adversarial.jpg>
 Package pdftex.def Info: graphics/final_adversarial.jpg  used on input line 99.
@@ -2199,12 +2315,11 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 92--102
 
 LaTeX Warning: Float too large for page by 89.75348pt on input line 104.
 
-[29]
 File: graphics/image0.jpg Graphic file (type jpg)
 <use graphics/image0.jpg>
 Package pdftex.def Info: graphics/image0.jpg  used on input line 109.
 (pdftex.def)             Requested size: 142.0342pt x 142.0342pt.
-<graphics/softmaxbenign.png, id=613, 429.2838pt x 350.5095pt>
+<graphics/softmaxbenign.png, id=629, 429.2838pt x 350.5095pt>
 File: graphics/softmaxbenign.png Graphic file (type png)
 <use graphics/softmaxbenign.png>
 Package pdftex.def Info: graphics/softmaxbenign.png  used on input line 114.
@@ -2214,12 +2329,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 107--117
 []$[]$ $[]$ 
  []
 
-<graphics/source_image.jpg, id=614, 224.84pt x 224.84pt>
+<graphics/source_image.jpg, id=630, 224.84pt x 224.84pt>
 File: graphics/source_image.jpg Graphic file (type jpg)
 <use graphics/source_image.jpg>
 Package pdftex.def Info: graphics/source_image.jpg  used on input line 124.
 (pdftex.def)             Requested size: 142.27092pt x 142.27092pt.
-<graphics/softmaxsource_image.png, id=615, 429.2838pt x 350.5095pt>
+<graphics/softmaxsource_image.png, id=631, 429.2838pt x 350.5095pt>
 File: graphics/softmaxsource_image.png Graphic file (type png)
 <use graphics/softmaxsource_image.png>
 Package pdftex.def Info: graphics/softmaxsource_image.png  used on input line 1
@@ -2230,12 +2345,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 122--132
 []$[]$ $[]$ 
  []
 
-<graphics/softmax3000.png, id=616, 429.2838pt x 350.5095pt>
+<graphics/softmax3000.png, id=632, 429.2838pt x 350.5095pt>
 File: graphics/softmax3000.png Graphic file (type png)
 <use graphics/softmax3000.png>
 Package pdftex.def Info: graphics/softmax3000.png  used on input line 141.
 (pdftex.def)             Requested size: 174.2389pt x 142.26578pt.
-<graphics/softmax4000.png, id=617, 429.2838pt x 350.5095pt>
+<graphics/softmax4000.png, id=633, 429.2838pt x 350.5095pt>
 File: graphics/softmax4000.png Graphic file (type png)
 <use graphics/softmax4000.png>
 Package pdftex.def Info: graphics/softmax4000.png  used on input line 146.
@@ -2245,12 +2360,12 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 139--149
 []$[]$ $[]$ 
  []
 
-<graphics/softmax8000.png, id=618, 429.2838pt x 350.5095pt>
+<graphics/softmax8000.png, id=634, 429.2838pt x 350.5095pt>
 File: graphics/softmax8000.png Graphic file (type png)
 <use graphics/softmax8000.png>
 Package pdftex.def Info: graphics/softmax8000.png  used on input line 153.
 (pdftex.def)             Requested size: 174.2389pt x 142.26578pt.
-<graphics/softmaxadversarial.png, id=619, 429.2838pt x 350.5095pt>
+<graphics/softmaxadversarial.png, id=635, 429.2838pt x 350.5095pt>
 File: graphics/softmaxadversarial.png Graphic file (type png)
 <use graphics/softmaxadversarial.png>
 Package pdftex.def Info: graphics/softmaxadversarial.png  used on input line 15
@@ -2261,15 +2376,15 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 151--161
 []$[]$ $[]$ 
  []
 
-)) [30] [31 <./graphics/image0.jpg> <./graphics/image1000.jpg> <./graphics/imag
+)) [31] [32 <./graphics/image0.jpg> <./graphics/image1000.jpg> <./graphics/imag
 e2000.jpg> <./graphics/image4000.jpg> <./graphics/image8000.jpg> <./graphics/im
 age12000.jpg> <./graphics/image16000.jpg> <./graphics/final_adversarial.jpg>]
-[32 <./graphics/softmaxbenign.png> <./graphics/source_image.jpg> <./graphics/so
-ftmaxsource_image.png>] [33 <./graphics/softmax3000.png> <./graphics/softmax400
+[33 <./graphics/softmaxbenign.png> <./graphics/source_image.jpg> <./graphics/so
+ftmaxsource_image.png>] [34 <./graphics/softmax3000.png> <./graphics/softmax400
 0.png> <./graphics/softmax8000.png> <./graphics/softmaxadversarial.png>]
-[34
+(./chapters/semi-targeted/semi-targeted.tex) [35
 
-] (./chapters/semi-targeted/semi-targeted.tex) [35] [36
+] [36
 
 ]
 (./chapters/critical-reflection/critical-reflection.tex
@@ -2302,13 +2417,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 182.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 53B4D1C4AE0BCDE9150CB0882311E658;1933.
+(rerunfilecheck)             Checksum: F144C4E4CE8429E9E784BA7FF6341234;1933.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 44934 strings out of 492649
- 980560 string characters out of 6129622
- 1281748 words of memory out of 5000000
- 47488 multiletter control sequences out of 15000+600000
+ 44998 strings out of 492649
+ 983033 string characters out of 6129622
+ 1281469 words of memory out of 5000000
+ 47538 multiletter control sequences out of 15000+600000
  160627 words of font info for 224 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,18n,103p,1967b,1874s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2339,10 +2458,10 @@ fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
 ype1/urw/courier/ucrr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw
 /helvetic/uhvb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/helvet
 ic/uhvr8a.pfb>
-Output written on thesis.pdf (57 pages, 2139753 bytes).
+Output written on thesis.pdf (57 pages, 4319075 bytes).
 PDF statistics:
- 833 PDF objects out of 1000 (max. 8388607)
- 707 compressed objects within 8 object streams
- 196 named destinations out of 1000 (max. 500000)
- 37755 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 847 PDF objects out of 1000 (max. 8388607)
+ 709 compressed objects within 8 object streams
+ 198 named destinations out of 1000 (max. 500000)
+ 37815 words of extra memory for PDF output out of 42996 (max. 10000000)
 
