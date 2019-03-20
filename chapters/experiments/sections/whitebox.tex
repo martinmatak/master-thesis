@@ -85,7 +85,47 @@ Several original samples and the corresponding adversarial samples crafted in th
 
 The CW attack, given the hyperparameters in Table \ref{table:cw-params}, managed to move MAE for model with id 1 from 6.69 to 29.45.  In other words, the targeted model on average predicted that a person in the adversarial image is 23 years younger or older than a person in the original image. This is not that much as FGSM managed for the model with id 2, but it is significant.
 
-TODO: Add sample image for CW
+Several original samples and the corresponding adversarial samples crafted in this experiment are presented in Figure \label{fig:cw-attack}. It can be observed that the attack adds a very strong pattern to every image, i.e. introduces high perturbation. This is a consequence of chosen values for number of iterations and the learning rate. 
+
+\begin{figure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{original_image_fgsm_1.jpg}
+  \caption{Original sample classified as 36 years old}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{adversarial_image_fgsm_1.jpg}
+  \caption{Adversarial sample classified as 79 years old}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{original_image_cw_2.jpg}
+  \caption{Original sample classified as 55 years old}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{adversarial_image_cw_2.jpg}
+  \caption{Adversarial sample classified as 10 years old}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{original_image_fgsm_3.jpg}
+  \caption{Original sample classified as 35 years old}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{adversarial_image_cw_3.jpg}
+  \caption{Adversarial sample classified as 84 years old}
+\end{subfigure}
+
+\caption{Original samples (left) and adversarial samples (right) crafted using the CW algorithm and evaluated against the model with id 1}
+\label{fig:cw-attack}
+\end{figure}
+
 
 Since CW attack wasn't able to find any adversarial sample for the model with id 2 with the given hyperparameters in Table \ref{table:cw-params}, further experiments are performed against that model with different values for learning rate and maximum number of iterations.
 
