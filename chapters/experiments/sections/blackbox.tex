@@ -2,23 +2,27 @@ When it comes to blackbox attacks, two existing approaches are evaluated: the Tr
 
 In the transfer based approach, as described in Section \ref{sec:transfer-based}, the goal is to train a substitute network that will learn similar decision boundaries for every class as the targeted network. This implies that total number of possible classes should be the same, but an architecture of the substitute network may be different.
 
-To get information about boundaries of the targeted neural network,  I take 778 samples that are previously unseen to targeted neural network, obtain labels for those samples and train the substitute neural network based on those results.
-
- TODO: Distribution of ages in those 778 samples
+To get information about boundaries of the targeted neural network,  I take 778 samples that are previously unseen to targeted neural network, obtain labels for those samples and train the substitute neural network based on those results. Distribution of samples over age is presented in Figure \ref{fig:custom-dataset}.
+ 
+ \begin{figure}[h]
+\includegraphics[width=13cm]{custom-dataset}
+\caption{Number of samples per age in the dataset that is used for training a substitute neural network by querying a targeted blackbox neural network}
+\label{fig:custom-dataset}
+\end{figure}
 
 Next, I take random 200 samples that are yet unseen by both networks and evaluate MAE of the targeted neural network and the substitute network on those 200 images. Then I craft adversarial samples for the substitute neural network using those 200 images. Target labels for adversarial samples are set in the same manner as in whitebox attacks, i.e. label 90 if a person is under 50 years old and label 10 if a person is over 50 years old. 
 
 Finally, I evaluate MAE of the targeted neural network and the substitute network on the 200 adversarial samples crafted in the previous step.
 
-In my first attempt, I tried to use the InceptionResNetV2 architecture as a substitute network, but the experiment failed due to memory consumption when jacobian augmentation of the dataset is performed. 
+As a blackbox, the model with id 4 from Table \ref{table:trained-models}  is used because of the lowest MAE.
 
-In my second attempt, I tried to use ResNet-50 architecture which smaller than the InceptionResNetV2, but the experiment failed again due to the same reason. (TODO: It does work on my local PC with 16GB RAM. It requires ~12GB RAM)
+In my first attempt, I tried to use the InceptionResNetV2 architecture as a substitute network. Since the targeted network has the same architectures, high number of adversarial samples that are transferred is expected. However, the experiment failed due to memory consumption when jacobian augmentation of the dataset is performed. 
 
-In my third attempt?!
+In my second attempt, I used ResNet50 architecture for a substitute network which is smaller \footnote{ResNet50 has 25,636,712 parameters and InceptionResNetV2 has 55,873,736 parameters.} than the InceptionResNetV2. However, the experiment failed again due to the memory exhaustion. 
 
-Finally, since the goal is to have similar boundaries as the targeted neural network, those boundaries could be obtained by just querying the targeted neural network and then learning the substitute neural network based on the results of queries. That skips a step of the jacobian augmentation of the dataset though. Further argumentation of this decision can be found in Section \ref{sec:threats-to-validity}.
+In my third attempt, I used a vanilla CNN with three convolutional layers followed by flatten layer and softmax layer used for classification. However, the experiment fails due to memory exhaustion in this case as well.
 
-
+Finally, since the goal is that a substitute neural network have similar boundaries for classification as the targeted neural network, those boundaries could be obtained to certain extent by just querying the targeted neural network and then learning the substitute neural network based on the results of queries. This approach skips a step of the jacobian augmentation of the dataset. Further argumentation of this decision can be found in Section \ref{sec:threats-to-validity}.
 
 Results are presented in Tables \ref{table:bbox-fgsm-resnet} and \ref{table:bbox-cw-resnet}.
 
@@ -32,7 +36,7 @@ Target model id & Blackbox MAE & Substitute MAE & Blackbox MAE & Substitute MAE 
 3 & TODO & TODO  & TODO & TODO  \\ \hline
 4 & TODO & TODO & TODO & TODO \\ \hline
 \end{tabular}
-\caption{Results using the ResNet-50 architecture for the substitute network and FGSM attack for crafting adversarial samples for it}
+\caption{Results using the ResNet50 architecture (with SGD optimizer) for the substitute network and FGSM attack for crafting adversarial samples for it}
 \label{table:bbox-fgsm-resnet}
 \end{table}
 
@@ -47,11 +51,11 @@ Target model id & Blackbox MAE & Substitute MAE & Blackbox MAE & Substitute MAE 
 3 &  TODO & TODO  & TODO &  \\ \hline
 4 &  TODO & TODO  & TODO &  \\ \hline
 \end{tabular}
-\caption{Results using the ResNet-50 architecture for the substitute network and CW attack for crafting adversarial samples for it}
+\caption{Results using the ResNet50 architecture (with SGD optimizer) for the substitute network and CW attack for crafting adversarial samples for it}
 \label{table:bbox-cw-resnet}
 \end{table}
 
-Regarding the boundary attack, it's hard to do any quantitative analysis because the attack, as described in Section \ref{sec:boundary-attack}, is fundamentally different that the transfer based approach. Instead, I generate several samples and discuss them. One sample can be seen in Figure \ref{fig:trump-adv} and the corresponding results in Figure \ref{fig:trump-softmax}. TODO: ADD reference to other images. The other samples can be found in Appendix. 
+Regarding the boundary attack, it's hard to do any quantitative analysis because the attack, as described in Section \ref{sec:boundary-attack}, is fundamentally different that the transfer based approach. Instead, I generate several samples and discuss them. One sample can be seen in Figure \ref{fig:trump-adv} and the corresponding results in Figure \ref{fig:trump-softmax}. 
 \begin{figure}
 \begin{subfigure}{.5\textwidth}
   \centering%
