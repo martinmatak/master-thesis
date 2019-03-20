@@ -1,10 +1,20 @@
 When it comes to whitebox attacks, three approaches are evaluated: FGSM, CW and JSMA. Hyperparameters used in the FGSM and the CW attack are listed in Table \ref{table:fgsm-params} and Table \ref{table:cw-params}, respectively. In Table \ref{table:whitebox-results} results are presented.
 
-Since the CW attack wasn't able to find an adversarial sample for the model with id 2 with the given hyperparameters, further experiments are performed on that model with different values for learning rate and maximum number of iterations. Results of those experiments are presented in Table \ref{table:cw-results}. 
+It is interesting to notice that the FGSM attack managed to change MAE for the model with id 2 from 9.5 to 47.79. In other words, the targeted model on average predicted that a person in the adversarial image is 38 years younger or older than a person in the original image!
 
-Discussion of the results from Table  \ref{table:whitebox-results} and Table \ref{table:cw-results} is in Section \ref{sec:discussion}. 
+TODO: Add sample for FGSM fool
 
-TODO: Add sample images
+The CW attack, given the hyperparameters in Table \ref{table:cw-params}, managed to move MAE for model with id 1 from 6.69 to 29.45.  In other words, the targeted model on average predicted that a person in the adversarial image is 23 years younger or older than a person in the original image. This is not that much as FGSM managed for the model with id 2, but it is significant.
+
+TODO: Add sample image for CW
+
+Since CW attack wasn't able to find any adversarial sample for the model with id 2 with the given hyperparameters in Table \ref{table:cw-params}, further experiments are performed against that model with different values for learning rate and maximum number of iterations.
+
+Results of those experiments are presented in Table \ref{table:cw-results}. The results show that it is not easy for CW attack to find any adversarial sample on a specific model. Although no adversarial sample is found, I performed no further exploration of combination of learning rate and number of iterations. Further argumentation of this decision can be found in Section \ref{sec:threats-to-validity}.
+
+It is also interesting to notice that for models with id 1 and 2, the attacks find stronger adversarial samples (i.e. bigger change in MAE) than for models with id 3 and 4. Could it be that bigger models \footnote{ResNet50 architecture that is used for model 1 and 2 has 25,636,712 parameters and InceptionResNetV2  architecture that is used for model 3 and 4 has 55,873,736 parameters.} are more resistent to adversarial samples? 
+
+As expected from the analysis of the paper \cite{DBLP:journals/corr/CarliniW16a} in Section \ref{sec:CW}, JSMA attack failed due to memory complexity of the algorithm.
 
 \begin{table}[]
 \centering

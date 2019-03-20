@@ -2,7 +2,7 @@ When it comes to blackbox attacks, two existing approaches are evaluated: the Tr
 
 In the transfer based approach, as described in Section \ref{sec:transfer-based}, the goal is to train a substitute network that will learn similar decision boundaries for every class as the targeted network. This implies that total number of possible classes should be the same, but an architecture of the substitute network may be different.
 
-To get information about boundaries of the targeted neural network,  I take 778 samples that are previously unseen to targeted neural network, obtain labels for those samples and train the substitute neural network based on those results. Distribution of samples over age is presented in Figure \ref{fig:custom-dataset}.
+To get information about boundaries of the targeted neural network,  I take 778 samples that are previously unseen to targeted neural network, obtain labels for those samples and train a substitute neural network based on those results. Distribution of samples over age is presented in Figure \ref{fig:custom-dataset}.
  
  \begin{figure}[h]
 \includegraphics[width=13cm]{custom-dataset}
@@ -14,13 +14,12 @@ Next, I take random 200 samples that are yet unseen by both networks and evaluat
 
 Finally, I evaluate MAE of the targeted neural network and the substitute network on the 200 adversarial samples crafted in the previous step.
 
-As a blackbox, the model with id 4 from Table \ref{table:trained-models}  is used because of the lowest MAE.
 
 In my first attempt, I tried to use the InceptionResNetV2 architecture as a substitute network. Since the targeted network has the same architectures, high number of adversarial samples that are transferred is expected. However, the experiment failed due to memory consumption when jacobian augmentation of the dataset is performed. 
 
-In my second attempt, I used ResNet50 architecture for a substitute network which is smaller \footnote{ResNet50 has 25,636,712 parameters and InceptionResNetV2 has 55,873,736 parameters.} than the InceptionResNetV2. However, the experiment failed again due to the memory exhaustion. 
+In my second attempt, I used ResNet50 architecture for a substitute network instead of InceptionResNetV2 architecture. However, the experiment again failed  due to the memory exhaustion. 
 
-In my third attempt, I used a vanilla CNN with three convolutional layers followed by flatten layer and softmax layer used for classification. However, the experiment fails due to memory exhaustion in this case as well.
+In my third attempt, I used a vanilla CNN with three convolutional layers followed by flatten layer and softmax layer used for classification. However, the experiment failed due to the memory exhaustion.
 
 Finally, since the goal is that a substitute neural network have similar boundaries for classification as the targeted neural network, those boundaries could be obtained to certain extent by just querying the targeted neural network and then learning the substitute neural network based on the results of queries. This approach skips a step of the jacobian augmentation of the dataset. Further argumentation of this decision can be found in Section \ref{sec:threats-to-validity}.
 
