@@ -1,8 +1,8 @@
-When it comes to whitebox attacks, three approaches are evaluated: FGSM, CW and JSMA. Hyperparameters used in the FGSM and the CW attack are listed in Table \ref{table:fgsm-params} and Table \ref{table:cw-params}, respectively. In Table \ref{table:whitebox-results} results are presented.
+When it comes to whitebox attacks, three approaches are evaluated: FGSM, CW and JSMA. Hyperparameters used in the FGSM and the CW attack are listed in Table \ref{table:fgsm-params} and Table \ref{table:cw-params}, respectively. In Table \ref{table:whitebox-fgsm-results} and \ref{table:whitebox-cw-results} results are presented for FGSM attack and CW attack, respectively. In Table \ref{table:whitebox-results} results of all three attacks are presented.
 
 It is interesting to notice that the FGSM attack managed to change MAE for the model with id 2 from 9.5 to 47.79. In other words, the targeted model on average predicted that a person in the adversarial image is 38 years younger or older than a person in the original image! 
 
-Several original samples and the corresponding adversarial samples crafted in this experiment are presented in Figure \label{fig:fgsm-attack}. It can be observed that the attack adds a similar pattern to every image. However, when hyperparameter $eps$ is reduced to $1.0$, it is almost impossible to notice the perturbation as it can be seen in Figure \label{fig:fgsm-attack-eps1}. But it still can be noticed that there is some perturbation. Lines in adversarial images are not that sharp as in original images and some pixels are not natural e.g. line between left cheek and the background in the image (d).
+Several original samples and the corresponding adversarial samples crafted in this experiment are presented in Figure \ref{fig:fgsm-attack}. It can be observed that the attack adds a similar pattern to every image. However, when hyperparameter $eps$ is reduced to $1.0$, it is almost impossible to notice the perturbation as it can be seen in Figure \ref{fig:fgsm-attack-eps1}. But it still can be noticed that there is some perturbation. Lines in adversarial images are not that sharp as in original images and some pixels are not natural e.g. line between left cheek and the background in the image (d).
 
 \begin{figure}
 
@@ -82,8 +82,9 @@ Several original samples and the corresponding adversarial samples crafted in th
 \label{fig:fgsm-attack-eps1}
 \end{figure}
 
+The CW attack, given the hyperparameters in Table \ref{table:cw-params}, managed to move MAE for model with id 1 from 6.69 to 29.35. In other words, the targeted model on average predicted that a person in the adversarial image is 23 years younger or older than a person in the original image. This is not that much as FGSM managed for the model with id 2, but it is significant.
 
-The CW attack, given the hyperparameters in Table \ref{table:cw-params}, managed to move MAE for model with id 1 from 6.69 to 29.45.  In other words, the targeted model on average predicted that a person in the adversarial image is 23 years younger or older than a person in the original image. This is not that much as FGSM managed for the model with id 2, but it is significant.
+ It is also interesting to observe that amount of perturbation added to an original sample varies a lot. From value $0.00$ for minimal perturbation it can be observed that attack sometimes does not manage to find an adversarial sample and sometimes the added perturbation is rather huge. For example, maximal perturbation introduced using CW attack for model 1 is $16419.60$, but when FGSM is used, that value is $1939.89$.
 
 Several original samples and the corresponding adversarial samples crafted in this experiment are presented in Figure \label{fig:cw-attack}. It can be observed that the attack adds a very strong pattern to every image, i.e. introduces high perturbation. This is a consequence of chosen values for number of iterations and the learning rate. 
 
@@ -171,13 +172,47 @@ initial\_const & 0.1 \\ \hline
 \hline
 \multicolumn{2}{|c|}{} & \multicolumn{2}{c|}{FGSM} & \multicolumn{2}{c|}{CW} & \multicolumn{2}{c|}{JSMA} \\ \hline
 \multicolumn{1}{|c|}{\begin{tabular}[c]{@{}c@{}}model\\ id\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}clean\\ MAE\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}adv\\ MAE\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}avg\\ L2\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}adv\\ MAE\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}avg\\ L2\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}adv\\ MAE\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}avg\\ L2\end{tabular}} \\ \hline
-1 & 6.69 & 32.25 & 1879.63 & 29.45 & 2952.22 & - & - \\ \hline
+1 & 6.69 & 32.25 & 1879.63 & 29.35 & 2977.28 & - & - \\ \hline
 2 & 9.50 & 47.79 & 1879.49 & 9.50 & 0.00 & - & - \\ \hline
-3 & 5.40 & 19.32 & 2510.92 & 6.39 & 1175.80 & - & - \\ \hline
-4 & 4.62 & 15.03 & 2511.10 & 7.14 & 1084.08 & - & - \\ \hline
+3 & 5.40 & 19.32 & 2510.92 & 7.51 & 1307.51 & - & - \\ \hline
+4 & 4.62 & 15.03 & 2511.10 & 6.79 & 1104.78 & - & - \\ \hline
 \end{tabular}
 \caption{Results of different adversarial attacks. The "-" sign means that an attack couldn't be executed.}
 \label{table:whitebox-results}
+\end{table}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+model id & clean MAE & adv MAE & avg L2 & std dev L2 & min L2 & max L2 \\ \hline
+1 & 6.69 & 32.25 & 1879.63 & 77.23  & 1637.33 & 1939.89  \\ \hline
+2 & 9.50 & 47.79 & 1879.49 & 77.26 & 1649.43 & 1939.90 \\ \hline
+3 & 5.40 & 19.32 & 2510.92 &  100.00 & 2201.44 & 2589.42  \\ \hline
+4 & 4.62 & 15.08 & 2511.10 & 99.53 & 2204.20 & 2589.41 \\ \hline
+\end{tabular}%
+}
+\caption{Results of FGSM attack}
+\label{table:whitebox-fgsm-results}
+\end{table}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+model id & clean MAE & adv MAE & avg L2 & std dev L2 & min L2 & max L2 \\ \hline
+1 & 6.69 & 29.35 & 2977.28 & 3532.85 & 0.0 & 16419.60 \\ \hline
+2 & 9.50 & 9.50 & 0.00 & 0.00 & 0.00 &  \\ \hline
+3 & 5.40 & 7.51 & 1307.51 & 2969.74 & 0.00 & 11071.88  \\ \hline
+4 & 4.62 & 6.79 & 1104.78 & 3070.10 & 0.00 & 17673.81  \\ \hline
+\end{tabular}%
+}
+\caption{Results of CW attack}
+\label{table:whitebox-cw-results}
 \end{table}
 
 \begin{table}[]
