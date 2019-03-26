@@ -23,38 +23,171 @@ In my third attempt, I used a vanilla CNN with three convolutional layers follow
 
 Finally, since the goal is that a substitute neural network have similar boundaries for classification as the targeted neural network, those boundaries could be obtained to certain extent by just querying the targeted neural network and then learning the substitute neural network based on the results of queries. This approach skips a step of the jacobian augmentation of the dataset. Further argumentation of this decision can be found in Section \ref{sec:threats-to-validity}.
 
-Results are presented in Tables \ref{table:bbox-fgsm-resnet} and \ref{table:bbox-cw-resnet}.
+Results are presented in Tables
+\ref{table:bbox-resnet50-sgd-fgsm},
+\ref{table:bbox-resnet50-adam-fgsm}, 
+\ref{table:bbox-resnet50-sgd-cw},
+\ref{table:bbox-resnet50-adam-cw}, 
+\ref{table:bbox-inception-sgd-fgsm},
+\ref{table:bbox-inception-adam-fgsm}, 
+\ref{table:bbox-inception-sgd-cw}, and
+\ref{table:bbox-inception-adam-cw}.
 
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
 \begin{table}[]
-\begin{tabular}{|c|c|c|c|c|}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 \hline
- & \multicolumn{2}{c|}{Clean Samples} & \multicolumn{2}{c|}{Adversarial samples} \\ \hline
-Blackbox model id & Blackbox MAE & Substitute MAE & Blackbox MAE & Substitute MAE \\ \hline
-1 & 6.21 & 14.17 & 6.61 & 14.20 \\ \hline
-2 & 8.61 & 13.20  &  8.17 & 13.39  \\ \hline
-3 & TODO & TODO  & TODO & TODO  \\ \hline
-4 & TODO & TODO & TODO & TODO \\ \hline
-\end{tabular}
-\caption{Results using the ResNet50 architecture (with SGD optimizer) for the substitute network and FGSM attack for crafting adversarial samples for it}
-\label{table:bbox-fgsm-resnet}
+ & \multicolumn{2}{c|}{clean samples} & \multicolumn{6}{c|}{adversarial samples} \\ \hline
+blackbox model id & blackbox MAE & substitute MAE & blackbox MAE & substitute MAE & avg L2 & std dev L2 & min L2 & max L2 \\ \hline
+1 &  &  &  &  &  &  &  &  \\ \hline
+2 &  &  &  &  &  &  &  &  \\ \hline
+3 &  &  &  &  &  &  &  &  \\ \hline
+4 &  &  &  &  &  &  &  &  \\ \hline
+\end{tabular}%
+}
+\caption{Substitute network: ResNet50 architecture with SGD optimizer; Attack: FGSM}
+\label{table:bbox-resnet50-sgd-fgsm}
+\end{table}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{2}{c|}{clean samples} & \multicolumn{6}{c|}{adversarial samples} \\ \hline
+blackbox model id & blackbox MAE & substitute MAE & blackbox MAE & substitute MAE & avg L2 & std dev L2 & min L2 & max L2 \\ \hline
+1 &  &  &  &  &  &  &  &  \\ \hline
+2 &  &  &  &  &  &  &  &  \\ \hline
+3 &  &  &  &  &  &  &  &  \\ \hline
+4 &  &  &  &  &  &  &  &  \\ \hline
+\end{tabular}%
+}
+\caption{Substitute network: ResNet50 architecture with Adam optimizer; Attack: FGSM}
+\label{table:bbox-resnet50-adam-fgsm}
+\end{table}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{2}{c|}{clean samples} & \multicolumn{6}{c|}{adversarial samples} \\ \hline
+blackbox model id & blackbox MAE & substitute MAE & blackbox MAE & substitute MAE & avg L2 & std dev L2 & min L2 & max L2 \\ \hline
+1 &  &  &  &  &  &  &  &  \\ \hline
+2 &  &  &  &  &  &  &  &  \\ \hline
+3 &  &  &  &  &  &  &  &  \\ \hline
+4 &  &  &  &  &  &  &  &  \\ \hline
+\end{tabular}%
+}
+\caption{Substitute network: ResNet50 architecture with Adam optimizer; Attack: CW}
+\label{table:bbox-resnet50-sgd-cw}
+\end{table}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{2}{c|}{clean samples} & \multicolumn{6}{c|}{adversarial samples} \\ \hline
+blackbox model id & blackbox MAE & substitute MAE & blackbox MAE & substitute MAE & avg L2 & std dev L2 & min L2 & max L2 \\ \hline
+1 &  &  &  &  &  &  &  &  \\ \hline
+2 &  &  &  &  &  &  &  &  \\ \hline
+3 &  &  &  &  &  &  &  &  \\ \hline
+4 &  &  &  &  &  &  &  &  \\ \hline
+\end{tabular}%
+}
+\caption{Substitute network: ResNet50 architecture with Adam optimizer; Attack: CW}
+\label{table:bbox-resnet50-adam-cw}
+\end{table}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{2}{c|}{clean samples} & \multicolumn{6}{c|}{adversarial samples} \\ \hline
+blackbox model id & blackbox MAE & substitute MAE & blackbox MAE & substitute MAE & avg L2 & std dev L2 & min L2 & max L2 \\ \hline
+1 &  &  &  &  &  &  &  &  \\ \hline
+2 &  &  &  &  &  &  &  &  \\ \hline
+3 &  &  &  &  &  &  &  &  \\ \hline
+4 &  &  &  &  &  &  &  &  \\ \hline
+\end{tabular}%
+}
+\caption{Substitute network: InceptionResNetV2 architecture with SGD optimizer; Attack: FGSM}
+\label{table:bbox-inception-sgd-fgsm}
+\end{table}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{2}{c|}{clean samples} & \multicolumn{6}{c|}{adversarial samples} \\ \hline
+blackbox model id & blackbox MAE & substitute MAE & blackbox MAE & substitute MAE & avg L2 & std dev L2 & min L2 & max L2 \\ \hline
+1 &  &  &  &  &  &  &  &  \\ \hline
+2 &  &  &  &  &  &  &  &  \\ \hline
+3 &  &  &  &  &  &  &  &  \\ \hline
+4 &  &  &  &  &  &  &  &  \\ \hline
+\end{tabular}%
+}
+\caption{Substitute network: InceptionResNetV2 architecture with Adam optimizer; Attack: FGSM}
+\label{table:bbox-inception-adam-fgsm}
+\end{table}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{2}{c|}{clean samples} & \multicolumn{6}{c|}{adversarial samples} \\ \hline
+blackbox model id & blackbox MAE & substitute MAE & blackbox MAE & substitute MAE & avg L2 & std dev L2 & min L2 & max L2 \\ \hline
+1 &  &  &  &  &  &  &  &  \\ \hline
+2 &  &  &  &  &  &  &  &  \\ \hline
+3 &  &  &  &  &  &  &  &  \\ \hline
+4 &  &  &  &  &  &  &  &  \\ \hline
+\end{tabular}%
+}
+\caption{Substitute network: InceptionResNetV2 architecture with Adam optimizer; Attack: CW}
+\label{table:bbox-inception-sgd-cw}
+\end{table}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline
+ & \multicolumn{2}{c|}{clean samples} & \multicolumn{6}{c|}{adversarial samples} \\ \hline
+blackbox model id & blackbox MAE & substitute MAE & blackbox MAE & substitute MAE & avg L2 & std dev L2 & min L2 & max L2 \\ \hline
+1 &  &  &  &  &  &  &  &  \\ \hline
+2 &  &  &  &  &  &  &  &  \\ \hline
+3 &  &  &  &  &  &  &  &  \\ \hline
+4 &  &  &  &  &  &  &  &  \\ \hline
+\end{tabular}%
+}
+\caption{Substitute network: InceptionResNetV2 architecture with Adam optimizer; Attack: CW}
+\label{table:bbox-inception-adam-cw}
 \end{table}
 
 
-\begin{table}[]
-\begin{tabular}{|c|c|c|c|c|}
-\hline
- & \multicolumn{2}{c|}{Clean Samples} & \multicolumn{2}{c|}{Adversarial samples} \\ \hline
-Blackbox model id & Blackbox MAE & Substitute MAE & Blackbox MAE & Substitute MAE \\ \hline
-1 & 6.21 & 15.92 & 6.10 & 15.93 \\ \hline
-2 &  TODO & TODO  & TODO &  \\ \hline
-3 &  TODO & TODO  & TODO &  \\ \hline
-4 &  TODO & TODO  & TODO &  \\ \hline
-\end{tabular}
-\caption{Results using the ResNet50 architecture (with SGD optimizer) for the substitute network and CW attack for crafting adversarial samples for it}
-\label{table:bbox-cw-resnet}
-\end{table}
+Regarding the boundary attack, it's hard to do any quantitative analysis because the attack, as described in Section \ref{sec:boundary-attack}, is fundamentally different that the transfer based approach. One sample can be seen in Figure \ref{fig:trump-adv} and the corresponding results in Figure \ref{fig:trump-softmax}.
 
-Regarding the boundary attack, it's hard to do any quantitative analysis because the attack, as described in Section \ref{sec:boundary-attack}, is fundamentally different that the transfer based approach. Instead, I generate several samples and discuss them. One sample can be seen in Figure \ref{fig:trump-adv} and the corresponding results in Figure \ref{fig:trump-softmax}. 
+It is interesting to observe what is happening during the attack. 
+
+In the beginning of the attack, the original sample is classified as 68 years old as presented in Figure \ref{fig:starting-image-softmax} and the targeted image is classified as 4 years old as presented in Figure \ref{fig:targeted-image-softmax}. 
+
+As the attack performs more queries, the adversarial sample is looking more and more like the targeted image, but the values that the network is predicting also start to correspond to the targeted image. 
+
+Finally when the attack is finished, the adversarial sample seems as the targeted image and the network is very aware of it, i.e. there is a high probability that the adversarial sample is classified as 4 years old. However, probability that the person in the adversarial image is 68 years old is just a bit higher than the probability that the person is 4 years old and that is enough that a person gets classified as 68 years old. This can be seen in \ref{fig:trump-softmax}
+
 \begin{figure}
 \begin{subfigure}{.5\textwidth}
   \centering%
