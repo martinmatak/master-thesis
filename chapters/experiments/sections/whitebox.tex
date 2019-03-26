@@ -2,7 +2,7 @@ When it comes to whitebox attacks, three approaches are evaluated: FGSM, CW and 
 
 It is interesting to notice that the FGSM attack managed to change MAE for the model with id 2 from 9.5 to 47.79. In other words, the targeted model on average predicted that a person in the adversarial image is 38 years younger or older than a person in the original image! 
 
-Several original samples and the corresponding adversarial samples crafted in this experiment are presented in Figure \ref{fig:fgsm-attack}. It can be observed that the attack adds a similar pattern to every image. However, when hyperparameter $eps$ is reduced to $1.0$, it is almost impossible to notice the perturbation as it can be seen in Figure \ref{fig:fgsm-attack-eps1}. But it still can be noticed that there is some perturbation. Lines in adversarial images are not that sharp as in original images and some pixels are not natural e.g. line between left cheek and the background in the image (d).
+Several original samples and the corresponding adversarial samples crafted using the FGSM attack are presented in Figure \ref{fig:fgsm-attack}. It can be observed that the attack adds a similar pattern to every image. However, when hyperparameter $eps$ is reduced to $1.0$, it is almost impossible to notice the perturbation as it can be seen in Figure \ref{fig:fgsm-attack-eps1}. But it still can be noticed that there is some perturbation. Lines in adversarial images are not that sharp as in original images and some pixels are not natural e.g. line between left cheek and the background in the image (d).
 
 \begin{figure}
 
@@ -84,9 +84,9 @@ Several original samples and the corresponding adversarial samples crafted in th
 
 The CW attack, given the hyperparameters in Table \ref{table:cw-params}, managed to move MAE for model with id 1 from 6.69 to 29.35. In other words, the targeted model on average predicted that a person in the adversarial image is 23 years younger or older than a person in the original image. This is not that much as FGSM managed for the model with id 2, but it is significant.
 
- It is also interesting to observe that amount of perturbation added to an original sample varies a lot. From value $0.00$ for minimal perturbation it can be observed that attack sometimes does not manage to find an adversarial sample and sometimes the added perturbation is rather huge. For example, maximal perturbation introduced using CW attack for model 1 is $16419.60$, but when FGSM is used, that value is $1939.89$.
+It is also interesting to observe that amount of perturbation added to an original sample varies a lot when the CW attack is used. From value $0.00$ for minimal perturbation it can be observed that attack sometimes does not manage to find an adversarial sample and sometimes the added perturbation is rather huge. For example, maximal value for L2 distance between the original and the adversarial sample using CW attack for model 1 is $16419.60$, but when FGSM is used, that value is $1939.89$.
 
-Several original samples and the corresponding adversarial samples crafted in this experiment are presented in Figure \label{fig:cw-attack}. It can be observed that the attack adds a very strong pattern to every image, i.e. introduces high perturbation. This is a consequence of chosen values for number of iterations and the learning rate. 
+Several original samples and the corresponding adversarial samples crafted using the CW attack are presented in Figure \ref{fig:cw-attack}. It can be observed that the attack adds a very strong pattern to every image, i.e. introduces high perturbation. This is a consequence of chosen values for number of iterations and the learning rate. 
 
 \begin{figure}
 
@@ -130,7 +130,7 @@ Several original samples and the corresponding adversarial samples crafted in th
 
 Since CW attack wasn't able to find any adversarial sample for the model with id 2 with the given hyperparameters in Table \ref{table:cw-params}, further experiments are performed against that model with different values for learning rate and maximum number of iterations.
 
-Results of those experiments are presented in Table \ref{table:cw-results}. The results show that it is not easy for CW attack to find any adversarial sample on a specific model. Although no adversarial sample is found, I performed no further exploration of combination of learning rate and number of iterations. Further argumentation of this decision can be found in Section \ref{sec:threats-to-validity}.
+Results of those experiments are presented in Table \ref{table:cw-results}. The results show that it is not easy for the CW attack to find any adversarial sample for the specific model. Although no adversarial sample is found, I performed no further exploration of combination of learning rate and number of iterations. Further argumentation of this decision can be found in Section \ref{sec:threats-to-validity}.
 
 It is also interesting to notice that for models with id 1 and 2, the attacks find stronger adversarial samples (i.e. bigger change in MAE) than for models with id 3 and 4. Could it be that bigger models \footnote{ResNet50 architecture that is used for model 1 and 2 has 25,636,712 parameters and InceptionResNetV2  architecture that is used for model 3 and 4 has 55,873,736 parameters.} are more resistent to adversarial samples? 
 
