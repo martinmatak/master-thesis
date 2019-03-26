@@ -7,7 +7,7 @@ The APPA-REAL dataset contains 7,591 images with associated age labels. The data
 
 The UTK Face dataset consists of 23252 images with associated age labels. I preprocessed every image to extract a face\footnote{every face is cropped with 40\% margin} from it. For face detection, I used Dlib \cite{dlib09} library. Distribution of samples over age is presented in Figure \ref{fig:utk-stats}.
 
-I constructed my training dataset as union of all the images from the UTK Face dataset and training images from the APPA-REAL dataset . For my validation dataset and my test dataset I used validation images and test images from the APPA-REAL validation and test dataset, respectively. 
+I constructed my training dataset as union of all the images from the UTK Face dataset and training images from the APPA-REAL dataset. For my validation dataset and my test dataset I used validation images and test images from the APPA-REAL validation and test dataset, respectively. 
 
 \begin{figure}[h]
 \includegraphics[width=13cm]{utk-stats}
@@ -23,7 +23,7 @@ I constructed my training dataset as union of all the images from the UTK Face d
 
 Instead of training a DNN from scratch, I used a pretrained DNN that is trained on the ImageNet dataset and fine-tuned it for age estimation. In other words, I downloaded already existing model of a DNN and re-trained it for my specific task, i.e. age estimation. This technique is called \textit{transfer learning} and more information about it can be found in \cite{yosinski2014transferable}.
 
-Instead of measuring accuracy of a classifier, in the age estimation domain usually a mean absolute error (MAE) is measured. If a person who is 65 years old gets classified as 66 years old, a classifier did actually a good job although it didn't predict the correct class. However, if a person who is 65 years old gets classified as 6 years old, that is a significantly bigger mistake than classifying it as 66 years old. Yet, when computing an accuracy, there is no difference if a predicted class is 6 or 66 if a ground truth is 65. That is intuition why mean absolute error is used instead of accuracy as a metric.
+If a person who is 65 years old gets classified as 66 years old, a classifier did actually a good job although it didn't predict the correct class. However, if a person who is 65 years old gets classified as 6 years old, that is a significantly bigger mistake than classifying it as 66 years old. Yet, when computing an accuracy, there is no difference if a predicted class is 6 or 66 if a ground truth is 65. That is the reason why in age estimation usually a mean absolute error (MAE) of a classifier is measured instead of accuracy.
 
 When it comes to (targeted) misclassification, there is something in age estimation domain that needs to be taken care of. If a person is classified a year or two older, it is not a huge success for a (targeted) misclassification. In the experiments that follow, targeted version of attacks is used, but a label is set as follows. If a person is under 50 years old, the target label is 90 years old. If a person is 50 years old or older, the target label is 10 years old. 
 
