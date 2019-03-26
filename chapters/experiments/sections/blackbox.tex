@@ -1,6 +1,6 @@
-When it comes to blackbox attacks, two existing approaches are evaluated: the Transfer based approach and the Boundary attack. In this section, results are only presented, but not discussed. The discussion is left for Section \ref{sec:discussion}.
+When it comes to blackbox attacks, the transfer based approach introduced in Section \ref{sec:transfer-based} is evaluated as well as the boundary attack from Section \ref{sec:boundary-attack}. It is worth mentioning that in this thesis a \textit{blackbox attack} means that the adversary can only query the targeted neural network and obtain an associated label. The adversary has no information about the confidence of the network in the prediction or any kind of list of most probable labels.
 
-In the transfer based approach, as described in Section \ref{sec:transfer-based}, the goal is to train a substitute network that will learn similar decision boundaries for every class as the targeted network. This implies that total number of possible classes should be the same, but an architecture of the substitute network may be different.
+In the transfer based approach, as described in Section \ref{sec:transfer-based}, the goal is to train a substitute network that will learn similar decision boundaries for every class as the targeted network. This implies that total number of possible classes must be the same, but an architecture of the substitute network may be different from the architecture of the targeted network.
 
 To get information about boundaries of the targeted neural network,  I take 778 samples that are previously unseen to targeted neural network, obtain labels for those samples and train a substitute neural network based on those results. Distribution of samples over age is presented in Figure \ref{fig:custom-dataset}.
  
@@ -14,16 +14,16 @@ Next, I take random 200 samples that are yet unseen by both networks and evaluat
 
 Finally, I evaluate MAE of the targeted neural network and the substitute network on the 200 adversarial samples crafted in the previous step.
 
+In my first attempt, I tried to use the InceptionResNetV2 architecture as a substitute network. However, the experiment failed due to memory consumption when the jacobian augmentation of the dataset is performed. 
 
-In my first attempt, I tried to use the InceptionResNetV2 architecture as a substitute network. Since the targeted network has the same architectures, high number of adversarial samples that are transferred is expected. However, the experiment failed due to memory consumption when jacobian augmentation of the dataset is performed. 
+In my second attempt, I used ResNet50 architecture for a substitute network instead of InceptionResNetV2 architecture. However, the experiment again failed  due to the memory exhaustion when the jacobian augmentation of the dataset is performed.  
 
-In my second attempt, I used ResNet50 architecture for a substitute network instead of InceptionResNetV2 architecture. However, the experiment again failed  due to the memory exhaustion. 
+In my third attempt, I used a vanilla CNN with three convolutional layers followed by flatten layer and softmax layer used for classification. However, the experiment failed again due to the same reason..
 
-In my third attempt, I used a vanilla CNN with three convolutional layers followed by flatten layer and softmax layer used for classification. However, the experiment failed due to the memory exhaustion.
 
-Finally, since the goal is that a substitute neural network have similar boundaries for classification as the targeted neural network, those boundaries could be obtained to certain extent by just querying the targeted neural network and then learning the substitute neural network based on the results of queries. This approach skips a step of the jacobian augmentation of the dataset. Further argumentation of this decision can be found in Section \ref{sec:threats-to-validity}.
+Finally, I skip the step of the jacobian augmentation of the dataset in the transfer based approach and manage to run the experiments. The jacobian augmentation is a heuristic that computes how to expand the existing dataset so that new samples are closer to boundaries of being classified as a certain class. Instead of using this heuristic, I query once the targeted neural network, train the substitute network based on the associated labels provided by the targeted neural network and execute the attack. This way the substitute network does learn information about classification boundaries of the targeted neural network, but less than it would learn using the jacobian augmentation. Further argumentation of this decision can be found in Section \ref{sec:threats-to-validity}.
 
-Results are presented in Tables
+Results of this modified transfer based approach are presented in Tables
 \ref{table:bbox-resnet50-sgd-fgsm},
 \ref{table:bbox-resnet50-adam-fgsm}, 
 \ref{table:bbox-resnet50-sgd-cw},
@@ -177,16 +177,15 @@ blackbox model id & blackbox MAE & substitute MAE & blackbox MAE & substitute MA
 \label{table:bbox-inception-adam-cw}
 \end{table}
 
+Regarding the boundary attack, it's hard to do any quantitative analysis because the attack, as described in Section \ref{sec:boundary-attack}, is fundamentally different than the transfer based approach. 
 
-Regarding the boundary attack, it's hard to do any quantitative analysis because the attack, as described in Section \ref{sec:boundary-attack}, is fundamentally different that the transfer based approach. One sample can be seen in Figure \ref{fig:trump-adv} and the corresponding results in Figure \ref{fig:trump-softmax}.
+One sample can be seen in Figure \ref{fig:trump-adv} and the corresponding results in Figure \ref{fig:trump-softmax}. It is interesting to observe what is happening during the attack. 
 
-It is interesting to observe what is happening during the attack. 
+In the beginning of the attack, as presented in Figure \ref{fig:starting-image-softmax}, the original sample is classified as 68 years old and the targeted image, as presented in Figure \ref{fig:targeted-image-softmax}, is classified as 4 years old. 
 
-In the beginning of the attack, the original sample is classified as 68 years old as presented in Figure \ref{fig:starting-image-softmax} and the targeted image is classified as 4 years old as presented in Figure \ref{fig:targeted-image-softmax}. 
+As the attack performs more queries, the adversarial sample is looking more and more like the targeted image, but the values that the network is predicting also start to correspond to the targeted image. This can be seen in Figure \ref{fig:trump-softmax}.
 
-As the attack performs more queries, the adversarial sample is looking more and more like the targeted image, but the values that the network is predicting also start to correspond to the targeted image. 
-
-Finally when the attack is finished, the adversarial sample seems as the targeted image and the network is very aware of it, i.e. there is a high probability that the adversarial sample is classified as 4 years old. However, probability that the person in the adversarial image is 68 years old is just a bit higher than the probability that the person is 4 years old and that is enough that a person gets classified as 68 years old. This can be seen in Figure \ref{fig:trump-softmax}
+Finally when the attack is finished, the adversarial sample seems as the targeted image and the network is very aware of it, i.e. there is a high probability that the adversarial sample is classified as 4 years old. However, probability that the person in the adversarial image is 68 years old is just a bit higher than the probability that the person is 4 years old and that is enough for the network to classify the person as 68 years old. 
 
 \begin{figure}
 \begin{subfigure}{.5\textwidth}
