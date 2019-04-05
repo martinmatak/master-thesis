@@ -31,7 +31,13 @@ Results of this modified transfer based approach are presented in Tables
 \ref{table:bbox-inception-sgd-fgsm},
 \ref{table:bbox-inception-adam-fgsm}, 
 \ref{table:bbox-inception-sgd-cw}, and
-\ref{table:bbox-inception-adam-cw}.
+\ref{table:bbox-inception-adam-cw}. Two things can be observed.
+
+First observation is that InceptionResNetV2 architecture with SGD optimizer is a combination of the neural network architecture and the optimizer that learned the most from the black-box network in terms of age estimation task. The substitute network managed to have MAE under $10.0$ on clean samples as it can be seen in Tables \ref{table:bbox-inception-sgd-fgsm} and \ref{table:bbox-inception-sgd-cw}. 
+
+Second observation is regarding the black-box accuracy after the attack, i.e. against the adversarial samples. Only the FGSM attack managed to increase MAE of black-box above $10.0$ and only against black-box model with id 2 as it can be seen in Tables \ref{table:bbox-inception-sgd-fgsm} and \ref{table:bbox-resnet50-sgd-fgsm}. However, since the MAE of the black-box model against clean samples is $6.99$, this is not a large increase in MAE. This observation implies the result of the experiment. 
+
+The result of the experiment is that this approach is not successful. No matter which combination of an attack, a substitute network, and an optimizer used for training a network is used, there was no huge impact on performance of a black-box model. 
 
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
@@ -42,7 +48,7 @@ Results of this modified transfer based approach are presented in Tables
  & \multicolumn{2}{c|}{clean samples} & \multicolumn{6}{c|}{adversarial samples} \\ \hline
 blackbox model id & blackbox MAE & substitute MAE & blackbox MAE & substitute MAE & avg L2 & std dev L2 & min L2 & max L2 \\ \hline
 1 &  6.42 &  12.42 & 6.92 & 19.14  &  1890.86 & 58.77 &  1580.84 & 1939.89 \\ \hline
-2 & 6.99 & 11.52 & 10.20 &  23.145 &  1891.01 & 59.07 & 1565.25 & 1939.89  \\ \hline
+2 & 6.99 & 11.52 & \textbf{10.20} &  23.145 &  1891.01 & 59.07 & 1565.25 & 1939.89  \\ \hline
 3 & 5.29 & 14.28 & 5.79  & 25.685 & 1891.34  & 58.79 & 1559.34 & 1939.89  \\ \hline
 4 & 3.75 & 11.40 & 4.92 & 19.08 & 1891.43  & 58.15 & 1575.75  & 1939.89  \\ \hline
 \end{tabular}%
@@ -61,7 +67,7 @@ blackbox model id & blackbox MAE & substitute MAE & blackbox MAE & substitute MA
 blackbox model id & blackbox MAE & substitute MAE & blackbox MAE & substitute MAE & avg L2 & std dev L2 & min L2 & max L2 \\ \hline
 1 & 6.42 & 20.28 & 6.99 & 19.91  & 1890.10 & 60.31  &  1555.87 & 1939.89  \\ \hline
 2 & 6.99 & 11.94 & 7.44 & 12.15 & 1921.91  &  21.20 &  1809.24 & 1939.89  \\ \hline
-3 & 5.29 & 24.99 & 26.1 & 4.91 & 1893.30 & 58.41 & 1534.87 & 1939.89  \\ \hline
+3 & 5.29 & 24.99 & 4.91 & 26.1 & 1893.30 & 58.41 & 1534.87 & 1939.89  \\ \hline
 4 & 3.75 & 10.53 & 4.0 & 9.75 & 1900.11 & 48.29 & 1662.20  & 1939.89  \\ \hline
 \end{tabular}%
 }
@@ -78,7 +84,7 @@ blackbox model id & blackbox MAE & substitute MAE & blackbox MAE & substitute MA
  & \multicolumn{2}{c|}{clean samples} & \multicolumn{6}{c|}{adversarial samples} \\ \hline
 blackbox model id & blackbox MAE & substitute MAE & blackbox MAE & substitute MAE & avg L2 & std dev L2 & min L2 & max L2 \\ \hline
 1 & 6.42 &  13.73 & 6.17 & 14.90 & 369.75 & 1407.87  & 0.0  & 6269.29 \\ \hline
-2 & 6.99 & 9.54  & 6.99 &  9.54 & 0.00 & 0.00 & 0.00 & 0.00 \\ \hline
+2 & 6.99 & 10.54  & 6.99 &  10.54 & 0.00 & 0.00 & 0.00 & 0.00 \\ \hline
 3 & 5.29 & 16.58 & 5.37  & 17.67 & 369.31 & 468.55 & 0.00 & 7710.35 \\ \hline
 4 & 3.75 & 11.83 & 4.00  & 11.58  & 33.56  & 473.54 & 0.00 & 6713.73 \\ \hline
 \end{tabular}%
@@ -114,7 +120,7 @@ blackbox model id & blackbox MAE & substitute MAE & blackbox MAE & substitute MA
  & \multicolumn{2}{c|}{clean samples} & \multicolumn{6}{c|}{adversarial samples} \\ \hline
 blackbox model id & blackbox MAE & substitute MAE & blackbox MAE & substitute MAE & avg L2 & std dev L2 & min L2 & max L2 \\ \hline
 1 & 6.42 & 10.20 & 7.57 & 13.63 & 2524.84 & 77.62 & 2097.67 & 2589.41 \\ \hline
-2 & 6.99  & 11.09 & 10.66  &  18.59 & 2525.10 & 76.92 & 2105.15 & 2589.41 \\ \hline
+2 & 6.99  & 11.09 & \textbf{10.66} & 18.59 & 2525.10 & 76.92 & 2105.15 & 2589.41 \\ \hline
 3 & 5.29 & 21.02 & 5.57 & 25.09 & 2527.32 & 73.56 & 2143.89 & 2589.41  \\ \hline
 4 & 3.75 & 8.25 & 4.25 & 14.75 & 2525.40 & 76.66 & 2111.09 & 2589.41  \\ \hline
 \end{tabular}%
@@ -152,7 +158,7 @@ blackbox model id & blackbox MAE & substitute MAE & blackbox MAE & substitute MA
 1 & 6.42 & 18.55 & 6.42 &  18.55 & 0.00 & 0.00 & 0.00 & 0.00  \\ \hline
 2 & 6.99  & 14.82 &  6.99 & 4.82 & 0.00 & 0.00 &  0.00 & 0.00 \\ \hline
 3 & 5.29 & 30.20  & 5.29 & 30.20 & 0.00 & 0.00 & 0.00 & 0.00  \\ \hline
-4 & 3.75 & 8.17 & 3.833  & 8.09 & 157.46 & 1276.19 & 0.00 & 10773.81  \\ \hline
+4 & 3.75 & 8.17 & 3.83  & 8.09 & 157.46 & 1276.19 & 0.00 & 10773.81  \\ \hline
 \end{tabular}%
 }
 \caption{Substitute network: InceptionResNetV2 architecture with SGD optimizer; Attack: CW}
