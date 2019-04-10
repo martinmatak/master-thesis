@@ -34,6 +34,8 @@
 \contentsline {section}{\numberline {4.2}Whitebox attacks}{26}{section.4.2}
 \contentsline {section}{\numberline {4.3}Blackbox attacks}{30}{section.4.3}
 \contentsline {chapter}{\chapternumberline {5}The Semi-targeted Approach}{39}{chapter.5}
+\contentsline {section}{\numberline {5.1}Motivation}{39}{section.5.1}
+\contentsline {section}{\numberline {5.2}Evaluation}{40}{section.5.2}
 \contentsline {chapter}{\chapternumberline {6}Critical Reflection}{41}{chapter.6}
 \contentsline {section}{\numberline {6.1}Discussion}{41}{section.6.1}
 \contentsline {section}{\numberline {6.2}Threats to validity}{41}{section.6.2}
