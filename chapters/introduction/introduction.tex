@@ -4,7 +4,46 @@ One of the tools used in AI are deep neural networks (DNNs) and neural networks 
 
 Nevertheless, neural networks tend to have some peculiar properties as well. If only several pixels in an image are changed, some neural networks produce incorrect results \cite{szegedy2013intriguing}. Such a behaviour is not desirable in safety-critical systems. For example, if an autonomous car recognizes a  \textit{STOP} sign as anything else but a \textit{STOP} sign, it can lead to deadly consequences. Therefore, it is important to verify the system. 
 
-TODO: Add more interesting examples
+Three original and three adversarial samples that are crafted in one of the experiments this thesis is presented in Figure \ref{fig:motivational-samples}.
+
+\begin{figure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{original_image_fgsm_1-eps1.jpg}
+  \caption{Original sample classified as 28 years old}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{adversarial_image_fgsm_1-eps1.jpg}
+  \caption{Adversarial sample classified as 59 years old}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{original_image_fgsm_2-eps1.jpg}
+  \caption{Original sample classified as 59 years old}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{adversarial_image_fgsm_2-eps1.jpg}
+  \caption{Adversarial sample classified as 28 years old}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{original_image_fgsm_3-eps1.jpg}
+  \caption{Original sample classified as 28 years old}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{adversarial_image_fgsm_3-eps1.jpg}
+  \caption{Adversarial sample classified as 64 years old}
+\end{subfigure}
+
+\caption{Original samples (left) and adversarial samples (right)}
+\label{fig:motivational-samples}
+\end{figure}
 
 \section{Problem Definition} 
 \label{motivation}

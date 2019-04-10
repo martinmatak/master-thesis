@@ -14,30 +14,30 @@
 \contentsline {chapter}{Contents}{xiii}{section*.5}
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Problem Definition}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Aim of the Work}{2}{section.1.2}
-\contentsline {section}{\numberline {1.3}Methodological Approach}{4}{section.1.3}
-\contentsline {section}{\numberline {1.4}Outline}{4}{section.1.4}
-\contentsline {chapter}{\chapternumberline {2}Background}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}Feedforward neural networks}{7}{section.2.1}
-\contentsline {section}{\numberline {2.2}Gradient descent}{9}{section.2.2}
-\contentsline {section}{\numberline {2.3}Backpropagation}{12}{section.2.3}
-\contentsline {section}{\numberline {2.4}Convolutional neural networks}{12}{section.2.4}
-\contentsline {chapter}{\chapternumberline {3}State-of-the-Art}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}Fast Gradient Sign Method (FGSM)}{16}{section.3.1}
-\contentsline {section}{\numberline {3.2}Jacobian-based Saliency Map Attack (JSMA)}{16}{section.3.2}
-\contentsline {section}{\numberline {3.3}Carlini \& Wagner (CW)}{18}{section.3.3}
-\contentsline {section}{\numberline {3.4}Transfer based approach}{20}{section.3.4}
-\contentsline {section}{\numberline {3.5}Ensemble approach}{21}{section.3.5}
-\contentsline {section}{\numberline {3.6}Boundary attack}{21}{section.3.6}
-\contentsline {chapter}{\chapternumberline {4}Experiments}{23}{chapter.4}
-\contentsline {section}{\numberline {4.1}Methodology}{23}{section.4.1}
-\contentsline {section}{\numberline {4.2}Whitebox attacks}{26}{section.4.2}
-\contentsline {section}{\numberline {4.3}Blackbox attacks}{30}{section.4.3}
-\contentsline {chapter}{\chapternumberline {5}The Semi-targeted Approach}{39}{chapter.5}
-\contentsline {section}{\numberline {5.1}Motivation}{39}{section.5.1}
-\contentsline {section}{\numberline {5.2}Evaluation}{40}{section.5.2}
-\contentsline {chapter}{\chapternumberline {6}Threats to Validity and Future Work}{41}{chapter.6}
-\contentsline {section}{\numberline {6.1}Threats to Validity}{41}{section.6.1}
-\contentsline {section}{\numberline {6.2}Future Work}{42}{section.6.2}
-\contentsline {chapter}{\chapternumberline {7}Summary}{43}{chapter.7}
-\contentsline {chapter}{Bibliography}{45}{chapter*.39}
+\contentsline {section}{\numberline {1.2}Aim of the Work}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}Methodological Approach}{5}{section.1.3}
+\contentsline {section}{\numberline {1.4}Outline}{6}{section.1.4}
+\contentsline {chapter}{\chapternumberline {2}Background}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Feedforward neural networks}{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}Gradient descent}{11}{section.2.2}
+\contentsline {section}{\numberline {2.3}Backpropagation}{14}{section.2.3}
+\contentsline {section}{\numberline {2.4}Convolutional neural networks}{14}{section.2.4}
+\contentsline {chapter}{\chapternumberline {3}State-of-the-Art}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Fast Gradient Sign Method (FGSM)}{18}{section.3.1}
+\contentsline {section}{\numberline {3.2}Jacobian-based Saliency Map Attack (JSMA)}{18}{section.3.2}
+\contentsline {section}{\numberline {3.3}Carlini \& Wagner (CW)}{20}{section.3.3}
+\contentsline {section}{\numberline {3.4}Transfer based approach}{22}{section.3.4}
+\contentsline {section}{\numberline {3.5}Ensemble approach}{23}{section.3.5}
+\contentsline {section}{\numberline {3.6}Boundary attack}{23}{section.3.6}
+\contentsline {chapter}{\chapternumberline {4}Experiments}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Methodology}{25}{section.4.1}
+\contentsline {section}{\numberline {4.2}Whitebox attacks}{28}{section.4.2}
+\contentsline {section}{\numberline {4.3}Blackbox attacks}{32}{section.4.3}
+\contentsline {chapter}{\chapternumberline {5}The Semi-targeted Approach}{41}{chapter.5}
+\contentsline {section}{\numberline {5.1}Motivation}{41}{section.5.1}
+\contentsline {section}{\numberline {5.2}Evaluation}{42}{section.5.2}
+\contentsline {chapter}{\chapternumberline {6}Threats to Validity and Future Work}{43}{chapter.6}
+\contentsline {section}{\numberline {6.1}Threats to Validity}{43}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future Work}{44}{section.6.2}
+\contentsline {chapter}{\chapternumberline {7}Summary}{45}{chapter.7}
+\contentsline {chapter}{Bibliography}{47}{chapter*.40}

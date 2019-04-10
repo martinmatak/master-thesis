@@ -1,8 +1,7 @@
 In Section \ref{sec:blackbox-attacks} I present observation that the transfer based approach expects more memory than it is available to me. In the same section I also present poor results of transfer based approach without Jacobian Augmentation. In this chapter I introduce an adaptation of the transfer based approach.
 
 \section{Motivation}
-
-Memory expectation, poor results without jacobian augmentation, and the fact that transferability of adversarial samples crafted in misclassification attacks is higher than transferability of adversarial samples crafted in targeted misclassification attacks \cite{ensemble-attack} motivated me to modify transfer based approach.
+High memory expectation, poor results without jacobian augmentation, and higher transferability of adversarial samples crafted in misclassification attacks than transferability of adversarial samples crafted in targeted misclassification attacks \cite{ensemble-attack} motivated me to modify transfer based approach.
 
 In the modified approach the substitute network has lower number of classes than black-box model is expected to have and the goal of an attack against the substitute network is not targeted misclassification, but only misclassification. I call the modified approach \textit{the semi-targeted approach}.
 
@@ -11,9 +10,9 @@ In the semi targeted approach a substitute neural network has only a several cla
 Let me provide an example. Assume a substitute network with only three classes that represent age intervals 0-33, 34-66 and 67-99 years. Now if a person who is 50 years old gets misclassified, that means the person got classified as 0-33 years old or as 67-99 years old. In either case, the mistake is greater than getting classified as 51 or 49 years old as it would be the case when the substitute network would have 100 classes. Finally, if that adversarial sample transfers to targeted black-box network, then the black-box model will also have a large error.
 
 \section{Evaluation}
-To make semi-targeted approach and transfer based approach comparable, hyperparameters of the FGSM and CW attacks as well as training and test samples are completely the same as in Section \ref{sec:blackbox-attacks}. Jacobian Augmentation is performed for several iterations before executing an attack as described in Section \ref{sec:transfer-based} that describes the transfer based approach .
+To make the semi-targeted approach and the transfer based approach comparable, hyperparameters of the FGSM and CW attacks as well as training and test samples are completely the same as in Section \ref{sec:blackbox-attacks}. Jacobian Augmentation is performed for several iterations before executing an attack as described in Section \ref{sec:transfer-based} that describes the transfer based approach .
 
 However, in this approach the substitute network has fewer classes than the targeted black-box network. In performed experiments, the substitute network recognizes only three classes: 0-33, 34-66 and 67-99 years. Number of iterations for Jacobian Augmentation is 3. I also tried with 4 iterations for Jacobian Augmentation, but the system crashed. Number of epochs used for training the substitute network is set to 40.
 
-Since the substitute network is trained on only three classes, accuracy is used as a measure for evaluation of the network.
+Since the substitute network is trained on three classes, accuracy is used as a measure for evaluation of the network. For the targeted black-box neural network, MAE is used as a measure.
 
