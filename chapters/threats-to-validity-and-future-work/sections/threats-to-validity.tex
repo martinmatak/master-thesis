@@ -1,0 +1,13 @@
+\textbf{Decision:} Skipping the Jacobian-based Dataset Augmentation step in transfer based approach.
+
+\textbf{Argumentation:} One could argue that without the jacobian augmentation, the transfer based approach is incomplete algorithm. Given the hardware resources \footnote{Intel(R) Core(TM) i5-8500 2 CPU @ 3.00GHz, 16GB RAM, GeForce GTX 1080 8GB}, every time during the call for jacobian augmentation, process would get killed by the kernel due to memory consumption. The implementation of the jacobian augmentation that is used is the offical one provided by the author \cite{papernot2018cleverhans}. I tried to contact the author \footnote{https://github.com/tensorflow/cleverhans/issues/974}, but even he couldn't find a solution \footnote{https://stackoverflow.com/questions/54580105/memory-consumption-of-jacobian-dataset-augmentation/54718059}. However, I observed that when the number of potential classes is lower, the jacobian-based augmentation can be performed for the same network.
+
+\textbf{Decision:} Number of iterations for Jacobian-based Dataset Augmentations is too low in semi-targeted approach.
+
+\textbf{Argumentation: } Using the given resources, that are described above, it was not possible to perform more iterations.
+
+\textbf{Decision:} 
+Not trying more than 100 000 iterations for CW attack in the whitebox experiment discussed in Section \ref{sec:whitebox-attacks}.
+
+\textbf{Argumentation:}
+The attack using 100 000 iterations takes a week to finish given the hardware resources. I believe that the hardware resources used in this thesis are hardware resources that an average adversarial user might have at home and I don't see a motivation in running the attack for one sample for more than one week.

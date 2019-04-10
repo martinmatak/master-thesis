@@ -36,10 +36,8 @@
 \contentsline {chapter}{\chapternumberline {5}The Semi-targeted Approach}{39}{chapter.5}
 \contentsline {section}{\numberline {5.1}Motivation}{39}{section.5.1}
 \contentsline {section}{\numberline {5.2}Evaluation}{40}{section.5.2}
-\contentsline {chapter}{\chapternumberline {6}Critical Reflection}{41}{chapter.6}
-\contentsline {section}{\numberline {6.1}Discussion}{41}{section.6.1}
-\contentsline {section}{\numberline {6.2}Threats to validity}{41}{section.6.2}
-\contentsline {chapter}{\chapternumberline {7}Summary and Future Work}{43}{chapter.7}
-\contentsline {section}{\numberline {7.1}Summary}{43}{section.7.1}
-\contentsline {section}{\numberline {7.2}Future Work}{43}{section.7.2}
+\contentsline {chapter}{\chapternumberline {6}Threats to Validity and Future Work}{41}{chapter.6}
+\contentsline {section}{\numberline {6.1}Threats to Validity}{41}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future Work}{42}{section.6.2}
+\contentsline {chapter}{\chapternumberline {7}Summary}{43}{chapter.7}
 \contentsline {chapter}{Bibliography}{45}{chapter*.39}
