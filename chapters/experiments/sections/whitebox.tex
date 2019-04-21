@@ -228,3 +228,36 @@ max iterations & learning rate & clean MAE & adv MAE & avg L2 \\ \hline
 \caption{Results using the CW attack with different values of hyperparameters against model with id 2}
 \label{table:cw-results}
 \end{table}
+
+Finally, I upload several original samples and corresponding adversarial samples to  Microsoft's service for age estimation \footnote{https://www.how-old.net/} to check if there is any transferability between adversarial samples. Usually, results are as expected as it can be seen in Figure \ref{fig:ms_correct_1} and Figure \ref{fig:ms_correct_2}. However, as it can be seen in \ref{fig:ms_tricked} , sometimes an adversarial sample manages to trick Microsoft's service for age estimation as well!
+
+\begin{figure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{ms_correct_1.png}
+  \label{fig:ms_correct_1}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{ms_correct_2.png}
+    \label{fig:ms_correct_2}
+\end{subfigure}
+\caption{Correct evaluation by Microsoft's service for age estimation}
+\end{figure}
+
+\begin{figure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{ms_correct_girl.png}
+      \caption{Original sample}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{ms_fail_girl.png}
+        \caption{Adversarial sample}
+\end{subfigure}
+\label{fig:ms_tricked}
+\caption{Adversarial sample tricked Microsoft's service for age estimation}
+\end{figure}

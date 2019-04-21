@@ -1,1 +1,19 @@
-TODO
+This thesis describes several adversarial attacks, trains four classifiers for age estimation and presents the results of the adversarial attacks against them in a white-box and a black-box scenario.
+
+Three white-box attacks are evaluated.
+The JSMA attack was not able to craft a single adversarial sample because image dimensions were too large. This is confirmation of the result presented in \cite{DBLP:journals/corr/CarliniW16a}.
+
+The FGSM attack presents the best performance by successfully increasing mean absolute error of one of the classifiers from 9.5 years to 48 years! Depending on the allowed perturbation in the image, adversarial samples are sometimes imperceptible from the original samples.
+
+The CW attack is sometimes successful, but sometimes it fails to find an adversarial sample for a given neural network at all. This optimization-based approach is significantly slower than the FGSM attack, but not necessarily more successful. It does not seem to be easy to find correct hyperparameters that should be used in this attack.
+
+Two existing black-box approaches are evaluated. 
+The Boundary attack is successful for every sample, but the cost is high number of queries for every sample to the targeted black-box network. Around 16 000 queries are needed for one sample to become adversarial and adversary has to have two images to execute the attack. 
+
+The transfer based approach trains a substitute network, attacks the substitute network and the adversarial samples then transfer to targeted black-box network up to certain extent. However, training of the substitute network such that decision boundaries are similar as in targeted network does not seem to scale up successfully with higher number of classes.
+
+A new black-box attack, the semi-targeted approach, is introduced that is based on the transfer based approach. 
+
+Instead of having a substitute network with the same number of classes as the targeted network, number of classes is reduced. If a sample is misclassified by the substitute network and misclassification transfers to targeted network, the range of misclassification by the targeted network will be greater than if the substitute network would have the same number of classes as the targeted network. This approach can be used whenever labels can be ordered or even clustered. Results show that there is still a place for improvement in this approach.
+
+

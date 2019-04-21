@@ -30,9 +30,9 @@
 	\begin{itemize}
 	\item In the domain of age estimation, it makes sense to be less strict about the targeted label. For instance, if an image of a minor is classified as an image of a person over a fifty years old, this could lead to the same consequences (e.g. access to an age-restricted content), no matter if the minor is classified as a 55 or 65 years old person. 
 	
-	Formally, if the goal is to hit any label from a specific group of labels, I define that attack as \textit{semi-targeted misclassification}. Of course, a group of labels must be smaller than a whole set of possible labels, otherwise the task is trivial. In general, this attack makes sense in any environment where labels can be ordered or at least clustered.
+	Formally, if the goal is to hit any label outside a specific group of labels, I define that attack as \textit{semi-targeted misclassification}. A group of labels must be smaller than a an empty set, otherwise the task is trivial. In general, this attack makes sense in any environment where labels can be ordered or at least clustered.
 
-To this end, I adapted one already existing black-box approach to this more relaxed setting. Such a relaxation is not yet introduced in the literature since it is very domain specific. Consequently, the results can't be compared against previous work of that kind, but results are compared with targeted black-box misclassification attacks. This comparison is explained in more details in Section \ref{approach}. 
+To this end, I adapted one already existing black-box approach to this more relaxed setting. Such a relaxation is not yet introduced in the literature since it is very domain specific. Consequently, the results can't be compared against previous work of that kind, but results are compared with targeted black-box attacks.
 	\end{itemize}
 	
 \item \textbf{adversarial algorithms are evaluated in the different environments}; and
