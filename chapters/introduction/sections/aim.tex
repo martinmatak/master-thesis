@@ -1,6 +1,11 @@
-\textbf{The goals} of this thesis, in no particular order, are the following:
+\textbf{The goals} of this thesis, in order of chapters, are the following:
 \begin{itemize}
 
+ \item \textbf{write a short survey on adversarial algorithms}.
+  	 \begin{itemize}
+  	 \item Three different white-box attacks and three different black-box attacks are analyzed and discussed.  All of them are used to attack the DNN used for age estimation.
+ \end{itemize}	
+ 
   \item \textbf{create a classifier for age estimation};
   	\begin{itemize}
   		\item Implement a DNN which receives an image as an input and outputs how old the person in the image is. 
@@ -11,36 +16,31 @@
  		\item In the \textit{white-box} environment, an adversary has all the information about the DNN under attack. The internal structure of the neural network, all the implementation details and values of all the variables in any moment are known to the attacker. In other words, the attacker has access to the source code and nothing is hidden.
  	 \end{itemize}
  	 
- \item \textbf{attack the classifier in a black-box environment}; and
+ \item \textbf{attack the classifier in a black-box environment}; 
  \begin{itemize}
  	\item In the \textit{black-box} environment, an adversary doesn't have access to all the information. Depending on the precise definition of "black-box", more or less information is provided. In this thesis, the only capability of the black-box adversary is to observe the labels assigned by the DNN to chosen inputs.
  \end{itemize}
- 
- \item \textbf{write a short survey on adversarial algorithms}.
-  	 \begin{itemize}
-  	 \item Three different white-box attacks and three different black-box attacks are analyzed and discussed.  All of them are used to attack the DNN used for age estimation.
- \end{itemize}	
  
 \end{itemize}
 
 \textbf{The contributions} of this thesis, sorted by priority, can be enumerated as follows:
 \begin{enumerate}
 
-\item \textbf{the new Semi-targeted Black-box Attack is introduced};
+\item \textbf{the new Semi-targeted Black-box Attack is introduced}
 	\begin{itemize}
 	\item In the domain of age estimation, it makes sense to be less strict about the targeted label. For instance, if an image of a minor is classified as an image of a person over a fifty years old, this could lead to the same consequences (e.g. access to an age-restricted content), no matter if the minor is classified as a 55 or 65 years old person. 
 	
-	Formally, if the goal is to hit any label outside a specific group of labels, I define that attack as \textit{semi-targeted misclassification}. A group of labels must be smaller than a an empty set, otherwise the task is trivial. In general, this attack makes sense in any environment where labels can be ordered or at least clustered.
+	Formally, if the goal is to hit any label outside a specific group of labels, I define that attack as \textit{semi-targeted misclassification}. A group of labels must be greater than an empty set, otherwise the task is trivial. In general, this attack makes sense in any environment where labels can be ordered or at least clustered.
 
-To this end, I adapted one already existing black-box approach to this more relaxed setting. Such a relaxation is not yet introduced in the literature since it is very domain specific. Consequently, the results can't be compared against previous work of that kind, but results are compared with targeted black-box attacks.
+To this end, I adapted one already existing black-box approach to this more relaxed setting. Such a relaxation is not yet introduced in the literature since it is very domain specific. Consequently, the results can't be compared against previous work of that kind, but results are compared to targeted black-box attacks.
 	\end{itemize}
 	
-\item \textbf{adversarial algorithms are evaluated in the different environments}; and
+\item \textbf{adversarial algorithms are evaluated in different environments}
 	\begin{itemize}
-		\item A natural question is which algorithm is the best one for the white-box attack and which one for the black-box attack? Several algorithms are run in the different settings and results are compared. That provides an answer to the question which algorithm to use in which scenario.
+		\item A natural question is which algorithm is the best one for the white-box attack and which one for the black-box attack? Several algorithms are run in  different settings and the results are compared. That provides an answer to the question which algorithm to use in which scenario.
 	\end{itemize}
 
-\item \textbf{a framework for the white-box and the black-box attacks is developed}.
+\item \textbf{a framework for the white-box and the black-box attacks is developed}
 	\begin{itemize}
 	\item I developed the framework for a white-box and a black-box targeted misclassification attack. In other words, while treating the DNN as a white-box or a black-box, images can be constructed in a way that the targeted DNN outputs a specific year. I also extended the framework with capability to craft semi-targeted black-box misclassification attacks.
 	\end{itemize}
