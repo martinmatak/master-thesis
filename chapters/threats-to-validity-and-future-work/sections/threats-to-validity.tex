@@ -1,13 +1,33 @@
-\textbf{Decision:} Skipping the Jacobian-based Dataset Augmentation step in transfer based approach.
+\begin{itemize}
 
-\textbf{Argumentation:} One could argue that without the Jacobian augmentation, the transfer based approach is an incomplete algorithm. Given the hardware resources\footnote{Intel(R) Core(TM) i5-8500 2 CPU @ 3.00GHz, 16GB RAM, GeForce GTX 1080 8GB}, every time during the call for Jacobian augmentation, the process would get killed by the kernel due to memory consumption. The implementation of the Jacobian augmentation that is used is the offical one provided by the author \cite{papernot2018cleverhans}. I tried to contact the author \footnote{https://github.com/tensorflow/cleverhans/issues/974}, but even he couldn't find a solution \footnote{https://stackoverflow.com/questions/54580105/memory-consumption-of-jacobian-dataset-augmentation/54718059}. However, I observed that when the number of potential classes is lower, the jacobian-based augmentation can be performed for the same network.
+	\item \textbf{Decision:} Skipping the Jacobian-based Dataset Augmentation step in the transfer-based approach.
 
-\textbf{Decision:} Number of iterations for Jacobian-based Dataset Augmentations is too low in semi-targeted approach.
+		\begin{itemize}	
+			\item \textbf{Argumentation:} One could argue that without the Jacobian augmentation, the transfer based approach is an incomplete algorithm. Given the hardware resources\footnote{Intel(R) Core(TM) i5-8500 2 CPU @ 3.00GHz, 16GB RAM, GeForce GTX 1080 8GB}, every time during the call for Jacobian augmentation, the process would get killed by the kernel due to memory consumption. The implementation of the Jacobian augmentation that is used is the offical one provided by the author \cite{papernot2018cleverhans}. I tried to contact the author \footnote{https://github.com/tensorflow/cleverhans/issues/974}, but even he couldn't find a solution \footnote{https://stackoverflow.com/questions/54580105/memory-consumption-of-jacobian-dataset-augmentation/54718059}. However, I observed that when the number of potential classes is lower, the jacobian-based augmentation can be performed for the same network.
+	
+			\item \textbf{Potential consequences:} Since the transfer-based approach is not evaluated using the hardware that would support a complete execution of the attack, the results differ from those reported when a complete execution of the attack is supported.
+		\end{itemize}
+	
+	\item \textbf{Decision:} Number of iterations for Jacobian-based Dataset Augmentations is too low in semi-targeted approach.
 
-\textbf{Argumentation: } Using the given resources, that are described above, it was not possible to perform more iterations.
-
-\textbf{Decision:} 
+		\begin{itemize}
+			\item \textbf{Argumentation:} Using the given resources, that are described above, it was not possible to perform more iterations.
+	
+			\item \textbf{Potential consequences:} The results are probably not as good as they would be when more iterations would be executed.
+		\end{itemize}
+	
+	\item \textbf{Decision:} 
 Not trying more than 100 000 iterations for CW attack in the whitebox experiment discussed in Section \ref{sec:whitebox-attacks}.
 
-\textbf{Argumentation:}
-The attack using 100 000 iterations takes a week to finish given the hardware resources. I believe that the hardware resources used in this thesis are hardware resources that an average adversarial user might have at hand and I don't see a motivation to run the attack for one sample for more than one week.
+		\begin{itemize}
+			\item \textbf{Argumentation:} The attack using 100 000 iterations takes a week to finish given the hardware resources. I believe that the hardware resources used in this thesis are hardware resources that an average adversarial user might have at hand and I don't see a motivation to run the attack for one sample for more than one week.
+	
+			\item \textbf{Potential consequences:} Given more iterations, an optimizer might do a better job.
+		\end{itemize}
+\end{itemize}
+
+
+
+
+
+

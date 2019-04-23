@@ -20,7 +20,6 @@ In my second attempt, I used the ResNet50 architecture for the substitute networ
 
 In my third attempt, I used a vanilla CNN with three convolutional layers followed by a flatten layer and a softmax layer used for classification. However, the experiment failed again due to the same reason.
 
-
 Finally, I skipped the step of the Jacobian augmentation of the dataset in the transfer based approach and managed to run the experiments. The Jacobian augmentation is a heuristic that computes how to expand the existing dataset so that new samples are closer to the boundaries of being classified as a certain class. Instead of using this heuristic, I query once the targeted neural network, train the substitute network based on the associated labels provided by the targeted neural network and execute the attack. This way the substitute network does learn information about classification boundaries of the targeted neural network, but less than it would learn using the Jacobian augmentation. Further justification of this decision can be found in Section \ref{sec:threats-to-validity}.
 
 Results of this modified transfer based approach are presented in Tables
