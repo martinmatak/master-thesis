@@ -12,7 +12,7 @@ Sometimes is \ref{eq:numerical-derivative-2} used instead of \ref{eq:numerical-d
 \nabla L (\pmb \theta) = (L(\pmb \theta + \pmb 1_p \epsilon) - L (\pmb \theta - \pmb 1_p \epsilon)) / 2 \epsilon
 \end{equation}
 
-This approach is easy to implement, but it's only an approximation ($\epsilon$ cannot be arbitrary small) and it is too inefficient in practice because $L$ must be evaluated $dim(\pmb\theta)$ times (modern DNNs have millions of parameters). Instead of \textit{numerical differentiation}, preferable way is to obtain $\textit{analytic gradient}$, i.e. obtain $\nabla L (\pmb \theta)$ analytically using calculus. This approach is more accurate (no approximation) and much more efficient (single evaluation).
+This approach is easy to implement, but it's only an approximation ($\epsilon$ cannot be arbitrary small) and it is too inefficient in practice because $L$ must be evaluated $dim(\pmb\theta)$ times (modern DNNs have millions of parameters). Instead of \textit{numerical differentiation}, preferable way is to obtain the $\textit{analytic gradient}$, i.e. obtain $\nabla L (\pmb \theta)$ analytically using calculus. This approach is more accurate (no approximation) and much more efficient (single evaluation).
 
 
 A neural network is actually a computational graph composed of other functions. The loss function $L$ of the neural network is again a computational graph. Derivatives in such graphs can be computed iteratively using the \textit{chain rule}. The chain rule is used for computing the derivative of composition of two or more functions. 
