@@ -39,7 +39,9 @@ Formally, let $y$ be the ground truth label of an input sample $\pmb x$. Then fu
 
 The idea behind such a setting is to maximize the mean absolute error, i.e. make the classification as wrong as possible, using the targeted version of known attacks.  This is how I reused targeted attacks in a novel setting. Initially I put targeted labels to 0 and 100 instead of 10 and 90, respectively, but I observed a worse performance, probably because they are on the edge of the considered age range.
 
-Two different optimizers are used in the experiments for minimizing a loss function: SGD, introduced in Section \ref{subsection:gradient-descent}, and Adam \cite{DBLP:journals/corr/KingmaB14}. Three different DNN architectures are used for training: VGG16 \cite{DBLP:journals/corr/SimonyanZ14a}, ResNet-50 \cite{DBLP:journals/corr/HeZRS15}, and InceptionResNetV2\cite{DBLP:journals/corr/SzegedyIV16}. Results of training the models based on the ResNet-50 architecture and the InceptionResNetV2 architecture are presented in Table \ref{table:trained-models}. The VGG16 architecture didn't show nearly good results as the other two did, i.e. it always predicted the value of the most frequent label, and hence I discarded it. However, if the VGG16 architecture is trained on the significantly larger IMDB-WIKI dataset, it can produce good results \cite{Rothe-IJCV-2016}. 
+Two different optimizers are used in the experiments for minimizing a loss function: SGD, introduced in Section \ref{subsection:gradient-descent}, and Adam \cite{DBLP:journals/corr/KingmaB14}. Three different DNN architectures are used for training: VGG16 \cite{DBLP:journals/corr/SimonyanZ14a}, ResNet-50 \cite{DBLP:journals/corr/HeZRS15}, and InceptionResNetV2\cite{DBLP:journals/corr/SzegedyIV16}. Results of training the models based on the ResNet-50 architecture and the InceptionResNetV2 architecture are presented in Table \ref{table:trained-models}. 
+
+The VGG16 architecture didn't show nearly as good results as the other two did, i.e. it always predicted the value of the most frequent label. Hence, I do not present the results of training the VGG16 in Table \ref{table:trained-models} and I do not evaluate any adversarial attack against it. However, if the VGG16 architecture is trained on the significantly larger IMDB-WIKI dataset, it can produce good results \cite{Rothe-IJCV-2016}. 
 
 \begin{table}[]
 \centering
@@ -55,4 +57,4 @@ Id & Architecture & Optimizer & Validation Loss & \textbf{Validation MAE} \\ \hl
 \label{table:trained-models}
 \end{table}
 
-For evaluation of attacks, 100 random samples are taken from the APPA-REAL test dataset. Neither of models from Table \ref{table:trained-models} has ever seen any of these samples before.
+For the evaluation of attacks, 100 random samples are taken from the APPA-REAL test dataset. Neither of the models from Table \ref{table:trained-models} has ever been trained on any of these samples before.
