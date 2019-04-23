@@ -1,8 +1,8 @@
 When it comes to blackbox attacks, the transfer based approach introduced in Section \ref{sec:transfer-based} is evaluated as well as the boundary attack from Section \ref{sec:boundary-attack}. It is worth mentioning that in this thesis a \textit{blackbox attack} means that the adversary can only query the targeted neural network and obtain an associated label. The adversary has no information about the confidence of the network in the prediction or any kind of list of most probable labels.
 
-In the transfer based approach, as described in Section \ref{sec:transfer-based}, the goal is to train a substitute network that will learn similar decision boundaries for every class as the targeted network. This implies that total number of possible classes must be the same, but an architecture of the substitute network may be different from the architecture of the targeted network.
+In the transfer based approach, as described in Section \ref{sec:transfer-based}, the goal is to train a substitute network that will learn similar decision boundaries for every class as the targeted network. This implies that the total number of possible classes must be the same, but an architecture of the substitute network may be different from the architecture of the targeted network.
 
-To get information about boundaries of the targeted neural network,  I take 778 samples that are previously unseen to targeted neural network, obtain labels for those samples and train a substitute neural network based on those results. Distribution of samples over age is presented in Figure \ref{fig:custom-dataset}.
+To get information about boundaries of the targeted neural network,  I take 778 samples that are previously unknown to the targeted neural network, obtain labels for those samples and train a substitute neural network based on those results. The distribution of samples over age is presented in Figure \ref{fig:custom-dataset}.
  
  \begin{figure}[h]
 \includegraphics[width=13cm]{custom-dataset}
@@ -10,18 +10,18 @@ To get information about boundaries of the targeted neural network,  I take 778 
 \label{fig:custom-dataset}
 \end{figure}
 
-Next, I take random 200 samples that are yet unseen by both networks and evaluate MAE of the targeted neural network and the substitute network on those 200 images. Then I craft adversarial samples for the substitute neural network using those 200 images. Target labels for adversarial samples are set in the same manner as in whitebox attacks, i.e. label 90 if a person is under 50 years old and label 10 if a person is over 50 years old. 
+Next, I take 200 random samples that are yet unseen by both networks and evaluate MAE of the targeted neural network and the substitute network on those 200 images. Then I craft adversarial samples for the substitute neural network using those 200 images. Target labels for adversarial samples are set in the same manner as in whitebox attacks, i.e. label 90 if a person is under 50 years old and label 10 if a person is over 50 years old. 
 
-Finally, I evaluate MAE of the targeted neural network and the substitute network on the 200 adversarial samples crafted in the previous step.
+Finally, I evaluate the MAE of the targeted neural network and the substitute network on the 200 adversarial samples crafted in the previous step.
 
-In my first attempt, I tried to use the InceptionResNetV2 architecture as a substitute network. However, the experiment failed due to memory consumption when the jacobian augmentation of the dataset is performed. 
+In my first attempt, I tried to use the InceptionResNetV2 architecture as a substitute network. However, the experiment failed due to memory consumption when the Jacobian augmentation of the dataset was performed. 
 
-In my second attempt, I used ResNet50 architecture for a substitute network instead of InceptionResNetV2 architecture. However, the experiment again failed  due to the memory exhaustion when the jacobian augmentation of the dataset is performed.  
+In my second attempt, I used the ResNet50 architecture for the substitute network instead of the InceptionResNetV2 architecture. However, the experiment again failed due to the memory exhaustion when the Jacobian augmentation of the dataset was performed. 
 
-In my third attempt, I used a vanilla CNN with three convolutional layers followed by flatten layer and softmax layer used for classification. However, the experiment failed again due to the same reason..
+In my third attempt, I used a vanilla CNN with three convolutional layers followed by a flatten layer and a softmax layer used for classification. However, the experiment failed again due to the same reason.
 
 
-Finally, I skip the step of the jacobian augmentation of the dataset in the transfer based approach and manage to run the experiments. The jacobian augmentation is a heuristic that computes how to expand the existing dataset so that new samples are closer to boundaries of being classified as a certain class. Instead of using this heuristic, I query once the targeted neural network, train the substitute network based on the associated labels provided by the targeted neural network and execute the attack. This way the substitute network does learn information about classification boundaries of the targeted neural network, but less than it would learn using the jacobian augmentation. Further argumentation of this decision can be found in Section \ref{sec:threats-to-validity}.
+Finally, I skipped the step of the Jacobian augmentation of the dataset in the transfer based approach and managed to run the experiments. The Jacobian augmentation is a heuristic that computes how to expand the existing dataset so that new samples are closer to the boundaries of being classified as a certain class. Instead of using this heuristic, I query once the targeted neural network, train the substitute network based on the associated labels provided by the targeted neural network and execute the attack. This way the substitute network does learn information about classification boundaries of the targeted neural network, but less than it would learn using the Jacobian augmentation. Further justification of this decision can be found in Section \ref{sec:threats-to-validity}.
 
 Results of this modified transfer based approach are presented in Tables
 \ref{table:bbox-resnet50-sgd-fgsm},
@@ -33,11 +33,11 @@ Results of this modified transfer based approach are presented in Tables
 \ref{table:bbox-inception-sgd-cw}, and
 \ref{table:bbox-inception-adam-cw}. Two things can be observed.
 
-First observation is that InceptionResNetV2 architecture with SGD optimizer is a combination of the neural network architecture and the optimizer that learned the most from the black-box network in terms of age estimation task. The substitute network managed to have MAE under $10.0$ on clean samples as it can be seen in Tables \ref{table:bbox-inception-sgd-fgsm} and \ref{table:bbox-inception-sgd-cw}. 
+The first observation is that the InceptionResNetV2 architecture with the SGD optimizer is a combination of the neural network architecture and the optimizer that learned the most from the black-box network in terms of age estimation task. The substitute network managed to have an MAE under $10.0$ on clean samples as can be seen in Tables \ref{table:bbox-inception-sgd-fgsm} and \ref{table:bbox-inception-sgd-cw}. 
 
-Second observation is regarding the black-box accuracy after the attack, i.e. against the adversarial samples. Only the FGSM attack managed to increase MAE of black-box above $10.0$ and only against black-box model with id 2 as it can be seen in Tables \ref{table:bbox-inception-sgd-fgsm} and \ref{table:bbox-resnet50-sgd-fgsm}. However, since the MAE of the black-box model against clean samples is $6.99$, this is not a large increase in MAE. This observation implies the result of the experiment. 
+The second observation is regarding the black-box accuracy after the attack, i.e. against the adversarial samples. Only the FGSM attack managed to increase the MAE of the black-box above $10.0$ and only against the black-box model with id 2 as can be seen in Tables \ref{table:bbox-inception-sgd-fgsm} and \ref{table:bbox-resnet50-sgd-fgsm}. However, since the MAE of the black-box model against clean samples is $6.99$, this is not a large increase in MAE. This observation implies the result of the experiment. 
 
-The result of the experiment is that this approach is not successful. No matter which combination of an attack, a substitute network, and an optimizer used for training a network is used, there was no huge impact on performance of a black-box model. 
+The result of the experiment is that this approach is not successful. No matter which combination of an attack, a substitute network, and an optimizer used for training a network is used, there was no huge impact on the performance of a black-box model. 
 
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
