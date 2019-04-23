@@ -5,7 +5,7 @@ The ensemble-based approach is also based on transferability of an adversarial i
 Formally, given $k$ white-box models with softmax outputs being $\pmb J_1$, ..., $\pmb J_k$, an original image $\pmb x$, and its ground-truth vector $\pmb y$, the ensemble-based approach solves the following optimization problem:
 
 \begin{equation}\label{eq:ensemble-objective}
-argmin_{\pmb x^*} - log ((\sum_{i=1}^k \alpha_i \pmb J_i(\pmb x^*)) \cdot \pmb y^*) + \lambda d(\pmb x, \pmb x^*)
+argmin_{\pmb x^*} (- log ((\sum_{i=1}^k \alpha_i \pmb J_i(\pmb x^*)) \cdot \pmb y^*) + \lambda d(\pmb x, \pmb x^*))
 \end{equation}
 
 where $\pmb y^*$ is a vector encoding the target label specified by the adversary, $\sum_{i=1}^k \alpha_i \pmb J_i(\pmb x^*)$ is the ensemble model, and $\alpha_i$ are the ensemble weights s.t. $\sum_{i=1}^k \alpha_i = 1$.
