@@ -1,11 +1,11 @@
-In Section \ref{sec:blackbox-attacks} I present observation that the transfer based approach expects more memory than it is available to me. In the same section I also present poor results of transfer based approach without Jacobian Augmentation. In this chapter I introduce an adaptation of the transfer based approach.
+In Section \ref{sec:blackbox-attacks} I made the observation that the transfer based approach expects more memory than is available to me. In the same section I also present poor results of the transfer-based approach without Jacobian Augmentation. In this chapter I introduce an adaptation of the transfer-based approach.
 
 \section{Motivation}
-High memory expectation, poor results without jacobian augmentation, and higher transferability of adversarial samples crafted in misclassification attacks than transferability of adversarial samples crafted in targeted misclassification attacks \cite{ensemble-attack} motivated me to modify transfer based approach.
+High memory expectation, poor results without Jacobian augmentation, and higher transferability of adversarial samples crafted in misclassification attacks than transferability of adversarial samples crafted in targeted misclassification attacks \cite{ensemble-attack} motivated me to modify the transfer-based approach.
 
-In the modified approach the substitute network has lower number of classes than black-box model is expected to have and the goal of an attack against the substitute network is not targeted misclassification, but only misclassification. I call the modified approach \textit{the semi-targeted approach}.
+In the modified approach the substitute network has a lower number of classes than the black-box model is expected to have and the goal of an attack against the substitute network is not a targeted misclassification, but only a misclassification. I call the modified approach \textit{the semi-targeted approach}.
 
-In the semi targeted approach a substitute neural network has only a several classes and every class represents a certain age interval. If a misclassification occurs in such a scenario, that means that the classifier is tricked at least for the amount of years corresponding to the age interval. In this thesis all age intervals have the same length, but in general this is not necessary.
+In the semi targeted approach a substitute neural network has only several classes and every class represents a certain age interval. If a misclassification occurs in such a scenario, that means that the classifier is tricked at least for the amount of years corresponding to the age interval. In this thesis all age intervals have the same length, but in general this is not necessary.
 
 Let me provide an example. Assume a substitute network with only three classes that represent age intervals 0-33, 34-66 and 67-99 years. Now if a person who is 50 years old gets misclassified, that means the person got classified as 0-33 years old or as 67-99 years old. In either case, the mistake is greater than getting classified as 51 or 49 years old as it would be the case when the substitute network would have 100 classes. Finally, if that adversarial sample transfers to targeted black-box network, then the black-box model will also have a large error.
 
@@ -14,7 +14,7 @@ In Section \ref{sec:blackbox-attacks} it is shown that FGSM has better results a
 
 Jacobian Augmentation is performed for three iterations before executing an attack as described in Section \ref{sec:transfer-based} that describes the transfer based approach. I also tried with four iterations for Jacobian Augmentation, but the system crashed. 
 
-In performed experiments, the substitute network recognizes four classes: 0-25, 26-50, 51-75, and 76-99 years old. Number of epochs used for training the substitute network is set to 40.
+In my experiments, the substitute network recognizes four classes: 0-25, 26-50, 51-75, and 76-99 years old. The number of epochs used for training the substitute network is set to 40.
 
 Since the substitute network is trained on four classes, accuracy is used as a measure for evaluation of the network. For the targeted black-box neural network, MAE is used as a measure. Results are presented in Tables
 \ref{table:semi-targeted-resnet50-sgd-fgsm},
