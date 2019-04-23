@@ -1,6 +1,6 @@
 % L norm introduction
 
-To quantify similarity between two images, different distance metrics can be used. Quantification of similarity can be used when comparing how much an adversarial image is different from the original input. There are three widely-used distance metrics in the literature for generating adversarial examples , all of which are $L_p$ distances. The $L_p$ distance is written $||\pmb x - \pmb x'||_p$, where the $p$-norm for purposes of this thesis can be defined as
+To quantify similarity between two images, different distance metrics can be used. Quantification of similarity can be used when comparing how much an adversarial image is different from the original input. There are three widely-used distance metrics in the literature for generating adversarial examples, all of which are $L_p$ distances. The $L_p$ distance is written $||\pmb x - \pmb x'||_p$, where the $p$-norm for purposes of this thesis can be defined as
 
 \begin{equation}
   ||\pmb v||_p=\left\{
@@ -51,7 +51,7 @@ Let $\pmb Z$ be the output of the targeted DNN second-to-last layer, the logits,
 The function $f$ that the authors find the most effective is: 
 
 \begin{equation}
-f(\pmb x') = max(max(\{\pmb Z(\pmb x ')_i : i \neq t\}) - \pmb Z(\pmb x')_t, 0).
+f(\pmb x + \pmb \delta) = max(max(\{\pmb Z(\pmb x + \pmb \delta)_i : i \neq t\}) - \pmb Z(\pmb x + \pmb \delta)_t, 0).
 \label{fun:obj-fun}
 \end{equation}
 
@@ -66,13 +66,13 @@ Now the solution will automatically be valid since from $-1 \leq tanh(\omega_i) 
 Finally, for $\mathcal{D} = L_2$, the attack can be formalized as follows. Given the original sample $\pmb x$ and the target class $t$, search for $\pmb \omega$ that solves \footnote{Here $\pmb 1$ represents a vector of same dimensionality as $\pmb x$ and $\pmb \omega$, it has value $1$ at every index and it shouldn't be confused with a ground-truth vector $\pmb 1_p$. }
 
 \[
-\text{minimize  }||\pmb x - \frac{1}{2}(tanh(\pmb \omega) + \pmb 1)||_2^2 + c \cdot  f(\frac{1}{2}(tanh(\pmb \omega) + \pmb 1))
+\text{minimize  }(||\pmb x - \frac{1}{2}(tanh(\pmb \omega) + \pmb 1)||_2)^2 + c \cdot  f(\frac{1}{2}(tanh(\pmb \omega) + \pmb 1))
 \]
 
 with $f$ similar to the objective function defined in \ref{fun:obj-fun}, but this time defined as
 
 \[
-f(\pmb x') = max(max\{\pmb Z(\pmb x ')_i : i \neq t\} - \pmb Z(\pmb x)_t, - \kappa).
+f(\pmb x') = max(max\{\pmb Z(\pmb x ')_i : i \neq t\} - \pmb Z(\pmb x')_t, - \kappa)
 \]
 
 where $\kappa$ is a parameter that controls the confidence with which the misclassification occurs. The authors in their implementation set $\kappa = 0$. The adversarial example is then crafted as $\pmb x' = \pmb x + \pmb \delta$. For more details about the attack, please consider \cite{DBLP:journals/corr/CarliniW16a}.
