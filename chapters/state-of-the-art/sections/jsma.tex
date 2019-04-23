@@ -4,7 +4,7 @@ The idea is, given the saliency map for a target class, the algorithm picks the 
 
 In the actual implementation of the algorithm, instead of picking one pixel, a pair of pixels is picked because selecting pixels one at a time is too strict and very few pixels would meet the heuristic search criteria introduced below. A pair of pixels is more likely to match the conditions because one of the pixels can compensate a minor flaw of the other pixel. Larger group of pixels comes at a greater computational cost. For further details, I refer the reader to the original paper \cite{DBLP:journals/corr/PapernotMJFCS15}.
 
-Formally, let $t$ be the target class, $\pmb x$ be the input to the classifier and $\pmb F$ be the output of the softmax layer s.t. $ \pmb F(\pmb x)_t$ denotes output of the softmax layer for a class $t$ on the input $\pmb x$, i.e. the probability that $\pmb x$ belongs to the class $t$. Then the adversarial saliency map in terms of pair pixels $p, q$ is defined as:
+Formally, let $t$ be the target class, $\pmb x$ be the input to the classifier and $\pmb F$ be the output of the softmax layer s.t. $ \pmb F(\pmb x)_t$ denotes output of the softmax layer for a class $t$ on the input $\pmb x$, i.e. $ \pmb F(\pmb x)_t$ denotes the probability that $\pmb x$ belongs to the class $t$. Then the adversarial saliency map in terms of pair pixels $p, q$ is defined as:
 
 \[
 \alpha_{pq} = \sum_{i \in \{p,q\}} \frac{\partial \pmb F(\pmb x)_t}{\partial \pmb x_i},
