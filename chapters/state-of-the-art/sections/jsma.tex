@@ -1,8 +1,10 @@
 This attack is based on a greedy algorithm that picks pixels to modify one at a time, increasing the likelihood of the targeted class in each iteration.  \textit{Adversarial Saliency Maps} - maps that measure an impact of a pixel on an image being classified as a target class - are created. If a value in this map is large, it means that changing that pixel will increase the likelihood of the image being classified as a target class. 
 
-The idea is, given the saliency map for a target class, the algorithm picks the pixel with the highest impact and modifies it. In the next iteration, the second most important pixel is changed and so on. This continues until either the attack succeeds to trick the classifier or too many pixels get changed and the attack becomes detectable. In the actual implementation of the algorithm, instead of picking one pixel, a pair of pixels is picked.
+The idea is, given the saliency map for a target class, the algorithm picks the pixel with the highest impact and modifies it. In the next iteration, the second most important pixel is changed and so on. This continues until either the attack succeeds to trick the classifier or too many pixels get changed and the attack becomes detectable.
 
-Formally, let $t$ be the target class, $\pmb x$ be the input to the classifier and $\pmb F$ be the output of the softmax layer. Then the adversarial saliency map in terms of pair pixels $p, q$ is defined as:
+In the actual implementation of the algorithm, instead of picking one pixel, a pair of pixels is picked because selecting pixels one at a time is too strict and very few pixels would meet the heuristic search criteria introduced below. A pair of pixels is more likely to match the conditions because one of the pixels can compensate a minor flaw of the other pixel. Larger group of pixels comes at a greater computational cost. For further details, I refer the reader to the original paper \cite{DBLP:journals/corr/PapernotMJFCS15}.
+
+Formally, let $t$ be the target class, $\pmb x$ be the input to the classifier and $\pmb F$ be the output of the softmax layer s.t. $ \pmb F(\pmb x)_t$ denotes output of the softmax layer for a class $t$ on the input $\pmb x$, i.e. the probability that $\pmb x$ belongs to the class $t$. Then the adversarial saliency map in terms of pair pixels $p, q$ is defined as:
 
 \[
 \alpha_{pq} = \sum_{i \in \{p,q\}} \frac{\partial \pmb F(\pmb x)_t}{\partial \pmb x_i},
@@ -15,11 +17,11 @@ Formally, let $t$ be the target class, $\pmb x$ be the input to the classifier a
 so that $\alpha_{pq}$ represents the impact of changing the both pixels $p$ and $q$ on the input being classified as $t$, and $\beta_{pq}$ represents how
 much changing $p$ and $q$ will change all the other outputs of the softmax layer.
 
-Now the algorithm picks $p$ and $q$ such that the target class gets more likely ($\alpha_{pq} > 0$), but other classes get less likely ($\beta_{pq} < 0$) and that combination is as strong as possible, i.e. that $ - \alpha_{pq} * \beta_{pq}$ is as large as possible. This can be formalized as:
+Now the algorithm picks $p$ and $q$ such that the target class gets more likely ($\alpha_{pq} > 0$), but other classes get less likely ($\beta_{pq} < 0$) and that combination is as strong as possible, i.e. that $ - \alpha_{pq} \cdot \beta_{pq}$ is as large as possible. This can be formalized as:
 
 \begin{align*}
 (p^*, q^*) 
-				&= arg max_{p, q} (- \alpha_{pq} * \beta_{pq}) \\
+				&= arg max_{p, q} (- \alpha_{pq} \cdot \beta_{pq}) \\
                   & \textnormal{ s.t. } \alpha_{pq} > 0 \textnormal{ and } \beta_{pq} < 0
 \end{align*}
 
