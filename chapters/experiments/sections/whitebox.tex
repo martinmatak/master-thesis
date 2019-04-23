@@ -1,8 +1,8 @@
-When it comes to whitebox attacks, three approaches are evaluated: FGSM, CW and JSMA. Hyperparameters used in the FGSM and the CW attack are listed in Table \ref{table:fgsm-params} and Table \ref{table:cw-params}, respectively. In Table \ref{table:whitebox-fgsm-results} and \ref{table:whitebox-cw-results} results are presented for FGSM attack and CW attack, respectively. In Table \ref{table:whitebox-results} results of all three attacks are presented.
+When it comes to whitebox attacks, I evaluated three approaches: FGSM, CW and JSMA. Hyperparameters used in the FGSM and the CW attack are listed in Table \ref{table:fgsm-params} and Table \ref{table:cw-params}, respectively. In Table \ref{table:whitebox-fgsm-results} and \ref{table:whitebox-cw-results} results are presented for FGSM attack and CW attack, respectively. In Table \ref{table:whitebox-results} results of all three attacks are presented.
 
-It is interesting to notice that the FGSM attack managed to change MAE for the model with id 2 from 9.5 to 47.79. In other words, the targeted model on average predicted that a person in the adversarial image is 38 years younger or older than a person in the original image! 
+It is interesting to notice that the FGSM attack managed to change the MAE for the model with id 2 from 9.5 to 47.79. In other words, the targeted model on average predicted that a person in the adversarial image is 38 years younger or older than a person in the original image! 
 
-Several original samples and the corresponding adversarial samples crafted using the FGSM attack are presented in Figure \ref{fig:fgsm-attack}. It can be observed that the attack adds a similar pattern to every image. However, when hyperparameter $eps$ is reduced to $1.0$, it is almost impossible to notice the perturbation as it can be seen in Figure \ref{fig:fgsm-attack-eps1}. But it still can be noticed that there is some perturbation. Lines in adversarial images are not that sharp as in original images and some pixels are not natural e.g. line between left cheek and the background in the image (d).
+Several original samples and the corresponding adversarial samples crafted using the FGSM attack are presented in Figure \ref{fig:fgsm-attack}. It can be observed that the attack adds a similar pattern to every image. However, when hyperparameter $eps$ is reduced to $1.0$, it is almost impossible to notice the perturbation as it can be seen in Figure \ref{fig:fgsm-attack-eps1}. But it still can be noticed that there is some perturbation. Lines in adversarial images are not that sharp as in original images and some pixels are not natural, e.g. the line between left cheek and the background in the image (d).
 
 \begin{figure}
 
@@ -82,11 +82,11 @@ Several original samples and the corresponding adversarial samples crafted using
 \label{fig:fgsm-attack-eps1}
 \end{figure}
 
-The CW attack, given the hyperparameters in Table \ref{table:cw-params}, managed to move MAE for model with id 1 from 6.69 to 29.35. In other words, the targeted model on average predicted that a person in the adversarial image is 23 years younger or older than a person in the original image. This is not that much as FGSM managed for the model with id 2, but it is significant.
+The CW attack, given the hyperparameters in Table \ref{table:cw-params}, managed to move the MAE for the model with id 1 from 6.69 to 29.35. In other words, the targeted model on average predicted that a person in the adversarial image is 23 years younger or older than a person in the original image. This is not that much as FGSM managed for the model with id 2, but it is significant.
 
-It is also interesting to observe that amount of perturbation added to an original sample varies a lot when the CW attack is used. From value $0.00$ for minimal perturbation it can be observed that attack sometimes does not manage to find an adversarial sample and sometimes the added perturbation is rather huge. For example, maximal value for L2 distance between the original and the adversarial sample using CW attack for model 1 is $16419.60$, but when FGSM is used, that value is $1939.89$.
+It is also interesting to observe that amount of perturbation added to an original sample varies a lot when the CW attack is used. From the value $0.00$ for minimal perturbation it can be observed that attack sometimes does not manage to find an adversarial sample and sometimes the added perturbation is rather huge. For example, the maximal value for L2 distance between the original and the adversarial sample using CW attack for model 1 is $16419.60$, but when FGSM is used, that value is $1939.89$.
 
-Several original samples and the corresponding adversarial samples crafted using the CW attack are presented in Figure \ref{fig:cw-attack}. It can be observed that the attack adds a very strong pattern to every image, i.e. introduces high perturbation. This is a consequence of chosen values for number of iterations and the learning rate. 
+Several original samples and the corresponding adversarial samples crafted using the CW attack are presented in Figure \ref{fig:cw-attack}. It can be observed that the attack adds a very strong pattern to every image, i.e. introduces high perturbation. This is a consequence of chosen values for the number of iterations and the learning rate. 
 
 \begin{figure}
 
@@ -128,13 +128,13 @@ Several original samples and the corresponding adversarial samples crafted using
 \end{figure}
 
 
-Since CW attack wasn't able to find any adversarial sample for the model with id 2 with the given hyperparameters in Table \ref{table:cw-params}, further experiments are performed against that model with different values for learning rate and maximum number of iterations.
+Since the CW attack wasn't able to find any adversarial sample for the model with id 2 with the given hyperparameters in Table \ref{table:cw-params}, further experiments are performed against that model with different values for learning rate and maximum number of iterations.
 
-Results of those experiments are presented in Table \ref{table:cw-results}. The results show that it is not easy for the CW attack to find any adversarial sample for the specific model. Although no adversarial sample is found, I performed no further exploration of combination of learning rate and number of iterations. Further argumentation of this decision can be found in Section \ref{sec:threats-to-validity}.
+Results of those experiments are presented in Table \ref{table:cw-results}. The results show that it is not easy for the CW attack to find any adversarial sample for the specific model. Since no adversarial sample is found, I performed no further exploration of combination of learning rate and number of iterations. Further argumentation of this decision can be found in Section \ref{sec:threats-to-validity}.
 
-It is also interesting to notice that for models with id 1 and 2, the attacks find stronger adversarial samples (i.e. bigger change in MAE) than for models with id 3 and 4. Could it be that bigger models \footnote{ResNet50 architecture that is used for model 1 and 2 has 25,636,712 parameters and InceptionResNetV2  architecture that is used for model 3 and 4 has 55,873,736 parameters.} are more resistent to adversarial samples? 
+It is also interesting to notice that for the models with id 1 and 2, the attacks find stronger adversarial samples (i.e. bigger change in MAE) than for models with id 3 and 4. Could it be that bigger models\footnote{ResNet50 architecture that is used for model 1 and 2 has 25,636,712 parameters and InceptionResNetV2  architecture that is used for model 3 and 4 has 55,873,736 parameters.} are more resistant to adversarial samples? 
 
-As expected from the analysis of the paper \cite{DBLP:journals/corr/CarliniW16a} in Section \ref{sec:CW}, JSMA attack failed due to memory complexity of the algorithm.
+As expected from the analysis of the paper \cite{DBLP:journals/corr/CarliniW16a} in Section \ref{sec:CW}, the JSMA attack failed due to memory complexity of the algorithm.
 
 \begin{table}[]
 \centering
@@ -229,21 +229,20 @@ max iterations & learning rate & clean MAE & adv MAE & avg L2 \\ \hline
 \label{table:cw-results}
 \end{table}
 
-Finally, I upload several original samples and corresponding adversarial samples to  Microsoft's service for age estimation \footnote{https://www.how-old.net/} to check if there is any transferability between adversarial samples. Usually, results are as expected as it can be seen in Figure \ref{fig:ms_correct_1} and Figure \ref{fig:ms_correct_2}. However, as it can be seen in \ref{fig:ms_tricked} , sometimes an adversarial sample manages to trick Microsoft's service for age estimation as well!
+Finally, I upload several original samples and corresponding adversarial samples to  Microsoft's service for age estimation\footnote{https://www.how-old.net/} to check if there is any transferability between adversarial samples. Usually, results are as expected as it can be seen in Figure \ref{fig:ms_correct}. However, as it can be seen in \ref{fig:ms_tricked} , sometimes an adversarial sample manages to trick Microsoft's service for age estimation as well!
 
 \begin{figure}
 
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{ms_correct_1.png}
-  \label{fig:ms_correct_1}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{ms_correct_2.png}
-    \label{fig:ms_correct_2}
 \end{subfigure}
 \caption{Correct evaluation by Microsoft's service for age estimation}
+\label{fig:ms_correct}
 \end{figure}
 
 \begin{figure}
@@ -258,6 +257,6 @@ Finally, I upload several original samples and corresponding adversarial samples
   \includegraphics[height=5cm, width=\linewidth, keepaspectratio]{ms_fail_girl.png}
         \caption{Adversarial sample}
 \end{subfigure}
-\label{fig:ms_tricked}
 \caption{Adversarial sample tricked Microsoft's service for age estimation}
+\label{fig:ms_tricked}
 \end{figure}
